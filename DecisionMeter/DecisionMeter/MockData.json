@@ -1,0 +1,24 @@
+{
+    "posts":{"type":"OptionBasedQuestion","questionId":"1","questionType":"MULTIPLE_CHOICE","questionString":"How often do you check mails ?","options":{"1":"Daily","2":"Hourly","3":"Never"}}
+     {"type":"OptionBasedQuestion","questionId":"1","questionType":"SINGLE_OPTION","questionString":"How often do you check mails ?","options":{"1":"Daily","2":"Hourly","3":"Never"}}
+      {"type":"ScaleBasedQuestion","questionId":"1","questionType":"","questionString":"How Are You ?","minimumSclae":1,"maximumScale":6}
+
+          {"type":"ScaleBasedAnswer","questionId":"1","scale":5}
+
+}
+
+
+
+
+
+{
+    "type": "OptionBasedQuestion",
+    "questionId": "1",
+    "questionType": "MULTIPLE_CHOICE",
+    "questionString": "How often do you check mails ?",
+    "options": {
+        "1": "Daily",
+        "2": "Hourly",
+        "3": "Never"
+    }
+}

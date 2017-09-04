@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5431CD821F5D3FC3000982D1 /* CustomSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5431CD811F5D3FC3000982D1 /* CustomSliderViewController.swift */; };
 		544DB1251F5D143A00F8EDAB /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */; };
 		544DB1261F5D143A00F8EDAB /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */; };
 		5450632C1F5935CA001E6251 /* ADM_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5450632B1F5935CA001E6251 /* ADM_logo.png */; };
@@ -25,6 +26,8 @@
 		54572DE61F57BE380023DBC2 /* DecisionMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DE51F57BE380023DBC2 /* DecisionMeterUITests.swift */; };
 		54572DF61F57C3400023DBC2 /* TokenId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DF51F57C3400023DBC2 /* TokenId.swift */; };
 		54B787BD1F5D23620029ABAD /* Configure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54B787BC1F5D23620029ABAD /* Configure.plist */; };
+		54B787CC1F5D30BF0029ABAD /* NewSliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54B787C91F5D30BF0029ABAD /* NewSliderView.xib */; };
+		54B787CD1F5D30BF0029ABAD /* CustomSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B787CB1F5D30BF0029ABAD /* CustomSliderView.m */; };
 		54C7E7711F57CE3400522FE9 /* radioButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C7E7701F57CE3400522FE9 /* radioButton.png */; };
 		54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7E77A1F57D08100522FE9 /* LoginViewController.swift */; };
 		54C7E7831F57D1EE00522FE9 /* SingleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7E7821F57D1EE00522FE9 /* SingleChoiceViewController.swift */; };
@@ -53,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5431CD811F5D3FC3000982D1 /* CustomSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSliderViewController.swift; sourceTree = "<group>"; };
 		544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		544DB1231F5D143A00F8EDAB /* HCSStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSStarRatingView.h; sourceTree = "<group>"; };
 		544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSStarRatingView.m; sourceTree = "<group>"; };
@@ -81,6 +85,9 @@
 		54572DE71F57BE380023DBC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54572DF51F57C3400023DBC2 /* TokenId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenId.swift; sourceTree = "<group>"; };
 		54B787BC1F5D23620029ABAD /* Configure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configure.plist; sourceTree = "<group>"; };
+		54B787C91F5D30BF0029ABAD /* NewSliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewSliderView.xib; sourceTree = "<group>"; };
+		54B787CA1F5D30BF0029ABAD /* CustomSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSliderView.h; sourceTree = "<group>"; };
+		54B787CB1F5D30BF0029ABAD /* CustomSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSliderView.m; sourceTree = "<group>"; };
 		54C7E7701F57CE3400522FE9 /* radioButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButton.png; sourceTree = "<group>"; };
 		54C7E77A1F57D08100522FE9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		54C7E7821F57D1EE00522FE9 /* SingleChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleChoiceViewController.swift; path = Controller/SingleChoiceViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +130,9 @@
 				544DB1231F5D143A00F8EDAB /* HCSStarRatingView.h */,
 				544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */,
 				545063461F59992B001E6251 /* DecisionMeter-Bridging-Header.h */,
+				54B787C91F5D30BF0029ABAD /* NewSliderView.xib */,
+				54B787CA1F5D30BF0029ABAD /* CustomSliderView.h */,
+				54B787CB1F5D30BF0029ABAD /* CustomSliderView.m */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -189,6 +199,7 @@
 		54C7E77C1F57D09000522FE9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5431CD811F5D3FC3000982D1 /* CustomSliderViewController.swift */,
 				54C7E77A1F57D08100522FE9 /* LoginViewController.swift */,
 				54C7E7821F57D1EE00522FE9 /* SingleChoiceViewController.swift */,
 				54C7E7841F57D22C00522FE9 /* MultipleChoiceViewController.swift */,
@@ -333,6 +344,7 @@
 			files = (
 				54C7E78B1F57D42500522FE9 /* rating.png in Resources */,
 				5450632C1F5935CA001E6251 /* ADM_logo.png in Resources */,
+				54B787CC1F5D30BF0029ABAD /* NewSliderView.xib in Resources */,
 				5450632E1F5935E1001E6251 /* daimler_logo.png in Resources */,
 				54572DD01F57BE380023DBC2 /* LaunchScreen.storyboard in Resources */,
 				545063381F593F38001E6251 /* Pictorial Signature.ttf in Resources */,
@@ -374,10 +386,12 @@
 				54572DF61F57C3400023DBC2 /* TokenId.swift in Sources */,
 				545063401F59783E001E6251 /* Constants.swift in Sources */,
 				54C7E7891F57D31700522FE9 /* RangeViewController.swift in Sources */,
+				54B787CD1F5D30BF0029ABAD /* CustomSliderView.m in Sources */,
 				544DB1251F5D143A00F8EDAB /* CheckboxButton.swift in Sources */,
 				54572DC61F57BE380023DBC2 /* AppDelegate.swift in Sources */,
 				545063311F5938E5001E6251 /* UIFont+Extension.swift in Sources */,
 				544DB1261F5D143A00F8EDAB /* HCSStarRatingView.m in Sources */,
+				5431CD821F5D3FC3000982D1 /* CustomSliderViewController.swift in Sources */,
 				54C7E78D1F57D4B000522FE9 /* RatingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

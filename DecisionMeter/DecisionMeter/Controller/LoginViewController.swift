@@ -64,6 +64,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Note that SO highlighting makes the new selector syntax (#selector()) look
         // like a comment but it isn't one
+        let sliderView = Bundle.main.loadNibNamed("NewSliderView", owner: self, options: [].last)
+        sliderView.delegate = self
         
         let sampleMockDictionary:NSDictionary? = dataParserFromFile(fileName: "Mock") as? NSDictionary
         print(sampleMockDictionary ?? [:])

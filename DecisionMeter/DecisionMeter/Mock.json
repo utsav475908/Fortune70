@@ -1,7 +1,7 @@
 {
     "type": "OptionBasedQuestion",
     "questionId": "1",
-    "questionType": "SINGLE_OPTION",
+    "questionType": "RATINGS",
     "questionString": "How often do you check mails ?",
     "options": {
         "1": "Daily",

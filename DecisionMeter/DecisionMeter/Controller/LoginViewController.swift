@@ -19,7 +19,7 @@ enum QuestionType: String {
     static func parse(s:String) -> QuestionType {
         switch s {
         case "MULTIPLE_CHOICE": return .MULTIPLE_CHOICE
-            case "MULTIPLE_CHOICE": return .SINGLE_OPTION
+            case "SINGLE_OPTION": return .SINGLE_OPTION
             case "SINGLE_OPTION": return .MULTIPLE_CHOICE
             case "RATINGS": return .RATINGS
             case "SLIDER": return .SLIDER

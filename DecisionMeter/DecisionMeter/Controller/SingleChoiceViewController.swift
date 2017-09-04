@@ -17,7 +17,11 @@ class SingleChoiceViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBOutlet var selectedButton: [RadioButton]!
     
+    @IBAction func didPressSingleChoiceButton(_ sender: RadioButton) {
+        sender.isSelected = !sender.isSelected
+    }
     @IBOutlet weak var submitButtonPressd: UIButton!
     
     @IBAction func onSubmitButtonPressed(_ sender: UIButton) {

@@ -103,7 +103,7 @@ open class CheckboxButton: UIControl {
         let containerFrame = self.containerFrame
         
         // Add an offset for circular checkbox
-        let inset = containerLineWidth / 2
+        let inset = containerLineWidth / 2 
         let innerRect = containerFrame.insetBy(dx: inset, dy: inset)
         
         // Create check path

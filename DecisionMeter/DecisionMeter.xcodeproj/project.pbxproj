@@ -24,6 +24,8 @@
 		54572DDB1F57BE380023DBC2 /* DecisionMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DDA1F57BE380023DBC2 /* DecisionMeterTests.swift */; };
 		54572DE61F57BE380023DBC2 /* DecisionMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DE51F57BE380023DBC2 /* DecisionMeterUITests.swift */; };
 		54572DF61F57C3400023DBC2 /* TokenId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DF51F57C3400023DBC2 /* TokenId.swift */; };
+		545CF3BC1F5D53120039CC93 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3BB1F5D53120039CC93 /* Http.swift */; };
+		545CF3BE1F5D60F30039CC93 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3BD1F5D60F30039CC93 /* DataModel.swift */; };
 		54B787BD1F5D23620029ABAD /* Configure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54B787BC1F5D23620029ABAD /* Configure.plist */; };
 		54C7E7711F57CE3400522FE9 /* radioButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C7E7701F57CE3400522FE9 /* radioButton.png */; };
 		54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7E77A1F57D08100522FE9 /* LoginViewController.swift */; };
@@ -80,6 +82,8 @@
 		54572DE51F57BE380023DBC2 /* DecisionMeterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisionMeterUITests.swift; sourceTree = "<group>"; };
 		54572DE71F57BE380023DBC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54572DF51F57C3400023DBC2 /* TokenId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenId.swift; sourceTree = "<group>"; };
+		545CF3BB1F5D53120039CC93 /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
+		545CF3BD1F5D60F30039CC93 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = Models/DataModel.swift; sourceTree = "<group>"; };
 		54B787BC1F5D23620029ABAD /* Configure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configure.plist; sourceTree = "<group>"; };
 		54C7E7701F57CE3400522FE9 /* radioButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButton.png; sourceTree = "<group>"; };
 		54C7E77A1F57D08100522FE9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 				544DB1231F5D143A00F8EDAB /* HCSStarRatingView.h */,
 				544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */,
 				545063461F59992B001E6251 /* DecisionMeter-Bridging-Header.h */,
+				545CF3BB1F5D53120039CC93 /* Http.swift */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				54C7E7881F57D31700522FE9 /* RangeViewController.swift */,
 				54C7E78C1F57D4B000522FE9 /* RatingViewController.swift */,
 				5450633B1F5966FF001E6251 /* Mock.json */,
+				545CF3BD1F5D60F30039CC93 /* DataModel.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -368,11 +374,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C7E7831F57D1EE00522FE9 /* SingleChoiceViewController.swift in Sources */,
+				545CF3BC1F5D53120039CC93 /* Http.swift in Sources */,
 				54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */,
 				54C7E7851F57D22C00522FE9 /* MultipleChoiceViewController.swift in Sources */,
 				5450633E1F5968B1001E6251 /* iDataParserUtils.swift in Sources */,
 				54572DF61F57C3400023DBC2 /* TokenId.swift in Sources */,
 				545063401F59783E001E6251 /* Constants.swift in Sources */,
+				545CF3BE1F5D60F30039CC93 /* DataModel.swift in Sources */,
 				54C7E7891F57D31700522FE9 /* RangeViewController.swift in Sources */,
 				544DB1251F5D143A00F8EDAB /* CheckboxButton.swift in Sources */,
 				54572DC61F57BE380023DBC2 /* AppDelegate.swift in Sources */,

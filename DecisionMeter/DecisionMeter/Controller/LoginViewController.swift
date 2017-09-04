@@ -62,6 +62,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Http.httpRequest()
+        Http.submitAction()
         // Note that SO highlighting makes the new selector syntax (#selector()) look
         // like a comment but it isn't one
         

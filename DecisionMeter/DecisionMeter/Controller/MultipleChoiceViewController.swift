@@ -10,13 +10,29 @@ import UIKit
 
 class MultipleChoiceViewController: UIViewController {
 
+    @IBOutlet weak var optionLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
+        optionLabel.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
     }
+    
+    func tapFunction(sender:UITapGestureRecognizer) {
+        print("tap working")
+        UIView.animate(withDuration: 2, delay: 1, options:
+            UIViewAnimationOptions.curveEaseInOut, animations: { 
+                self.optionLabel.text = "this"
+        }) { (completed) in
+            self.optionLabel.text = "what" + "who are you"
+        }
+    }
+
 
     @IBOutlet weak var submit: UIButton!
+    
     
     
     @IBAction func onSubmitButtonPressed(_ sender: UIButton) {

@@ -88,7 +88,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Http.swift"
-                  timestampString = "526295136.683017"
+                  timestampString = "526302677.45637"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -103,7 +103,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Http.swift"
-                  timestampString = "526295136.684108"
+                  timestampString = "526302677.457514"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -184,7 +184,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/LoginViewController.swift"
-                  timestampString = "526295136.697446"
+                  timestampString = "526302677.467112"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "127"
@@ -199,7 +199,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/LoginViewController.swift"
-                  timestampString = "526295136.698513"
+                  timestampString = "526302677.468373"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
@@ -216,12 +216,90 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/MultipleChoiceViewController.swift"
-            timestampString = "526295135.145"
+            timestampString = "526302438.887127"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
             endingLineNumber = "13"
-            landmarkName = "viewDidLoad()"
+            landmarkName = "MultipleChoiceViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DecisionMeter.MultipleChoiceViewController.optionLabel.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "DecisionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/MultipleChoiceViewController.swift"
+                  timestampString = "526302677.47112"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DecisionMeter.MultipleChoiceViewController.optionLabel.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UILabel&gt;"
+                  moduleName = "DecisionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/MultipleChoiceViewController.swift"
+                  timestampString = "526302677.472195"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DecisionMeter.MultipleChoiceViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; DecisionMeter.MultipleChoiceViewController"
+                  moduleName = "DecisionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/MultipleChoiceViewController.swift"
+                  timestampString = "526302677.473341"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DecisionMeter.MultipleChoiceViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;DecisionMeter.MultipleChoiceViewController&gt;"
+                  moduleName = "DecisionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/MultipleChoiceViewController.swift"
+                  timestampString = "526302677.474523"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DecisionMeter/Controller/MultipleChoiceViewController.swift"
+            timestampString = "526302622.983572"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "tapFunction(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

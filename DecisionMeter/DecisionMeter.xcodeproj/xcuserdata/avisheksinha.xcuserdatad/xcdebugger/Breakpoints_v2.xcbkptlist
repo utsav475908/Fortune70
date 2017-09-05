@@ -36,15 +36,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/LoginViewController.swift"
-            timestampString = "526217997.974604"
+            timestampString = "526290863.912502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -71,22 +71,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DecisionMeter/Controller/LoginViewController.swift"
-            timestampString = "526217987.522287"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Http.swift"
             timestampString = "526216166.333163"
             startingColumnNumber = "9223372036854775807"
@@ -104,7 +88,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Http.swift"
-                  timestampString = "526220942.360313"
+                  timestampString = "526295136.683017"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -119,7 +103,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Http.swift"
-                  timestampString = "526220942.361449"
+                  timestampString = "526295136.684108"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -167,13 +151,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DecisionMeter/Http.swift"
-            timestampString = "526217968.997976"
+            filePath = "DecisionMeter/Controller/LoginViewController.swift"
+            timestampString = "526286385.627502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "submitAction()"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -183,14 +167,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DecisionMeter/Http.swift"
-            timestampString = "526217970.187339"
+            filePath = "DecisionMeter/Controller/LoginViewController.swift"
+            timestampString = "526290863.912502"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "submitAction()"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DecisionMeter.LoginViewController.textField (__ObjC.UITextField, shouldChangeCharactersIn : __C._NSRange, replacementString : Swift.String) -&gt; Swift.Bool"
+                  moduleName = "DecisionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/LoginViewController.swift"
+                  timestampString = "526295136.697446"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "2680">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DecisionMeter.LoginViewController.(textField (__ObjC.UITextField, shouldChangeCharactersIn : __C._NSRange, replacementString : Swift.String) -&gt; Swift.Bool).(closure #7)"
+                  moduleName = "DecisionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/LoginViewController.swift"
+                  timestampString = "526295136.698513"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -199,13 +215,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DecisionMeter/Http.swift"
-            timestampString = "526218033.570487"
+            filePath = "DecisionMeter/Controller/MultipleChoiceViewController.swift"
+            timestampString = "526295135.145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "submitAction()"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

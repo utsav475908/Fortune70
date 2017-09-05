@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TC3-mv-Ue4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -33,30 +33,42 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-Nn-cTQ">
                                         <rect key="frame" x="50" y="97" width="274" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                         <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prd-6I-Ffo">
-                                        <rect key="frame" x="108" y="147" width="158" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvR-Qh-9sD">
-                                        <rect key="frame" x="120" y="228" width="134" height="38"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvR-Qh-9sD" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="229" width="134" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="doLoginTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BPG-A1-3nt"/>
+                                            <action selector="doLoginTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1re-9F-l8B"/>
                                             <action selector="onSubmitButtonPressed:" destination="Goo-aG-f2q" eventType="touchUpInside" id="Nvh-VD-tnt"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEj-oS-GAs">
+                                        <rect key="frame" x="244" y="35" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="2Xg-qQ-4Ju" kind="show" id="j2o-sN-VOK"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="eg: 0015" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="prd-6I-Ffo">
+                                        <rect key="frame" x="126" y="146" width="122" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196788311004639" green="0.90196806192398071" blue="0.90196657180786133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -73,12 +85,13 @@
                     <navigationItem key="navigationItem" id="aB1-LJ-4le"/>
                     <connections>
                         <outlet property="attendeeLabel" destination="2jO-Nn-cTQ" id="4PQ-Eu-dxf"/>
+                        <outlet property="loginButton" destination="yvR-Qh-9sD" id="neV-aM-1Ug"/>
                         <outlet property="tokenTextField" destination="prd-6I-Ffo" id="tdr-d5-jZ7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3298" y="-269"/>
+            <point key="canvasLocation" x="-2359.1999999999998" y="-269.41529235382313"/>
         </scene>
         <!--Single Choice View Controller-->
         <scene sceneID="TmX-q6-t0X">
@@ -96,87 +109,67 @@
                                 <rect key="frame" x="0.0" y="159" width="375" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ogu-tc-fRB">
-                                        <rect key="frame" x="133" y="115" width="108.5" height="109"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Every Hour" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrD-vA-CO5">
+                                        <rect key="frame" x="132" y="150" width="108.5" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Every Hour" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrD-vA-CO5">
-                                                <rect key="frame" x="0.0" y="0.0" width="108.5" height="23"/>
-                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
-                                                <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Daily/Weekly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK9-SF-0Vb">
-                                                <rect key="frame" x="0.0" y="43" width="108.5" height="23"/>
-                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
-                                                <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Never " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znN-wR-Ned">
-                                                <rect key="frame" x="0.0" y="86" width="108.5" height="23"/>
-                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
-                                                <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Never " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="znN-wR-Ned">
+                                        <rect key="frame" x="132" y="107" width="108.5" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r81-w9-0hV">
-                                        <rect key="frame" x="90" y="115" width="43" height="21"/>
+                                        <rect key="frame" x="90" y="111" width="43" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
                                         <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCM-hv-gex">
-                                        <rect key="frame" x="90" y="162" width="26" height="21"/>
+                                        <rect key="frame" x="90" y="155" width="26" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
                                         <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gga-rV-VJP">
-                                        <rect key="frame" x="89" y="203" width="26" height="21"/>
+                                        <rect key="frame" x="89" y="198" width="26" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
                                         <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0p-Jr-s8T">
-                                        <rect key="frame" x="98" y="296" width="134" height="38"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0p-Jr-s8T" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                        <rect key="frame" x="98" y="266" width="134" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onSubmitButtonPressed:" destination="Goo-aG-f2q" eventType="touchUpInside" id="NRO-5i-3dk"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrN-f4-Ne4">
-                                        <rect key="frame" x="29" y="0.0" width="270" height="102"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone?" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NrN-f4-Ne4">
+                                        <rect key="frame" x="43" y="0.0" width="286" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.26676476001739502" green="0.26676484942436218" blue="0.2667643129825592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-7O-1RP" customClass="RadioButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="112" width="33" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                <color key="value" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="fillCircleColor">
-                                                <color key="value" red="0.17075036469999999" green="0.40263006089999998" blue="0.49813476200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="didPressSingleChoiceButton:" destination="Goo-aG-f2q" eventType="touchUpInside" id="Swb-u2-hOy"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh3-fm-7xY" customClass="RadioButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="154" width="33" height="30"/>
+                                        <rect key="frame" x="43" y="154" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
@@ -191,7 +184,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyv-mm-AbW" customClass="RadioButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="29" y="192" width="33" height="30"/>
+                                        <rect key="frame" x="43" y="195" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
@@ -205,6 +198,41 @@
                                             <action selector="didPressSingleChoiceButton:" destination="Goo-aG-f2q" eventType="touchUpInside" id="c15-cU-mnN"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgT-H5-yvZ">
+                                        <rect key="frame" x="295" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="IyS-Sb-XQz" kind="show" id="PES-VJ-iay"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G8-7O-1RP" customClass="RadioButton" customModule="DecisionMeter" customModuleProvider="target">
+                                        <rect key="frame" x="43" y="111" width="28" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                <color key="value" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillCircleColor">
+                                                <color key="value" red="0.17075036469999999" green="0.40263006089999998" blue="0.49813476200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="didPressSingleChoiceButton:" destination="Goo-aG-f2q" eventType="touchUpInside" id="Swb-u2-hOy"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily/Weekly" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK9-SF-0Vb">
+                                        <rect key="frame" x="132" y="191" width="108.5" height="23"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196788311004639" green="0.90196806192398071" blue="0.90196657180786133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -225,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ln-Xd-h9o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1799" y="-269"/>
+            <point key="canvasLocation" x="-860" y="-269.41529235382313"/>
         </scene>
         <!--Multiple Choice View Controller-->
         <scene sceneID="JhB-1N-FuZ">
@@ -243,78 +271,115 @@
                                 <rect key="frame" x="0.0" y="159" width="375" height="343"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-x0-4SA">
-                                        <rect key="frame" x="36" y="22" width="270" height="102"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-x0-4SA">
+                                        <rect key="frame" x="36" y="22" width="266" height="89"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="16"/>
+                                        <color key="textColor" red="0.26676476001739502" green="0.26676484942436218" blue="0.2667643129825592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Every Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzJ-At-rkw">
                                         <rect key="frame" x="150" y="115" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily/Weekly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLN-2M-SAN">
                                         <rect key="frame" x="150" y="169" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Never " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAS-NK-xZ4">
                                         <rect key="frame" x="150" y="226" width="118" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKb-JA-R98">
                                         <rect key="frame" x="93" y="115" width="43" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QUO-dR-lAx">
                                         <rect key="frame" x="93" y="169" width="26" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NB-h8-vek">
                                         <rect key="frame" x="93" y="226" width="26" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="20"/>
+                                        <color key="textColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nPR-1D-NPq" customClass="CheckboxButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="114" width="30" height="30"/>
+                                        <rect key="frame" x="25" y="114" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="checkColor">
+                                                <color key="value" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
+                                                <color key="value" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ds1-2c-N9m" customClass="CheckboxButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="168" width="30" height="30"/>
+                                        <rect key="frame" x="25" y="168" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="checkColor">
+                                                <color key="value" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
+                                                <color key="value" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fhc-5a-PK4" customClass="CheckboxButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="25" y="225" width="30" height="30"/>
+                                        <rect key="frame" x="25" y="225" width="24" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="checkColor">
+                                                <color key="value" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
+                                                <color key="value" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-Mc-HLD">
-                                        <rect key="frame" x="104" y="298" width="134" height="38"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSN-9r-nrG">
+                                        <rect key="frame" x="300" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="Goo-aG-f2q" kind="show" id="Sgh-iU-VRy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-Mc-HLD" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="277" width="134" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onSubmitButtonPressed:" destination="Goo-aG-f2q" eventType="touchUpInside" id="k8N-20-lr9"/>
                                             <action selector="onSubmitButtonPressed:" destination="2Xg-qQ-4Ju" eventType="touchUpInside" id="xia-M4-14Y"/>
@@ -336,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DG-1H-VoJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2502" y="-259"/>
+            <point key="canvasLocation" x="-1564" y="-259.52023988005999"/>
         </scene>
         <!--Range View Controller-->
         <scene sceneID="uDe-KV-TTL">
@@ -354,15 +419,41 @@
                                 <rect key="frame" x="0.0" y="159" width="375" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GU-Zx-lbC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GU-Zx-lbC">
                                         <rect key="frame" x="40" y="22" width="270" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="textColor" red="0.26676476001739502" green="0.26676484942436218" blue="0.2667643129825592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5D-vX-rcE" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="298" width="134" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onSubmitButtonPressed:" destination="IyS-Sb-XQz" eventType="touchUpInside" id="gk2-9M-viK"/>
+                                            <action selector="onSubmitButtonPressed:" destination="Goo-aG-f2q" eventType="touchUpInside" id="iZV-wt-mpe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URU-eT-fs0">
+                                        <rect key="frame" x="310" y="8" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="Cd1-FG-TK8" kind="show" id="tmz-Fa-HPf"/>
+                                        </connections>
+                                    </button>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="6" translatesAutoresizingMaskIntoConstraints="NO" id="LXa-Ya-dU1" customClass="CustomSlider" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="146" width="256" height="31"/>
+                                        <rect key="frame" x="47" y="147" width="256" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="minimumTrackTintColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="0.77763805650684936" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="maximumTrackTintColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="0.30979773116438358" colorSpace="custom" customColorSpace="displayP3"/>
@@ -373,19 +464,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </slider>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5D-vX-rcE">
-                                        <rect key="frame" x="120" y="298" width="134" height="38"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <state key="normal" title="Submit">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="onSubmitButtonPressed:" destination="IyS-Sb-XQz" eventType="touchUpInside" id="gk2-9M-viK"/>
-                                            <action selector="onSubmitButtonPressed:" destination="Goo-aG-f2q" eventType="touchUpInside" id="iZV-wt-mpe"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196788311004639" green="0.90196806192398071" blue="0.90196657180786133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -402,7 +480,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pqb-Df-Ihl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1106" y="-279"/>
+            <point key="canvasLocation" x="-167.19999999999999" y="-279.31034482758622"/>
         </scene>
         <!--Rating View Controller-->
         <scene sceneID="l4A-3p-h0O">
@@ -420,32 +498,14 @@
                                 <rect key="frame" x="0.0" y="159" width="375" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-ci-7yY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-ci-7yY">
                                         <rect key="frame" x="36" y="22" width="270" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                         <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odS-ck-iic" customClass="HCSStarRatingView">
-                                        <rect key="frame" x="64" y="132" width="182" height="89"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                <integer key="value" value="6"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-YT-hRV">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-YT-hRV" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
                                         <rect key="frame" x="104" y="306" width="134" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -453,11 +513,37 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onSubmitButtonPressed:" destination="Goo-aG-f2q" eventType="touchUpInside" id="2OF-hO-h22"/>
                                             <action selector="onSubmitButtonPressed:" destination="Cd1-FG-TK8" eventType="touchUpInside" id="Rzf-8l-yeR"/>
                                         </connections>
                                     </button>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odS-ck-iic" customClass="HCSStarRatingView">
+                                        <rect key="frame" x="96" y="132" width="182" height="89"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyStarColor">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196788311004639" green="0.90196806192398071" blue="0.90196657180786133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -474,7 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azN-1X-jir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-298.39999999999998" y="-279.31034482758622"/>
+            <point key="canvasLocation" x="640.79999999999995" y="-279.31034482758622"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dCd-2Q-YG4">
@@ -514,18 +600,30 @@
                                 <rect key="frame" x="147" y="49" width="96" height="12"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmH-s0-qTR">
+                                <rect key="frame" x="300" y="138" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ehB-Wi-OZV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5AC-HU-X5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2917.5999999999999" y="-124.58770614692655"/>
+            <point key="canvasLocation" x="-3071" y="442"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="58V-ON-Z1S">
             <objects>
                 <viewController id="G9O-OX-3ti" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qpy-1c-z5c"/>
+                        <viewControllerLayoutGuide type="bottom" id="66P-hY-6WW"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M5J-Mn-ROT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -546,6 +644,24 @@
             </objects>
             <point key="canvasLocation" x="-1226" y="-873"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C2E-aj-2w1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TC3-mv-Ue4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UvC-cj-bFJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ju1-3e-Aoz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdk-Uu-KYq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3298.4000000000001" y="-269.41529235382313"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ADM_logo.png" width="159" height="74"/>
@@ -553,6 +669,7 @@
         <image name="tick.png" width="200" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gr9-Rl-N2Z"/>
+        <segue reference="Ju1-3e-Aoz"/>
+        <segue reference="KS2-VW-Np2"/>
     </inferredMetricsTieBreakers>
 </document>

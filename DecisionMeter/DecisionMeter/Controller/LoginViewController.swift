@@ -43,10 +43,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var daimlerImageView: UIImageView!
     @IBOutlet weak var attendeeLabel: UILabel!
     @IBOutlet weak var tokenTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginButton: CustomButton!
     // action for the login button 
    
-    @IBAction func doLoginTask(_ sender: UIButton) {
+    @IBAction func doLoginTask(_ sender: CustomButton) {
         
        controllers =   createAnArrayOfVC()
         print(controllers)

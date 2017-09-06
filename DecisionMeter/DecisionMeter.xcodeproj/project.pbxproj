@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		543022261F5FF1E100DC2754 /* MultipleChoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */; };
 		544C178E1F5E790E00EF2B01 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544C178D1F5E790E00EF2B01 /* CustomButton.swift */; };
 		544DB1251F5D143A00F8EDAB /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */; };
 		544DB1261F5D143A00F8EDAB /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipleChoiceModel.swift; path = Models/MultipleChoiceModel.swift; sourceTree = "<group>"; };
 		544C178D1F5E790E00EF2B01 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = Views/CustomButton.swift; sourceTree = "<group>"; };
 		544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		544DB1231F5D143A00F8EDAB /* HCSStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSStarRatingView.h; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				545063411F597F5D001E6251 /* MERCEDES.playground */,
 				54B787BC1F5D23620029ABAD /* Configure.plist */,
 				545CF3C31F5D9A080039CC93 /* CustomSlider.swift */,
+				543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */,
 			);
 			name = BusinessLogic;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				545CF3C41F5D9A080039CC93 /* CustomSlider.swift in Sources */,
 				545063311F5938E5001E6251 /* UIFont+Extension.swift in Sources */,
 				544C178E1F5E790E00EF2B01 /* CustomButton.swift in Sources */,
+				543022261F5FF1E100DC2754 /* MultipleChoiceModel.swift in Sources */,
 				545CF3C21F5D96C50039CC93 /* RadioButton.swift in Sources */,
 				544DB1261F5D143A00F8EDAB /* HCSStarRatingView.m in Sources */,
 				54C7E78D1F57D4B000522FE9 /* RatingViewController.swift in Sources */,

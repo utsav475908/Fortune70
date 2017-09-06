@@ -20,6 +20,10 @@ class MultipleChoiceViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func mapLabelTagWithButtonTag() {
+        
+    }
+    
     func tapFunction(sender:UITapGestureRecognizer) {
         print("tap working")
         UIView.animate(withDuration: 2, delay: 1, options:
@@ -29,6 +33,8 @@ class MultipleChoiceViewController: UIViewController {
             self.optionLabel.text = "what" + "who are you"
         }
     }
+    
+    
 
 
     @IBOutlet weak var submit: UIButton!

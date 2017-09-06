@@ -17,7 +17,7 @@ import UIKit
         // Drawing code
     }
     */
-    
+    @IBDesignable 
     open class CustomSlider : UISlider {
         @IBInspectable open var trackWidth:CGFloat = 2 {
             didSet {setNeedsDisplay()}

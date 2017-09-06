@@ -71,12 +71,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-//        var doAnimation:Bool = false;
-//        if textField.text!.characters.count == 4 {
-//            doAnimation = true
-//            return true
-//        }
-//     return false
+
         return true
         
     }
@@ -137,12 +132,41 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
     }
+    // MARK: Notification Method calls Show
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    // MARK: Notification Method calls Hide
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
     
+
     
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillShowNotification"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillHideNotification"), object: nil)
+    }
+    
+    func hideKeyboard() {
+        self.view.endEditing(true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        self.view.addGestureRecognizer(tap)
         self.loginButton.alpha = 0
         tokenTextField.delegate = self;
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         //Http.httpRequest()
         Http.submitAction()
         // Note that SO highlighting makes the new selector syntax (#selector()) look

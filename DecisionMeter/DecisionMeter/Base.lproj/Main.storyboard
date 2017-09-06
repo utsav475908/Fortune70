@@ -652,7 +652,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TC3-mv-Ue4" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UvC-cj-bFJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UvC-cj-bFJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

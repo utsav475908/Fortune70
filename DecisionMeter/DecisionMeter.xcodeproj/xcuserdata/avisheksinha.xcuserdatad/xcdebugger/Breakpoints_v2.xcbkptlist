@@ -40,11 +40,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/LoginViewController.swift"
-            timestampString = "526290863.912502"
+            timestampString = "526373530.41981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -88,7 +88,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Http.swift"
-                  timestampString = "526302677.45637"
+                  timestampString = "526373133.182873"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "27"
@@ -103,7 +103,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Http.swift"
-                  timestampString = "526302677.457514"
+                  timestampString = "526373133.183935"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "29"
@@ -152,11 +152,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/LoginViewController.swift"
-            timestampString = "526286385.627502"
+            timestampString = "526373530.41981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -168,11 +168,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/LoginViewController.swift"
-            timestampString = "526290863.912502"
+            timestampString = "526373530.41981"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "textField(_:shouldChangeCharactersIn:replacementString:)"
             landmarkType = "7">
             <Locations>
@@ -184,7 +184,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/LoginViewController.swift"
-                  timestampString = "526302677.467112"
+                  timestampString = "526373133.193447"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "127"
@@ -199,7 +199,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/LoginViewController.swift"
-                  timestampString = "526302677.468373"
+                  timestampString = "526373133.194549"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "129"
@@ -232,7 +232,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/MultipleChoiceViewController.swift"
-                  timestampString = "526302677.47112"
+                  timestampString = "526373133.197317"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -247,7 +247,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/MultipleChoiceViewController.swift"
-                  timestampString = "526302677.472195"
+                  timestampString = "526373133.198423"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -262,7 +262,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/MultipleChoiceViewController.swift"
-                  timestampString = "526302677.473341"
+                  timestampString = "526373133.199513"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -277,7 +277,7 @@
                   moduleName = "DecisionMeter"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/MultipleChoiceViewController.swift"
-                  timestampString = "526302677.474523"
+                  timestampString = "526373133.200612"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "13"
@@ -300,6 +300,38 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "tapFunction(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DecisionMeter/Controller/LoginViewController.swift"
+            timestampString = "526373530.41981"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DecisionMeter/Controller/LoginViewController.swift"
+            timestampString = "526373530.41981"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "viewWillDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

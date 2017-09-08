@@ -8,20 +8,33 @@
 
 import UIKit
 
-class SingleChoiceViewController: UIViewController {
+class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDelegate {
+    
+    @IBOutlet weak var choiceA: UIButton!
+    @IBOutlet weak var choiceB: UIButton!
+    @IBOutlet weak var choiceC: UIButton!
 
+    var radioButtonController:SSRadioButtonsController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        radioButtonController = SSRadioButtonsController(buttons: choiceA, choiceB, choiceC)
+        radioButtonController!.delegate = self;
+        radioButtonController!.shouldLetDeSelect = true
 
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet var selectedButton: [RadioButton]!
-    
-    @IBAction func didPressSingleChoiceButton(_ sender: RadioButton) {
-        sender.isSelected = !sender.isSelected
+    func didSelectButton(selectedButton: UIButton?) {
+        //print(selectedButton)
+        let selectedButton = radioButtonController?.selectedButton()
+        print(selectedButton?.titleLabel?.text! ?? "no value")
     }
+    
+    
+   
+    
+
     @IBOutlet weak var submitButtonPressd: UIButton!
     
     @IBAction func onSubmitButtonPressed(_ sender: UIButton) {

@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		543022261F5FF1E100DC2754 /* MultipleChoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */; };
+		543EF2B01F627FCB0003FAEF /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EF2AE1F627FCB0003FAEF /* SSRadioButtonsController.swift */; };
+		543EF2B11F627FCB0003FAEF /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EF2AF1F627FCB0003FAEF /* SSRadioButton.swift */; };
 		544C178E1F5E790E00EF2B01 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544C178D1F5E790E00EF2B01 /* CustomButton.swift */; };
 		544DB1251F5D143A00F8EDAB /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */; };
 		544DB1261F5D143A00F8EDAB /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */; };
-		5450632C1F5935CA001E6251 /* ADM_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5450632B1F5935CA001E6251 /* ADM_logo.png */; };
-		5450632E1F5935E1001E6251 /* daimler_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5450632D1F5935E1001E6251 /* daimler_logo.png */; };
 		545063311F5938E5001E6251 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545063301F5938E5001E6251 /* UIFont+Extension.swift */; };
 		545063361F593CE0001E6251 /* c063003t.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 545063351F593CE0001E6251 /* c063003t.ttf */; };
 		545063381F593F38001E6251 /* Pictorial Signature.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 545063371F593F38001E6251 /* Pictorial Signature.ttf */; };
@@ -28,9 +28,7 @@
 		54572DF61F57C3400023DBC2 /* TokenId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DF51F57C3400023DBC2 /* TokenId.swift */; };
 		545CF3BC1F5D53120039CC93 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3BB1F5D53120039CC93 /* Http.swift */; };
 		545CF3BE1F5D60F30039CC93 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3BD1F5D60F30039CC93 /* DataModel.swift */; };
-		545CF3C21F5D96C50039CC93 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3C11F5D96C50039CC93 /* RadioButton.swift */; };
 		545CF3C41F5D9A080039CC93 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3C31F5D9A080039CC93 /* CustomSlider.swift */; };
-		545CF3C61F5D9CD30039CC93 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 545CF3C51F5D9CD30039CC93 /* tick.png */; };
 		54B787BD1F5D23620029ABAD /* Configure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54B787BC1F5D23620029ABAD /* Configure.plist */; };
 		54C7E7711F57CE3400522FE9 /* radioButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C7E7701F57CE3400522FE9 /* radioButton.png */; };
 		54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7E77A1F57D08100522FE9 /* LoginViewController.swift */; };
@@ -61,12 +59,12 @@
 
 /* Begin PBXFileReference section */
 		543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipleChoiceModel.swift; path = Models/MultipleChoiceModel.swift; sourceTree = "<group>"; };
+		543EF2AE1F627FCB0003FAEF /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
+		543EF2AF1F627FCB0003FAEF /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
 		544C178D1F5E790E00EF2B01 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = Views/CustomButton.swift; sourceTree = "<group>"; };
 		544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		544DB1231F5D143A00F8EDAB /* HCSStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSStarRatingView.h; sourceTree = "<group>"; };
 		544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSStarRatingView.m; sourceTree = "<group>"; };
-		5450632B1F5935CA001E6251 /* ADM_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ADM_logo.png; sourceTree = "<group>"; };
-		5450632D1F5935E1001E6251 /* daimler_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daimler_logo.png; sourceTree = "<group>"; };
 		545063301F5938E5001E6251 /* UIFont+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		545063351F593CE0001E6251 /* c063003t.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = c063003t.ttf; sourceTree = "<group>"; };
 		545063371F593F38001E6251 /* Pictorial Signature.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pictorial Signature.ttf"; sourceTree = "<group>"; };
@@ -91,9 +89,7 @@
 		54572DF51F57C3400023DBC2 /* TokenId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenId.swift; sourceTree = "<group>"; };
 		545CF3BB1F5D53120039CC93 /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		545CF3BD1F5D60F30039CC93 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = Models/DataModel.swift; sourceTree = "<group>"; };
-		545CF3C11F5D96C50039CC93 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		545CF3C31F5D9A080039CC93 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSlider.swift; path = Views/CustomSlider.swift; sourceTree = "<group>"; };
-		545CF3C51F5D9CD30039CC93 /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
 		54B787BC1F5D23620029ABAD /* Configure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configure.plist; sourceTree = "<group>"; };
 		54C7E7701F57CE3400522FE9 /* radioButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButton.png; sourceTree = "<group>"; };
 		54C7E77A1F57D08100522FE9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
@@ -133,7 +129,8 @@
 		545063421F5998E3001E6251 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				545CF3C11F5D96C50039CC93 /* RadioButton.swift */,
+				543EF2AE1F627FCB0003FAEF /* SSRadioButtonsController.swift */,
+				543EF2AF1F627FCB0003FAEF /* SSRadioButton.swift */,
 				544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */,
 				544DB1231F5D143A00F8EDAB /* HCSStarRatingView.h */,
 				544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */,
@@ -170,8 +167,6 @@
 				545063421F5998E3001E6251 /* Vendor */,
 				54C7E78E1F57DBEB00522FE9 /* Images */,
 				54572DC51F57BE380023DBC2 /* AppDelegate.swift */,
-				5450632D1F5935E1001E6251 /* daimler_logo.png */,
-				5450632B1F5935CA001E6251 /* ADM_logo.png */,
 				545063351F593CE0001E6251 /* c063003t.ttf */,
 				545063371F593F38001E6251 /* Pictorial Signature.ttf */,
 				54572DC91F57BE380023DBC2 /* Main.storyboard */,
@@ -235,7 +230,6 @@
 		54C7E78E1F57DBEB00522FE9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				545CF3C51F5D9CD30039CC93 /* tick.png */,
 				54C7E78A1F57D42500522FE9 /* rating.png */,
 				54C7E7861F57D2A500522FE9 /* checklistImage.png */,
 				54C7E7701F57CE3400522FE9 /* radioButton.png */,
@@ -353,9 +347,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C7E78B1F57D42500522FE9 /* rating.png in Resources */,
-				5450632C1F5935CA001E6251 /* ADM_logo.png in Resources */,
-				5450632E1F5935E1001E6251 /* daimler_logo.png in Resources */,
-				545CF3C61F5D9CD30039CC93 /* tick.png in Resources */,
 				54572DD01F57BE380023DBC2 /* LaunchScreen.storyboard in Resources */,
 				545063381F593F38001E6251 /* Pictorial Signature.ttf in Resources */,
 				545063361F593CE0001E6251 /* c063003t.ttf in Resources */,
@@ -394,6 +385,7 @@
 				54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */,
 				54C7E7851F57D22C00522FE9 /* MultipleChoiceViewController.swift in Sources */,
 				5450633E1F5968B1001E6251 /* iDataParserUtils.swift in Sources */,
+				543EF2B01F627FCB0003FAEF /* SSRadioButtonsController.swift in Sources */,
 				54572DF61F57C3400023DBC2 /* TokenId.swift in Sources */,
 				545063401F59783E001E6251 /* Constants.swift in Sources */,
 				545CF3BE1F5D60F30039CC93 /* DataModel.swift in Sources */,
@@ -404,9 +396,9 @@
 				545063311F5938E5001E6251 /* UIFont+Extension.swift in Sources */,
 				544C178E1F5E790E00EF2B01 /* CustomButton.swift in Sources */,
 				543022261F5FF1E100DC2754 /* MultipleChoiceModel.swift in Sources */,
-				545CF3C21F5D96C50039CC93 /* RadioButton.swift in Sources */,
 				544DB1261F5D143A00F8EDAB /* HCSStarRatingView.m in Sources */,
 				54C7E78D1F57D4B000522FE9 /* RatingViewController.swift in Sources */,
+				543EF2B11F627FCB0003FAEF /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

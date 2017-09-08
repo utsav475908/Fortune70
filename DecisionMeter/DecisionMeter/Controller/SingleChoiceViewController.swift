@@ -10,14 +10,16 @@ import UIKit
 
 class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDelegate {
     
-    @IBOutlet weak var choiceA: UIButton!
-    @IBOutlet weak var choiceB: UIButton!
-    @IBOutlet weak var choiceC: UIButton!
+    @IBOutlet weak var choiceA: SSRadioButton!
+    @IBOutlet weak var choiceB: SSRadioButton!
+    @IBOutlet weak var choiceC: SSRadioButton!
 
     var radioButtonController:SSRadioButtonsController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.submitButtonPressd.alpha = 0
+        
         radioButtonController = SSRadioButtonsController(buttons: choiceA, choiceB, choiceC)
         radioButtonController!.delegate = self;
         radioButtonController!.shouldLetDeSelect = true
@@ -28,6 +30,24 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
     func didSelectButton(selectedButton: UIButton?) {
         //print(selectedButton)
         let selectedButton = radioButtonController?.selectedButton()
+        if (selectedButton != nil) {
+            
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                
+                self.submitButtonPressd.alpha = 1.0
+            }) { (isCompleted) in
+                self.submitButtonPressd.alpha = 1.0
+            }
+            
+            
+        }else {
+            UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                
+                self.submitButtonPressd.alpha = 0.0
+            }) { (isCompleted) in
+                self.submitButtonPressd.alpha = 0.0
+            }
+        }
         print(selectedButton?.titleLabel?.text! ?? "no value")
     }
     

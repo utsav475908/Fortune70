@@ -9,35 +9,52 @@
 import UIKit
 
 class MultipleChoiceViewController: UIViewController {
-
+  var submitCounter : Int = 0
     @IBOutlet weak var optionLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
-        optionLabel.addGestureRecognizer(tap)
-
-        // Do any additional setup after loading the view.
+        self.submitButton.alpha = 0
+        //showSubmitButton()
     }
     
-    func mapLabelTagWithButtonTag() {
-        
-    }
-    
-    func tapFunction(sender:UITapGestureRecognizer) {
-        print("tap working")
-        UIView.animate(withDuration: 2, delay: 1, options:
-            UIViewAnimationOptions.curveEaseInOut, animations: { 
-                self.optionLabel.text = "this"
-        }) { (completed) in
-            self.optionLabel.text = "what" + "who are you"
+    func showSubmitButton() {
+        for case let button as ISRadioButton in self.view.subviews {
+            if button.isSelected == true{
+                self.submitButton.alpha = 1
+               print("isRadiobutton detected")
+            }
+            
         }
     }
+    @IBOutlet var multipleRadioButton: [ISRadioButton]!
+
+    @IBAction func onMultipleChoiceButtonPressed(_ sender: ISRadioButton) {
+        
     
-    
+        if sender.isSelected {
+            submitCounter += 1
+        } else {
+            submitCounter -= 1
+        }
+        
+        if submitCounter > 0 {
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+                
+                self.submitButton.alpha = 1.0
+            }) { (isCompleted) in
+                self.submitButton.alpha = 1.0
+            }
+
+        }else {
+            self.submitButton.alpha = 0
+        }
+        
+        //print(multipleRadioButton)
+    }
 
 
-    @IBOutlet weak var submit: UIButton!
+
+    @IBOutlet weak var submitButton: CustomButton!
     
     
     

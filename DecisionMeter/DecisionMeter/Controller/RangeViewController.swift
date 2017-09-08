@@ -14,6 +14,7 @@ class RangeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.submitButton.alpha = 0
               //self.submitButton.alpha = 0
         // Do any additional setup after loading the view.
     }
@@ -33,7 +34,7 @@ class RangeViewController: UIViewController {
     }
     
     @IBAction func ratingSliderChanged(sender: CustomSlider) {
-        
+        showSubmitButton()
         sender.isContinuous = false;
         var currentStringValue:String = "1"
         let tracRect:CGRect = scaleShow.trackRect(forBounds: scaleShow.bounds)

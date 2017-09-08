@@ -10,6 +10,7 @@
 		543022261F5FF1E100DC2754 /* MultipleChoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */; };
 		543EF2B01F627FCB0003FAEF /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EF2AE1F627FCB0003FAEF /* SSRadioButtonsController.swift */; };
 		543EF2B11F627FCB0003FAEF /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EF2AF1F627FCB0003FAEF /* SSRadioButton.swift */; };
+		543EF2B51F62BBCA0003FAEF /* ISRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EF2B41F62BBCA0003FAEF /* ISRadioButton.swift */; };
 		544C178E1F5E790E00EF2B01 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544C178D1F5E790E00EF2B01 /* CustomButton.swift */; };
 		544DB1251F5D143A00F8EDAB /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */; };
 		544DB1261F5D143A00F8EDAB /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 544DB1241F5D143A00F8EDAB /* HCSStarRatingView.m */; };
@@ -61,6 +62,7 @@
 		543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipleChoiceModel.swift; path = Models/MultipleChoiceModel.swift; sourceTree = "<group>"; };
 		543EF2AE1F627FCB0003FAEF /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		543EF2AF1F627FCB0003FAEF /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
+		543EF2B41F62BBCA0003FAEF /* ISRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRadioButton.swift; sourceTree = "<group>"; };
 		544C178D1F5E790E00EF2B01 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomButton.swift; path = Views/CustomButton.swift; sourceTree = "<group>"; };
 		544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 		544DB1231F5D143A00F8EDAB /* HCSStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSStarRatingView.h; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		545063421F5998E3001E6251 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				543EF2B41F62BBCA0003FAEF /* ISRadioButton.swift */,
 				543EF2AE1F627FCB0003FAEF /* SSRadioButtonsController.swift */,
 				543EF2AF1F627FCB0003FAEF /* SSRadioButton.swift */,
 				544DB1221F5D143A00F8EDAB /* CheckboxButton.swift */,
@@ -385,6 +388,7 @@
 				54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */,
 				54C7E7851F57D22C00522FE9 /* MultipleChoiceViewController.swift in Sources */,
 				5450633E1F5968B1001E6251 /* iDataParserUtils.swift in Sources */,
+				543EF2B51F62BBCA0003FAEF /* ISRadioButton.swift in Sources */,
 				543EF2B01F627FCB0003FAEF /* SSRadioButtonsController.swift in Sources */,
 				54572DF61F57C3400023DBC2 /* TokenId.swift in Sources */,
 				545063401F59783E001E6251 /* Constants.swift in Sources */,

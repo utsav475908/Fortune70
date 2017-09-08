@@ -12,12 +12,21 @@ class RatingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+      self.submitButton.alpha = 0
         // Do any additional setup after loading the view.
     }
 
    
-    @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var starRating: HCSStarRatingView!
+    
+    @IBAction func ratingChanged(_ sender: HCSStarRatingView) {
+        UIView.animate(withDuration: 1.5, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: { 
+            self.submitButton.alpha = 1
+        }) { (completed) in
+            self.submitButton.alpha = 1 
+        }
+    }
+    @IBOutlet weak var submitButton: CustomButton!
     
     @IBAction func onSubmitButtonPressed(_ sender: UIButton) {
     let thisStoryboard =     UIStoryboard(name: "Main", bundle: nil)

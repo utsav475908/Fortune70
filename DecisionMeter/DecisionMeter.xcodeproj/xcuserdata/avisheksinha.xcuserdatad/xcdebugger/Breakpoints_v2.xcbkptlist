@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DecisionMeter/Controller/RatingViewController.swift"
-            timestampString = "526398016.274637"
+            filePath = "DecisionMeter/Controller/SingleChoiceViewController.swift"
+            timestampString = "526568288.391234"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "onSubmitButtonPressed(_:)"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "didSelectButton(selectedButton:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DecisionMeter/Controller/SingleChoiceViewController.swift"
-            timestampString = "526551408.603289"
+            filePath = "DecisionMeter/Controller/RangeViewController.swift"
+            timestampString = "526569117.734337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "didSelectButton(selectedButton:)"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "ratingSliderChanged(sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

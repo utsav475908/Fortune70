@@ -14,12 +14,15 @@ class RangeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        self.questionLabel.text = defaults.value(forKey: "quest") as? String
         self.submitButton.alpha = 0
               //self.submitButton.alpha = 0
         // Do any additional setup after loading the view.
     }
 
     
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scaleShow: CustomSlider!
     @IBOutlet weak var sliderValuePointer: UILabel!
     @IBOutlet weak var submitButton: CustomButton!
@@ -50,6 +53,7 @@ class RangeViewController: UIViewController {
             currentStringValue = String(self.revereSliderValue)
             DispatchQueue.main.async {
                 print("This is run on the main queue, after the previous code in outer block")
+                
                 self.sliderValuePointer.text = currentStringValue
                
             }
@@ -58,9 +62,14 @@ class RangeViewController: UIViewController {
         //showSubmitButton()
         
     }
+    
+    func saveTheCallMethodForSliderForPost(sliderValue:Int) {
+        SaveManager.sharedInstance().saveSlider(sliderString: sliderValue)
+    }
 
     @IBAction func onSubmitButtonPressed(_ sender: UIButton) {
-        
+        self.saveTheCallMethodForSliderForPost(sliderValue: Int(self.revereSliderValue))
+        Http.submitAction() 
         let thisStoryboard =     UIStoryboard(name: "Main", bundle: nil)
         let submittedVC =   thisStoryboard.instantiateViewController(withIdentifier: "submitted")
         present(submittedVC, animated: true, completion: nil)

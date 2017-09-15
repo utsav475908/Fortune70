@@ -6,13 +6,17 @@
 //  Copyright © 2017 Avishek Sinha. All rights reserved.
 //
 
+// question == question
+// option == option
+// session == session 
+
 import UIKit
 
 enum QuestionType: String {
     
     case MULTIPLE_CHOICE = "MULTIPLE_CHOICE"
     case SINGLE_OPTION = "SINGLE_OPTION"
-    case RATINGS = "RATINGS"
+    case RATING = "RATING"
     case SLIDER = "SLIDER"
     
     
@@ -20,20 +24,16 @@ enum QuestionType: String {
         switch s {
         case "MULTIPLE_CHOICE": return .MULTIPLE_CHOICE
             case "SINGLE_OPTION": return .SINGLE_OPTION
-            case "SINGLE_OPTION": return .MULTIPLE_CHOICE
-            case "RATINGS": return .RATINGS
+            //case "SINGLE_OPTION": return .MULTIPLE_CHOICE
+            case "RATING": return .RATING
             case "SLIDER": return .SLIDER
             
         default :
-            return .SLIDER
+            return .RATING
         
              }
-    
-          }
-
+    }
 }
-
-
 
 
 class LoginViewController: UIViewController, UITextFieldDelegate{
@@ -47,19 +47,27 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     // action for the login button 
    
     @IBAction func doLoginTask(_ sender: CustomButton) {
+        let defaults = UserDefaults.standard
+        defaults.set(self.tokenTextField.text, forKey: "session")
+        defaults.synchronize()
+        Http.httpRequest(session: self.tokenTextField.text!)
+       // only after the successful callback invokeTheSegueAfterTheWebService()
         
-       controllers =   createAnArrayOfVC()
-        print(controllers)
-        
-        switch navigateKey {
-        
-        case "MULTIPLE_CHOICE": present(controllers[0], animated: true, completion: nil)
-        case "SINGLE_OPTION": present(controllers[1], animated: true, completion: nil)
-        case "RATINGS": present(controllers[2], animated: true, completion: nil)
-        case "SLIDER": present(controllers[3], animated: true, completion: nil)
-         default: present(controllers[3], animated: true, completion: nil)
     }
     
+    func invokeTheSegueAfterTheWebService (navigationKey:String) {
+        controllers =   createAnArrayOfVC()
+        print(controllers)
+        
+        switch navigationKey {
+            
+        case "MULTIPLE_CHOICE": present(controllers[0], animated: true, completion: nil)
+        case "SINGLE_OPTION": present(controllers[1], animated: true, completion: nil)
+        case "RATING": present(controllers[2], animated: true, completion: nil)
+        case "RANGE": present(controllers[3], animated: true, completion: nil)
+        default: present(controllers[3], animated: true, completion: nil)
+        }
+
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -152,30 +160,125 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 
     
     override func viewWillDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillShowNotification"), object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillHideNotification"), object: nil)
-    }
+       removeListOfNotifications()
+            }
     
     func hideKeyboard() {
         self.view.endEditing(true)
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    func removeNotificationForKeyboard(){
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillShowNotification"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillHideNotification"), object: nil)
+
+    }
+    
+    func addNotificationForKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func respondToTokenTextField() {
         let tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         self.view.addGestureRecognizer(tap)
         self.loginButton.alpha = 0
         tokenTextField.delegate = self;
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        //Http.httpRequest()
-        Http.submitAction()
+    }
+    
+    func addNotificationForDownloadDataFromInternet() {
+        NotificationCenter.default.addObserver(self, selector: #selector(dataDownloaded), name: dataGotNotificationName, object: nil)
+    }
+    
+    func removeNotificationForDownloadDataFromInternet() {
+        NotificationCenter.default.removeObserver(self, name: dataGotNotificationName, object: nil)
+    }
+    // MARK: data downloaded callback 
+    
+    func dataDownloaded(notification:NSNotification) {
+        if let arrayElementsGot = notification.userInfo as? Dictionary<String,AnyObject> {
+            //navigateKey = String.getQuestionCategory(passedString: arrayElementsGot[2]).1
+          // print(arrayElementsGot)
+            //dictsValue["status"]!.int64Value == 404
+            if  arrayElementsGot["status"]?.int64Value == 404 {
+                print("Raise error")
+                DispatchQueue.main.async {
+                    [weak self] value in
+                  let ac =  UIAlertController.alertWithTitle(title: "TOKEN", message: "TOKEN", buttonTitle: "TOKEN")
+                    self?.tokenTextField.text = ""
+                    self?.present(ac, animated: true, completion: nil)
+                    
+                }
+            }
+            
+            // use keystore
+            // question
+            let defaults = UserDefaults.standard
+            // MULTIPLE_CHOICE
+            
+            
+                
+            defaults.set(arrayElementsGot["questionString"]!, forKey: "quest")
+            defaults.set(arrayElementsGot["questionId"]!, forKey: "questionId")
+            defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
+            defaults.synchronize()
+//            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
+//                else { return }
+            if  arrayElementsGot["questionType"] as! String == "SINGLE_OPTION" {
+             defaults.set(arrayElementsGot["options"], forKey: "options")
+            }
+            
+            if  arrayElementsGot["questionType"] as! String == "MULTIPLE_CHOICE" {
+                defaults.set(arrayElementsGot["options"], forKey: "options")
+            }
+            
+       
+    
+    
+            
+            defaults.synchronize()
+            
+//            KeyStore.saveTheQuestion(withValue: arrayElementsGot["questionString"]! as! String, withKey: "question")
+//            // options 
+//            //
+//            KeyStore.saveTheOptions(optionsDictionary: arrayElementsGot	["options"]! as! [String : String], withKey: "option")
+            
+            DispatchQueue.main.async {
+                [weak self] value in
+                self?.invokeTheSegueAfterTheWebService(navigationKey: arrayElementsGot["questionType"]! as! String)
+            }
+            
+        }
+        
+    }
+    
+    func addedListOfNotifications() {
+        addNotificationForKeyboard()
+        addNotificationForDownloadDataFromInternet()
+    }
+    
+    func removeListOfNotifications() {
+        removeNotificationForDownloadDataFromInternet()
+        removeNotificationForKeyboard()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        respondToTokenTextField()
+        addedListOfNotifications()
+        
+        
+        //Http.submitAction()
         // Note that SO highlighting makes the new selector syntax (#selector()) look
         // like a comment but it isn't one
         
-        let sampleMockDictionary:NSDictionary? = dataParserFromFile(fileName: "Mock") as? NSDictionary
-        print(sampleMockDictionary ?? [:])
-        navigateKey  = sampleMockDictionary!.value(forKey: "questionType")! as! String
-         print(sampleMockDictionary!.value(forKey: "questionType")!)
+        // this will mock data.
+        
+ //       let sampleMockDictionary:NSDictionary? = dataParserFromFile(fileName: "Mock") as? NSDictionary
+//        print(sampleMockDictionary ?? [:])
+//        navigateKey  = sampleMockDictionary!.value(forKey: "questionType")! as! String
+//         print(sampleMockDictionary!.value(forKey: "questionType")!)
+        
+        
     }
     
     func createAnArrayOfVC() ->[UIViewController] {
@@ -190,6 +293,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         return multipleVC;
     }
 
+    
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(navigateKey)

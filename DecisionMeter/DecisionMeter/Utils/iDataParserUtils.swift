@@ -14,7 +14,21 @@ func dataParserFromFile(fileName:String) -> Any {
         do {
             let data = try!  Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                jsonResult = try! JSONSerialization.jsonObject(with:data , options: .mutableContainers) as? NSDictionary
+            
         }
     }
    return jsonResult!
+}
+
+func dataParserFromUrl(givenData data:Data?) -> Any? {
+    //var dictionaryData
+    if let data = data {
+        do {
+      return  try JSONSerialization.jsonObject(with: data, options: []) 
+        } catch {
+            print(error.localizedDescription)
+        }
+
+    }
+    return nil
 }

@@ -13,5 +13,14 @@ struct DecisionConstants {
     static let single:String = "Single"
     static let multiple:String = "Multiple"
     static let slider:String = "Slider"
-    static let range:String = "Ratings"
+    static let range:String = "Rating"
+    static let baseURL:String = "http://localhost:8891"
+}
+
+struct QuestionTypeConstants {
+   static let MULTIPLE_CHOICE = "MULTIPLE_CHOICE"
+   static  let  SINGLE_OPTION = "SINGLE_OPTION"
+   static  let  RATING = "RATING"
+   static  let  SLIDER = "RANGE"
+
 }

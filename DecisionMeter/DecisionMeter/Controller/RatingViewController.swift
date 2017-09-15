@@ -11,12 +11,16 @@ import UIKit
 class RatingViewController: UIViewController {
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        self.questionLabel.text = defaults.value(forKey: "quest") as? String
       self.submitButton.alpha = 0
         // Do any additional setup after loading the view.
     }
 
    
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var starRating: HCSStarRatingView!
     
     @IBAction func ratingChanged(_ sender: HCSStarRatingView) {
@@ -29,9 +33,15 @@ class RatingViewController: UIViewController {
     @IBOutlet weak var submitButton: CustomButton!
     
     @IBAction func onSubmitButtonPressed(_ sender: UIButton) {
+        saveTheRatingsValue()
+        Http.submitAction() 
     let thisStoryboard =     UIStoryboard(name: "Main", bundle: nil)
       let submittedVC =   thisStoryboard.instantiateViewController(withIdentifier: "submitted")
         present(submittedVC, animated: true, completion: nil)
+    }
+    
+    func saveTheRatingsValue() {
+        SaveManager.sharedInstance().saveRatings(ratingString:Int(starRating.value))
     }
     
 

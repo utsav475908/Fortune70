@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540BDEB01F6A33F700456EA0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BDEAF1F6A33F700456EA0 /* StringExtension.swift */; };
+		540BDEB21F6A623600456EA0 /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BDEB11F6A623600456EA0 /* KeyStore.swift */; };
+		540BDEB41F6A879F00456EA0 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BDEB31F6A879F00456EA0 /* AlertExtension.swift */; };
+		540BDEB61F6AA9DA00456EA0 /* OptionBasedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BDEB51F6AA9DA00456EA0 /* OptionBasedModel.swift */; };
 		543022261F5FF1E100DC2754 /* MultipleChoiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */; };
 		543EF2B01F627FCB0003FAEF /* SSRadioButtonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EF2AE1F627FCB0003FAEF /* SSRadioButtonsController.swift */; };
 		543EF2B11F627FCB0003FAEF /* SSRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543EF2AF1F627FCB0003FAEF /* SSRadioButton.swift */; };
@@ -30,6 +34,10 @@
 		545CF3BC1F5D53120039CC93 /* Http.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3BB1F5D53120039CC93 /* Http.swift */; };
 		545CF3BE1F5D60F30039CC93 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3BD1F5D60F30039CC93 /* DataModel.swift */; };
 		545CF3C41F5D9A080039CC93 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545CF3C31F5D9A080039CC93 /* CustomSlider.swift */; };
+		545FBAA61F681DB3003BC275 /* TickMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545FBAA51F681DB3003BC275 /* TickMarkViewController.swift */; };
+		54654A761F6BA55C00199E82 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54654A751F6BA55C00199E82 /* Questions.swift */; };
+		54654A781F6BA6A800199E82 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54654A771F6BA6A800199E82 /* ViewRouter.swift */; };
+		54654A7A1F6BBEBC00199E82 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54654A791F6BBEBC00199E82 /* SaveManager.swift */; };
 		54B787BD1F5D23620029ABAD /* Configure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54B787BC1F5D23620029ABAD /* Configure.plist */; };
 		54C7E7711F57CE3400522FE9 /* radioButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C7E7701F57CE3400522FE9 /* radioButton.png */; };
 		54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7E77A1F57D08100522FE9 /* LoginViewController.swift */; };
@@ -59,6 +67,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		540BDEAF1F6A33F700456EA0 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		540BDEB11F6A623600456EA0 /* KeyStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyStore.swift; path = Models/KeyStore.swift; sourceTree = "<group>"; };
+		540BDEB31F6A879F00456EA0 /* AlertExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		540BDEB51F6AA9DA00456EA0 /* OptionBasedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionBasedModel.swift; path = Models/OptionBasedModel.swift; sourceTree = "<group>"; };
 		543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultipleChoiceModel.swift; path = Models/MultipleChoiceModel.swift; sourceTree = "<group>"; };
 		543EF2AE1F627FCB0003FAEF /* SSRadioButtonsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButtonsController.swift; sourceTree = "<group>"; };
 		543EF2AF1F627FCB0003FAEF /* SSRadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSRadioButton.swift; sourceTree = "<group>"; };
@@ -92,6 +104,10 @@
 		545CF3BB1F5D53120039CC93 /* Http.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Http.swift; sourceTree = "<group>"; };
 		545CF3BD1F5D60F30039CC93 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataModel.swift; path = Models/DataModel.swift; sourceTree = "<group>"; };
 		545CF3C31F5D9A080039CC93 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSlider.swift; path = Views/CustomSlider.swift; sourceTree = "<group>"; };
+		545FBAA51F681DB3003BC275 /* TickMarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TickMarkViewController.swift; path = Controller/TickMarkViewController.swift; sourceTree = "<group>"; };
+		54654A751F6BA55C00199E82 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Questions.swift; path = Models/Questions.swift; sourceTree = "<group>"; };
+		54654A771F6BA6A800199E82 /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		54654A791F6BBEBC00199E82 /* SaveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
 		54B787BC1F5D23620029ABAD /* Configure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configure.plist; sourceTree = "<group>"; };
 		54C7E7701F57CE3400522FE9 /* radioButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButton.png; sourceTree = "<group>"; };
 		54C7E77A1F57D08100522FE9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +156,9 @@
 				545063461F59992B001E6251 /* DecisionMeter-Bridging-Header.h */,
 				545CF3BB1F5D53120039CC93 /* Http.swift */,
 				544C178D1F5E790E00EF2B01 /* CustomButton.swift */,
+				540BDEAF1F6A33F700456EA0 /* StringExtension.swift */,
+				540BDEB31F6A879F00456EA0 /* AlertExtension.swift */,
+				540BDEB51F6AA9DA00456EA0 /* OptionBasedModel.swift */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -211,6 +230,10 @@
 				54C7E78C1F57D4B000522FE9 /* RatingViewController.swift */,
 				5450633B1F5966FF001E6251 /* Mock.json */,
 				545CF3BD1F5D60F30039CC93 /* DataModel.swift */,
+				545FBAA51F681DB3003BC275 /* TickMarkViewController.swift */,
+				540BDEB11F6A623600456EA0 /* KeyStore.swift */,
+				54654A751F6BA55C00199E82 /* Questions.swift */,
+				54654A771F6BA6A800199E82 /* ViewRouter.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +249,7 @@
 				54B787BC1F5D23620029ABAD /* Configure.plist */,
 				545CF3C31F5D9A080039CC93 /* CustomSlider.swift */,
 				543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */,
+				54654A791F6BBEBC00199E82 /* SaveManager.swift */,
 			);
 			name = BusinessLogic;
 			sourceTree = "<group>";
@@ -308,7 +332,7 @@
 				TargetAttributes = {
 					54572DC11F57BE380023DBC2 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = BW2JUPK3JZ;
+						DevelopmentTeam = Z556SWSEC6;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -384,24 +408,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				54C7E7831F57D1EE00522FE9 /* SingleChoiceViewController.swift in Sources */,
+				545FBAA61F681DB3003BC275 /* TickMarkViewController.swift in Sources */,
 				545CF3BC1F5D53120039CC93 /* Http.swift in Sources */,
 				54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */,
+				540BDEB41F6A879F00456EA0 /* AlertExtension.swift in Sources */,
 				54C7E7851F57D22C00522FE9 /* MultipleChoiceViewController.swift in Sources */,
 				5450633E1F5968B1001E6251 /* iDataParserUtils.swift in Sources */,
 				543EF2B51F62BBCA0003FAEF /* ISRadioButton.swift in Sources */,
 				543EF2B01F627FCB0003FAEF /* SSRadioButtonsController.swift in Sources */,
 				54572DF61F57C3400023DBC2 /* TokenId.swift in Sources */,
+				54654A7A1F6BBEBC00199E82 /* SaveManager.swift in Sources */,
 				545063401F59783E001E6251 /* Constants.swift in Sources */,
 				545CF3BE1F5D60F30039CC93 /* DataModel.swift in Sources */,
 				54C7E7891F57D31700522FE9 /* RangeViewController.swift in Sources */,
+				54654A761F6BA55C00199E82 /* Questions.swift in Sources */,
+				540BDEB21F6A623600456EA0 /* KeyStore.swift in Sources */,
 				544DB1251F5D143A00F8EDAB /* CheckboxButton.swift in Sources */,
 				54572DC61F57BE380023DBC2 /* AppDelegate.swift in Sources */,
 				545CF3C41F5D9A080039CC93 /* CustomSlider.swift in Sources */,
+				54654A781F6BA6A800199E82 /* ViewRouter.swift in Sources */,
 				545063311F5938E5001E6251 /* UIFont+Extension.swift in Sources */,
 				544C178E1F5E790E00EF2B01 /* CustomButton.swift in Sources */,
 				543022261F5FF1E100DC2754 /* MultipleChoiceModel.swift in Sources */,
 				544DB1261F5D143A00F8EDAB /* HCSStarRatingView.m in Sources */,
 				54C7E78D1F57D4B000522FE9 /* RatingViewController.swift in Sources */,
+				540BDEB61F6AA9DA00456EA0 /* OptionBasedModel.swift in Sources */,
+				540BDEB01F6A33F700456EA0 /* StringExtension.swift in Sources */,
 				543EF2B11F627FCB0003FAEF /* SSRadioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,7 +587,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = BW2JUPK3JZ;
+				DEVELOPMENT_TEAM = Z556SWSEC6;
 				INFOPLIST_FILE = DecisionMeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -572,7 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = BW2JUPK3JZ;
+				DEVELOPMENT_TEAM = Z556SWSEC6;
 				INFOPLIST_FILE = DecisionMeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -21,7 +21,7 @@ import UIKit
 
 class MultipleChoiceViewController: UIViewController {
     
-    //var sayTitleLabel = ["Now","Never","Slowly"]
+
     
     var submitCounter : Int = 0
     @IBOutlet weak var optionLabel: UILabel!
@@ -29,6 +29,7 @@ class MultipleChoiceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let defaults = UserDefaults.standard
         self.questionLabel.text = defaults.value(forKey: "quest") as? String
         self.submitButton.alpha = 0
@@ -44,12 +45,8 @@ class MultipleChoiceViewController: UIViewController {
             print("Item \(key): \(value)")
         }
         
-//        choiceA.titleLabel?.text = sayTitleLabel["1"]
-//        choiceB.titleLabel?.text = sayTitleLabel["2"]
-//        choiceC.titleLabel?.text = sayTitleLabel["3"]
-//        choiceD.titleLabel?.text = sayTitleLabel["4"]
+
         
-        choiceD.backgroundColor = UIColor.red
         choiceA.setTitle(sayTitleLabel["1"], for: .normal)
         choiceB.setTitle(sayTitleLabel["2"], for: .normal)
         choiceC.setTitle(sayTitleLabel["3"], for: .normal)
@@ -125,18 +122,18 @@ class MultipleChoiceViewController: UIViewController {
         if (choiceB.isSelected) {
             //list.append((choiceB.titleLabel?.text)!)
 //            list.append ("2")
-            list["2"] = (choiceA.titleLabel?.text)!
+            list["2"] = (choiceB.titleLabel?.text)!
         }
         if (choiceC.isSelected) {
             //list.append((choiceC.titleLabel?.text)!)
 //            list.append ("3")
-            list["3"] = (choiceA.titleLabel?.text)!
+            list["3"] = (choiceC.titleLabel?.text)!
 
         }
         if (choiceD.isSelected) {
             //list.append((choiceD.titleLabel?.text)!)
 //            list.append ("4")
-            list["4"] = (choiceA.titleLabel?.text)!
+            list["4"] = (choiceD.titleLabel?.text)!
 
         }
         

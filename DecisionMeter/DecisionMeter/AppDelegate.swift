@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.setDomainEnvironment()
         // Override point for customization after application launch.
         return true
     }
@@ -40,6 +41,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func setDomainEnvironment() {
+        let config = Bundle.main.object(forInfoDictionaryKey: "Config") as! String
+        let bundleId = Bundle.main.bundleIdentifier!
+        
+        
+        
+        #if Debug
+          serverEndPointURL = "www.google.com"
+        #elseif Testing
+            serverEndPointURL = "www.youtube.com"
+        
+        #elseif Staging
+            serverEndPointURL = "www.apple.com"
+        
+        #elseif Release
+            serverEndPointURL = "www.gmail.com"
+        
+        #elseif Production
+            serverEndPointURL = "www.yahoo.com"
+        
+        #endif
+        
+        print(serverEndPointURL)
+        print(config)
+        print(bundleId)
+        //https://www.youtube.com/watch?v=GrI9b9fDcys
+    }
+    
+    
+    
+    
+    
 
 
 }

@@ -36,7 +36,7 @@ class TickMarkViewController: UIViewController {
     let token = defaults.value(forKey: "session") as? String
         print(token!)
         // Do any additional setup after loading the view.
-        Http.httpRequest(session: token!)
+        Http.httpRequest(session: token!, viewController: self)
         
     }
 

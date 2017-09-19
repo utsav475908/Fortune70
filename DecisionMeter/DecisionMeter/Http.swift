@@ -16,12 +16,12 @@ struct Http{
     
 
     
-    static func httpRequest(session:String) {
+    static func httpRequest(session:String, viewController:UIViewController) {
         //var questions:String = String()
         //var questionList:[String] = [String]()
         var dicList:Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
-        
-        let url = URL(string: DecisionConstants.baseURL + "/decision-meter/sessions/\(session)/current-question")!
+        //let urlTest = URL(string: DecisionConstants.baseURL + "/decision-meter/sessions/\(session)/current-question")!
+        let url = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(session)/current-question")!
         //let url = URL(string: "http://sgscaiu0610.inedc.corpintra.net:8891/decision-meter/sessions/\(session)/current-question")!
 
 
@@ -29,7 +29,7 @@ struct Http{
         
         //now create the URLRequest object using the url object
         let request = URLRequest(url: url)
-        
+        MBProgressHUD.showAdded(to: viewController.view, animated: true)
         //create dataTask using the session object to send data to the server
         let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
             
@@ -41,10 +41,14 @@ struct Http{
             guard let data = data else {
                 return
             }
+            Thread.sleep(forTimeInterval: 1)
+            DispatchQueue.main.async {
+                MBProgressHUD.hide(for: viewController.view, animated: true)
+            }
             print(data)
-           dicList =  dataParserFromUrl(givenData: data) as! Dictionary<String,AnyObject>
+            dicList =  dataParserFromUrl(givenData: data) as! Dictionary<String,AnyObject>
             print(dicList)
-           NotificationCenter.default.post(name: dataGotNotificationName, object: nil, userInfo: dicList)
+            NotificationCenter.default.post(name: dataGotNotificationName, object: nil, userInfo: dicList)
             //print(String.convertToDictionary(text: questions)!)
         })
         task.resume()
@@ -65,7 +69,8 @@ struct Http{
         let defauts = UserDefaults.standard
          let questionNumber = defauts.value(forKey: "questionId") as! String
         let sessionId = defauts.value(forKey: "session") as! String
-        let url = URL(string: "http://localhost:8891/decision-meter/sessions/\(sessionId)/questions/\(questionNumber)/answer")!
+        // appURL = decision-meter/sessions   and baseURL = localhost://8891
+        let url = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionId)/questions/\(questionNumber)/answer")!
         //let url = URL(string: "localhost:8891/decision-meter/sessions/0001/questions")!//change the url
         //localhost:8891/decision-meter/sessions/0001/questions
         //create the sessi`on object
@@ -117,75 +122,96 @@ struct Http{
         task.resume()
     }
     
-   static func convertDictionaryToJsonObject(dictionary : [String : Any]) -> Any?{
-        
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
-            // here "jsonData" is the dictionary encoded in JSON data
-            
-            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
-            // here "decoded" is of type `Any`, decoded from JSON data
-            
-            // you can now cast it with the right type
-            if let dictFromJSON = decoded as? [String:Any] {
-                // use dictFromJSON
-                return dictFromJSON
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
-        return nil
-    }
+//   static func convertDictionaryToJsonObject(dictionary : [String : Any]) -> Any?{
+//        
+//        do {
+//            let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
+//            // here "jsonData" is the dictionary encoded in JSON data
+//            
+//            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
+//            // here "decoded" is of type `Any`, decoded from JSON data
+//            
+//            // you can now cast it with the right type
+//            if let dictFromJSON = decoded as? [String:Any] {
+//                // use dictFromJSON
+//                return dictFromJSON
+//            }
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//        return nil
+//    }
     
     
     
     static func passtheJSONDictionary() -> Dictionary<String,Any> {
         let defaults = UserDefaults.standard
         
-        if defaults.value(forKey: "questionType") as! String == "SINGLE_OPTION"{
+        if defaults.value(forKey: "questionType") as! String == QuestionTypeConstants.SINGLE_OPTION{
         let doThisForSingleChoice:[String:Any] = [
             "type": "OptionBasedAnswer" ,
             "questionId": defaults.value(forKey: "questionId") as! String,
-            "chossedOptions":self.convertDictionaryToJsonObject(dictionary: ["1":SaveManager.sharedInstance().getChoiceForSingleChoice()])!
+            "chossedOptions":SaveManager.sharedInstance().getChoiceForSingleChoice()
             
             
         ]
+            print(SaveManager.sharedInstance().getChoiceForSingleChoice())
+            print(["1":SaveManager.sharedInstance().getChoiceForSingleChoice()])
+            print(doThisForSingleChoice)
+//            let doThisForSingleChoice:[String:Any] = [
+//                "type": "OptionBasedAnswer" ,
+//                "questionId": defaults.value(forKey: "questionId") as! String,
+//                "chossedOptions":["1":"Daily"]
+//                
+//                
+//            ]
             return doThisForSingleChoice
         }
-        if defaults.value(forKey: "questionType") as! String == "MULTIPLE_CHOICE"{
+        if defaults.value(forKey: "questionType") as! String == QuestionTypeConstants.MULTIPLE_CHOICE{
 
             
         let doThisForMultipleChoice:[String:Any] = [
             "type": "OptionBasedAnswer" ,
             "questionId": defaults.value(forKey: "questionId") as! String,
-            "chossedOptions": self.convertDictionaryToJsonObject(dictionary: SaveManager.sharedInstance().getChoiceForMultipleChoice())!
+            "chossedOptions":SaveManager.sharedInstance().getChoiceForMultipleChoice()
         ]
             print(doThisForMultipleChoice)
             return doThisForMultipleChoice
         }
         
-        if defaults.value(forKey: "questionType") as! String == "SLIDER"{
+//            let doThisForMultipleChoice:[String:Any] = [
+//                "type": "OptionBasedAnswer" ,
+//                "questionId": defaults.value(forKey: "questionId") as! String,
+//                "chossedOptions":["1":"One", "2":"Two"]
+//            ]
+//            print(doThisForMultipleChoice)
+//            return doThisForMultipleChoice
+ //        }
+        
+        if defaults.value(forKey: "questionType") as! String == QuestionTypeConstants.RATING{
         
             let doThisForSlider:[String:Any] = [
                 "type": "ScaleBasedAnswer" ,
                 "questionId": defaults.value(forKey: "questionId") as! String,
                 
-                "scale": SaveManager.sharedInstance().getSlider()
+                "scale": SaveManager.sharedInstance().getRatings()
                 
             ]
-            
+            print(doThisForSlider)
             return doThisForSlider
         }
         
-        if defaults.value(forKey: "questionType") as! String == "RATING"{
+        if defaults.value(forKey: "questionType") as! String == QuestionTypeConstants.SLIDER{
+            
         
         let doThisForRange:[String:Any] = [
             "type": "ScaleBasedAnswer" ,
             "questionId": defaults.value(forKey: "questionId") as! String,
             
-                "scale": SaveManager.sharedInstance().getRatings()
+                "scale": SaveManager.sharedInstance().getSlider()
             
         ]
+            print(doThisForRange)
             return doThisForRange
         }
         

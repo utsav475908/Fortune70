@@ -357,7 +357,7 @@ public class  ISRadioButton: UIButton {
                     }else{
                         animation.toValue = self.iconSelected.cgImage
                     }
-                    animation.duration = self.animationDuration
+                    animation.duration = self.animationDuration 
                     self.imageView?.layer.add(animation, forKey:"icon" )
                 }
             }

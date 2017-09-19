@@ -50,7 +50,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         let defaults = UserDefaults.standard
         defaults.set(self.tokenTextField.text, forKey: "session")
         defaults.synchronize()
-        Http.httpRequest(session: self.tokenTextField.text!)
+        //Http.httpRequest(session: self.tokenTextField.text!)
+        Http.httpRequest(session: self.tokenTextField.text!, viewController: self)
        // only after the successful callback invokeTheSegueAfterTheWebService()
         
     }
@@ -96,7 +97,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         let  limitNumber = startString.characters.count
         if limitNumber > 4
         {
-            UIView.animate(withDuration: 2.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            UIView.animate(withDuration: 1.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 
                 self.loginButton.alpha = 1.0
             }) { (isCompleted) in
@@ -263,6 +264,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("loginviewcontroller" + serverEndPointURL)
         respondToTokenTextField()
         addedListOfNotifications()
         

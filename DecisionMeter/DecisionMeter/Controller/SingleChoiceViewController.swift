@@ -77,8 +77,9 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
         defaults.synchronize()
     }
     
-    func saveForTheSingleChoiceVC() -> String {
-      return (radioButtonController?.selectedButton()?.titleLabel?.text!)!
+    func saveForTheSingleChoiceVC() -> [String : String ] {
+      return [String(describing: radioButtonController!
+        .selectedButton()!.tag): (radioButtonController?.selectedButton()?.titleLabel?.text!)!]
     }
     
     func saveitToSaveManager() {

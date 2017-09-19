@@ -38,12 +38,13 @@ class SaveManager {
     }
     
     func getRatings() ->Int {
+        print(standard().value(forKey: "Rating") as! Int!)
       return   standard().value(forKey: "Rating") as! Int!
     }
     
      // MARK: Utility file for saving SingleChoice Questions and Multiple Choice Questions
     // savers for single choice and multiple choice
-    func saveChoiceForSingleChoice(choiceStringText:String) {
+    func saveChoiceForSingleChoice(choiceStringText:[String : String]) {
         standard().set(choiceStringText, forKey:"SingleChoice")
     }
     
@@ -51,8 +52,8 @@ class SaveManager {
         standard().set(multipleChoiceArray, forKey:"MultipleChoice")
     }
     // getters for single choice and multiple choice
-    func getChoiceForSingleChoice() -> String {
-        return standard().value(forKey: "SingleChoice") as! String
+    func getChoiceForSingleChoice() -> [String : String] {
+        return standard().value(forKey: "SingleChoice") as! [String : String]
     }
     
     func getChoiceForMultipleChoice() -> [String : String] {

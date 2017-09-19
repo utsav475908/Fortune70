@@ -13,6 +13,7 @@ class DecisionMeterTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        XCTAssert(2 < 3, "true")
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     

@@ -24,42 +24,44 @@ class SaveManager {
     
     //savers for slider and rating
     func saveSlider(sliderString:Int) {
-        standard().set(sliderString, forKey: "Slider")
+        standard().set(sliderString, forKey: Q.kSlider)
         sync()
     }
     
     func saveRatings(ratingString:Int) {
-        standard().set(ratingString, forKey: "Rating")
+        standard().set(ratingString, forKey: Q.kRating)
         sync()
     }
     // getters for sliders and ratings
     func getSlider() -> Int {
-      return   standard().value(forKey: "Slider") as! Int!
+      return   standard().value(forKey:Q.kSlider) as! Int!
     }
     
     func getRatings() ->Int {
-        print(standard().value(forKey: "Rating") as! Int!)
-      return   standard().value(forKey: "Rating") as! Int!
+        print(standard().value(forKey: Q.kRating) as! Int!)
+      return   standard().value(forKey: Q.kRating) as! Int!
     }
     
      // MARK: Utility file for saving SingleChoice Questions and Multiple Choice Questions
     // savers for single choice and multiple choice
     func saveChoiceForSingleChoice(choiceStringText:[String : String]) {
-        standard().set(choiceStringText, forKey:"SingleChoice")
+        standard().set(choiceStringText, forKey:Q.kSingleChoice)
     }
     
     func saveChoiceForMultipleChoice(multipleChoiceArray:[String: String]) {
-        standard().set(multipleChoiceArray, forKey:"MultipleChoice")
+        standard().set(multipleChoiceArray, forKey:Q.kMultipleChoice)
     }
     // getters for single choice and multiple choice
     func getChoiceForSingleChoice() -> [String : String] {
-        return standard().value(forKey: "SingleChoice") as! [String : String]
+        return standard().value(forKey: Q.kSingleChoice) as! [String : String]
     }
     
+    
+    
     func getChoiceForMultipleChoice() -> [String : String] {
-        print(standard().value(forKey: "MultipleChoice") as! [String:String])
-        print(standard().object(forKey: "MultipleChoice") as! [String:String])
-        return standard().value(forKey: "MultipleChoice") as! [String:String]
+        print(standard().value(forKey: Q.kMultipleChoice) as! [String:String])
+        print(standard().object(forKey: Q.kMultipleChoice) as! [String:String])
+        return standard().value(forKey: Q.kMultipleChoice) as! [String:String]
     }
     
     
@@ -71,5 +73,12 @@ class SaveManager {
     
     func sync () {
         standard().synchronize()
+    }
+    
+    struct Q {
+        static let kMultipleChoice = "MultipleChoice"
+        static let kSingleChoice = "SingleChoice"
+        static let kRating = "Rating"
+        static let kSlider = "Slider"
     }
 }

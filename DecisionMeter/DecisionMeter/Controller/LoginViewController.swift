@@ -23,15 +23,15 @@ enum QuestionType: String {
     static func parse(s:String) -> QuestionType {
         switch s {
         case "MULTIPLE_CHOICE": return .MULTIPLE_CHOICE
-            case "SINGLE_OPTION": return .SINGLE_OPTION
-            //case "SINGLE_OPTION": return .MULTIPLE_CHOICE
-            case "RATING": return .RATING
-            case "SLIDER": return .SLIDER
+        case "SINGLE_OPTION": return .SINGLE_OPTION
+        //case "SINGLE_OPTION": return .MULTIPLE_CHOICE
+        case "RATING": return .RATING
+        case "SLIDER": return .SLIDER
             
         default :
             return .RATING
-        
-             }
+            
+        }
     }
 }
 
@@ -39,20 +39,20 @@ enum QuestionType: String {
 class LoginViewController: UIViewController, UITextFieldDelegate{
     var navigateKey:String = String()
     var controllers:[UIViewController] = [UIViewController]()
-// 4 outlets image,label,textfield,button
+    // 4 outlets image,label,textfield,button
     @IBOutlet weak var daimlerImageView: UIImageView!
     @IBOutlet weak var attendeeLabel: UILabel!
     @IBOutlet weak var tokenTextField: UITextField!
     @IBOutlet weak var loginButton: CustomButton!
     // action for the login button 
-   
+    
     @IBAction func doLoginTask(_ sender: CustomButton) {
         let defaults = UserDefaults.standard
         defaults.set(self.tokenTextField.text, forKey: "session")
         defaults.synchronize()
         //Http.httpRequest(session: self.tokenTextField.text!)
         Http.httpRequest(session: self.tokenTextField.text!, viewController: self)
-       // only after the successful callback invokeTheSegueAfterTheWebService()
+        // only after the successful callback invokeTheSegueAfterTheWebService()
         
     }
     
@@ -68,25 +68,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         case "RANGE": present(controllers[3], animated: true, completion: nil)
         default: present(controllers[3], animated: true, completion: nil)
         }
-
+        
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         //self.loginButton.alpha = 1
-
+        
     }
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         return true;
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-
+        
         return true
         
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-
+        
         
         var startString = ""
         if (textField.text != nil)
@@ -158,11 +158,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-
+    
     
     override func viewWillDisappear(_ animated: Bool) {
-       removeListOfNotifications()
-            }
+        removeListOfNotifications()
+    }
     
     func hideKeyboard() {
         self.view.endEditing(true)
@@ -171,7 +171,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     func removeNotificationForKeyboard(){
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillShowNotification"), object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillHideNotification"), object: nil)
-
+        
     }
     
     func addNotificationForKeyboard() {
@@ -198,13 +198,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     func dataDownloaded(notification:NSNotification) {
         if let arrayElementsGot = notification.userInfo as? Dictionary<String,AnyObject> {
             //navigateKey = String.getQuestionCategory(passedString: arrayElementsGot[2]).1
-          // print(arrayElementsGot)
+            // print(arrayElementsGot)
             //dictsValue["status"]!.int64Value == 404
             if  arrayElementsGot["status"]?.int64Value == 404 {
                 print("Raise error")
                 DispatchQueue.main.async {
                     [weak self] value in
-                  let ac =  UIAlertController.alertWithTitle(title: "TOKEN", message: "TOKEN", buttonTitle: "TOKEN")
+                    let ac =  UIAlertController.alertWithTitle(title: "TOKEN", message: "TOKEN", buttonTitle: "TOKEN")
                     self?.tokenTextField.text = ""
                     self?.present(ac, animated: true, completion: nil)
                     
@@ -217,31 +217,31 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             // MULTIPLE_CHOICE
             
             
-                
+            
             defaults.set(arrayElementsGot["questionString"]!, forKey: "quest")
             defaults.set(arrayElementsGot["questionId"]!, forKey: "questionId")
             defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
             defaults.synchronize()
-//            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
-//                else { return }
+            //            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
+            //                else { return }
             if  arrayElementsGot["questionType"] as! String == "SINGLE_OPTION" {
-             defaults.set(arrayElementsGot["options"], forKey: "options")
+                defaults.set(arrayElementsGot["options"], forKey: "options")
             }
             
             if  arrayElementsGot["questionType"] as! String == "MULTIPLE_CHOICE" {
                 defaults.set(arrayElementsGot["options"], forKey: "options")
             }
             
-       
-    
-    
+            
+            
+            
             
             defaults.synchronize()
             
-//            KeyStore.saveTheQuestion(withValue: arrayElementsGot["questionString"]! as! String, withKey: "question")
-//            // options 
-//            //
-//            KeyStore.saveTheOptions(optionsDictionary: arrayElementsGot	["options"]! as! [String : String], withKey: "option")
+            //            KeyStore.saveTheQuestion(withValue: arrayElementsGot["questionString"]! as! String, withKey: "question")
+            //            // options
+            //            //
+            //            KeyStore.saveTheOptions(optionsDictionary: arrayElementsGot	["options"]! as! [String : String], withKey: "option")
             
             DispatchQueue.main.async {
                 [weak self] value in
@@ -275,10 +275,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         
         // this will mock data.
         
- //       let sampleMockDictionary:NSDictionary? = dataParserFromFile(fileName: "Mock") as? NSDictionary
-//        print(sampleMockDictionary ?? [:])
-//        navigateKey  = sampleMockDictionary!.value(forKey: "questionType")! as! String
-//         print(sampleMockDictionary!.value(forKey: "questionType")!)
+        //       let sampleMockDictionary:NSDictionary? = dataParserFromFile(fileName: "Mock") as? NSDictionary
+        //        print(sampleMockDictionary ?? [:])
+        //        navigateKey  = sampleMockDictionary!.value(forKey: "questionType")! as! String
+        //         print(sampleMockDictionary!.value(forKey: "questionType")!)
         
         
     }
@@ -294,10 +294,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         print(multipleVC)
         return multipleVC;
     }
-
     
     
-
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print(navigateKey)
         
@@ -311,11 +311,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         print(multipleVC)
         
     }
-
     
     
     
-
+    
+    
     
 }
 

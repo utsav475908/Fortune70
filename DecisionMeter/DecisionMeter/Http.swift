@@ -14,14 +14,28 @@ let dataGotNotificationName = Notification.Name("DataReceived")
 struct Http{
     // Get Method
     
+    static func switchTheURL(withSession sessionString:String, searchNext:Bool = false) -> URL {
+        let urlHolder:URL
+        if searchNext {
+           urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/questions/7")!
+        }else {
+        urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/current-question")!
+        }
+        print("url formatted is \(urlHolder) " )
+        return urlHolder
+    }
 
     
-    static func httpRequest(session:String, viewController:UIViewController) {
+    static func httpRequest(session:String, viewController:UIViewController, searchNext next:Bool = false)  {
         //var questions:String = String()
         //var questionList:[String] = [String]()
         var dicList:Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
         //let urlTest = URL(string: DecisionConstants.baseURL + "/decision-meter/sessions/\(session)/current-question")!
-        let url = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(session)/current-question")!
+        
+//        let url = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(session)/current-question")!
+        
+        let url = switchTheURL(withSession: session,searchNext: next)
+        
         //let url = URL(string: "http://sgscaiu0610.inedc.corpintra.net:8891/decision-meter/sessions/\(session)/current-question")!
 
 
@@ -45,13 +59,18 @@ struct Http{
             DispatchQueue.main.async {
                 MBProgressHUD.hide(for: viewController.view, animated: true)
             }
-            print(data)
+            //print("dictionary list got == \(data)")
             dicList =  dataParserFromUrl(givenData: data) as! Dictionary<String,AnyObject>
-            print(dicList)
-            NotificationCenter.default.post(name: dataGotNotificationName, object: nil, userInfo: dicList)
+            print("dictionary list got == \(dicList)")
+//            NotificationCenter.default.post(name: dataGotNotificationName, object: nil, userInfo: dicList)
+            postTheNotification(givenDictionary: dicList)
             //print(String.convertToDictionary(text: questions)!)
         })
         task.resume()
+    }
+    
+      static func postTheNotification(givenDictionary dictionaryList : Dictionary<String, AnyObject>){
+        NotificationCenter.default.post(name: dataGotNotificationName, object: nil, userInfo: dictionaryList)
     }
     
     

@@ -9,7 +9,8 @@
 import UIKit
 
 class TickMarkViewController: UIViewController {
-
+    @IBOutlet weak var field:UITextField!
+    
     func addNotificationForDownloadDataFromInternet() {
         NotificationCenter.default.addObserver(self, selector: #selector(dataDownloaded), name: dataGotNotificationName, object: nil)
     }
@@ -36,8 +37,9 @@ class TickMarkViewController: UIViewController {
     let token = defaults.value(forKey: "session") as? String
         print(token!)
         // Do any additional setup after loading the view.
+        if field.text != "200" {
         Http.httpRequest(session: token!, viewController: self)
-        
+        } 
     }
 
     override func didReceiveMemoryWarning() {

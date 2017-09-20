@@ -10,7 +10,6 @@
 		54013BF91F70CB0600FCA18B /* HttpRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54013BF81F70CB0600FCA18B /* HttpRouting.swift */; };
 		54013BFC1F70DD3900FCA18B /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54013BFB1F70DD3900FCA18B /* WaitingViewController.swift */; };
 		5401E1391F6FCF0C002BEE8A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5401E1381F6FCF0C002BEE8A /* MBProgressHUD.m */; };
-		5401E13B1F6FE3C6002BEE8A /* Drain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5401E13A1F6FE3C6002BEE8A /* Drain.storyboard */; };
 		5401E1491F6FEC80002BEE8A /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5401E1481F6FEC80002BEE8A /* Environments.swift */; };
 		540BDEB01F6A33F700456EA0 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BDEAF1F6A33F700456EA0 /* StringExtension.swift */; };
 		540BDEB21F6A623600456EA0 /* KeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BDEB11F6A623600456EA0 /* KeyStore.swift */; };
@@ -76,7 +75,6 @@
 		54013BFB1F70DD3900FCA18B /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WaitingViewController.swift; path = Controller/WaitingViewController.swift; sourceTree = "<group>"; };
 		5401E1371F6FCF0C002BEE8A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		5401E1381F6FCF0C002BEE8A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		5401E13A1F6FE3C6002BEE8A /* Drain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Drain.storyboard; sourceTree = "<group>"; };
 		5401E1481F6FEC80002BEE8A /* Environments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		540BDEAF1F6A33F700456EA0 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		540BDEB11F6A623600456EA0 /* KeyStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyStore.swift; path = Models/KeyStore.swift; sourceTree = "<group>"; };
@@ -128,6 +126,7 @@
 		54C7E7881F57D31700522FE9 /* RangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RangeViewController.swift; path = Controller/RangeViewController.swift; sourceTree = "<group>"; };
 		54C7E78A1F57D42500522FE9 /* rating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rating.png; sourceTree = "<group>"; };
 		54C7E78C1F57D4B000522FE9 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingViewController.swift; path = Controller/RatingViewController.swift; sourceTree = "<group>"; };
+		54D7D7071F726DBF00974F37 /* Drain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drain.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +205,7 @@
 				545063351F593CE0001E6251 /* c063003t.ttf */,
 				545063371F593F38001E6251 /* Pictorial Signature.ttf */,
 				54572DC91F57BE380023DBC2 /* Main.storyboard */,
-				5401E13A1F6FE3C6002BEE8A /* Drain.storyboard */,
+				54D7D7071F726DBF00974F37 /* Drain.storyboard */,
 				54572DCC1F57BE380023DBC2 /* Assets.xcassets */,
 				54572DCE1F57BE380023DBC2 /* LaunchScreen.storyboard */,
 				54572DD11F57BE380023DBC2 /* Info.plist */,
@@ -397,7 +396,6 @@
 				54572DCD1F57BE380023DBC2 /* Assets.xcassets in Resources */,
 				54C7E7711F57CE3400522FE9 /* radioButton.png in Resources */,
 				54C7E7871F57D2A500522FE9 /* checklistImage.png in Resources */,
-				5401E13B1F6FE3C6002BEE8A /* Drain.storyboard in Resources */,
 				5450633C1F5966FF001E6251 /* Mock.json in Resources */,
 				54572DCB1F57BE380023DBC2 /* Main.storyboard in Resources */,
 				54B787BD1F5D23620029ABAD /* Configure.plist in Resources */,

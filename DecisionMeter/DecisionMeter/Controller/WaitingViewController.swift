@@ -8,6 +8,16 @@
 
 import UIKit
 
+struct Decide {
+    static let single:String = "Single"
+    static let multiple:String = "Multiple"
+    static let slider:String = "Slider"
+    static let range:String = "Rating"
+    static let baseURL:String = "http://localhost:8891"
+    //static let baseURL:String = "http://sgscaiu0610.inedc.corpintra.net:8891"
+    static let appURL:String = "/decision-meter/sessions/"
+}
+
 class WaitingViewController: UIViewController {
     struct TimerConstants {
         static let kTimerConstant:Int = 60
@@ -19,9 +29,10 @@ class WaitingViewController: UIViewController {
     
     var seconds = TimerConstants.kTimerConstant
     var timer = Timer()
-    
+    var navigationKey:String?
     var isTimerRunning = false;
     var resumeTapped = false;
+    var errorCode404:Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,16 +152,120 @@ class WaitingViewController: UIViewController {
 //        present(vc!, animated: true, completion: nil);
     }
     
-    func hasTheQuestionIdChanged() {
-        print(" i am the JURY")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Single") as? SingleChoiceViewController
+    func hasTheQuestionIdChanged(notification:NSNotification) {
+        print(notification.userInfo as? Dictionary<String,AnyObject>!)
+        if let arrayElementsGot = notification.userInfo as? Dictionary<String,AnyObject> {
+            //navigateKey = String.getQuestionCategory(passedString: arrayElementsGot[2]).1
+            // print(arrayElementsGot)
+            //dictsValue["status"]!.int64Value == 404
+            if  arrayElementsGot["status"]?.int64Value == 404 {
+                print("Raise error")
+                DispatchQueue.main.async {
+                    [weak self] value in
+                    let ac =  UIAlertController.alertWithTitle(title: "NO Question", message: "NO Question", buttonTitle: "NO Question")
+//                    self?.tokenTextField.text = ""
+                    // the question has not changed , so stay upon this page or throw error.
+                    self?.present(ac, animated: true, completion: nil)
+                    
+                }
+            }
+            
+            let defaults = UserDefaults.standard
+            // MULTIPLE_CHOICE
+            
+            if var errorCode404  = arrayElementsGot["status"] {
+                errorCode404 = arrayElementsGot["status"]!
+                print(errorCode404 as! Int )
+            }
+            
+            if let _ = arrayElementsGot["questionString"], (arrayElementsGot["questionId"] != nil), (arrayElementsGot["questionType"] != nil) {
+                defaults.set(arrayElementsGot["questionString"]!, forKey: "quest")
+                defaults.set(arrayElementsGot["questionId"]!, forKey: "questionId")
+                defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
+                defaults.synchronize()
+            }
+            
+                //            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
+                //                else { return }
+            
+            if let _ = arrayElementsGot["questionType"] {
+            
+                if  arrayElementsGot["questionType"] as! String == "SINGLE_OPTION" {
+                    defaults.set(arrayElementsGot["options"], forKey: "options")
+                    defaults.synchronize()
+                }
+                
+                if  arrayElementsGot["questionType"] as! String == "MULTIPLE_CHOICE" {
+                    defaults.set(arrayElementsGot["options"], forKey: "options")
+                    defaults.synchronize()
+                }
+            }
+            
+          // nav key
+            navigationKey = arrayElementsGot["questionType"] as? String
+            
+                
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let returnVC : UIViewController
+            switch navigationKey {
+           
+            case "MULTIPLE_CHOICE"?:
+                returnVC =  storyboard.instantiateViewController(withIdentifier: DecisionConstants.multiple) as! MultipleChoiceViewController
+                
+            case "SINGLE_OPTION"?:
+                returnVC =   storyboard.instantiateViewController(withIdentifier: DecisionConstants.single) as! SingleChoiceViewController
+            case "RATING"?:
+                returnVC =   storyboard.instantiateViewController(withIdentifier: DecisionConstants.range) as! RatingViewController
+            case "RANGE"?:
+                returnVC = storyboard.instantiateViewController(withIdentifier: DecisionConstants.slider) as! RangeViewController
+                
+            default:
+                returnVC =  storyboard.instantiateViewController(withIdentifier: DecisionConstants.waiting) as! WaitingViewController
+                // Please handle this case kumar utsav
+                // ToDo: //
+            }
+            
+            
+        //
+//        print(" i am the JURY")
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "Single") as? SingleChoiceViewController
         DispatchQueue.main.async {
-            // memory management kumar utsav vvimportant 
-            self.present(vc!, animated: true, completion: nil);
+            // memory management kumar utsav vvimportant  
+            //self.present(vc!, animated: true, completion: nil);
+            self.presentTheViewController(viewController: returnVC)
         }
         
     }
+    
+    
+}
+        func presentTheViewController(viewController:UIViewController){
+            self.present(viewController, animated: true, completion: nil);
+        }
+        
+        
+//        func instantiateTheViewController(withIdentifier identifier:String,toNavigate navigationKey:String) -> UIViewController {
+//            //Decide.single
+//            // identifiers are like single multiple go with Decisionconstants.
+//            let returnVC : UIViewController
+//
+//            switch navigationKey {
+//            case "MULTIPLE_CHOICE":
+//              returnVC =  storyboard?.instantiateViewController(withIdentifier: DecisionConstants.multiple)
+//            case "SINGLE_OPTION":
+//              returnVC =   storyboard?.instantiateViewController(withIdentifier: DecisionConstants.single)
+//            case "RATING":
+//              returnVC =   storyboard?.instantiateViewController(withIdentifier: DecisionConstants.slider)
+//            case "RANGE":
+//               returnVC = storyboard?.instantiateViewController(withIdentifier: DecisionConstants.range)
+//
+//            default:
+//              returnVC =  storyboard?.instantiateViewController(withIdentifier: DecisionConstants.range)
+//            }
+//            return returnVC
+//
+//        }
     
     
     

@@ -17,7 +17,10 @@ struct Http{
     static func switchTheURL(withSession sessionString:String, searchNext:Bool = false) -> URL {
         let urlHolder:URL
         if searchNext {
-           urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/questions/7")!
+            let defauts = UserDefaults.standard
+            let questionNumber = defauts.value(forKey: "questionId") as! String
+            let questionId = Int(questionNumber)! + 1
+           urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/questions/\(questionId)")!
         }else {
         urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/current-question")!
         }
@@ -48,8 +51,11 @@ struct Http{
         let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
             
             guard error == nil else {
-               print(error!.localizedDescription)
+               print("HI I AM THE ERROR " + error!.localizedDescription)
+              let vc = UIAlertController.alertWithTitle(title: "ERROR", message: "ERROR", buttonTitle: "ERROR")
+                viewController.present(vc, animated: true, completion: nil)
                 return
+                
             }
             
             guard let data = data else {

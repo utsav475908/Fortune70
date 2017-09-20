@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/RatingViewController.swift"
-            timestampString = "527591854.313378"
+            timestampString = "527600746.136728"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/RangeViewController.swift"
-            timestampString = "527589686.661684"
+            timestampString = "527600746.137335"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/WaitingViewController.swift"
-            timestampString = "527591854.313591"
+            timestampString = "527600746.137442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/SingleChoiceViewController.swift"
-            timestampString = "527587742.719226"
+            timestampString = "527600746.13757"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/WaitingViewController.swift"
-            timestampString = "527591854.314066"
+            timestampString = "527600746.137627"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "204"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/WaitingViewController.swift"
-            timestampString = "527591854.314508"
+            timestampString = "527600746.137751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -106,13 +106,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DecisionMeter/Controller/WaitingViewController.swift"
-            timestampString = "527591854.315337"
+            timestampString = "527600746.137932"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "129"
             endingLineNumber = "129"
             landmarkName = "updateTimer()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DecisionMeter/Controller/WaitingViewController.swift"
+            timestampString = "527600746.13811"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "doThePolling()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DecisionMeter/Controller/LoginViewController.swift"
+            timestampString = "527600746.138192"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
+            landmarkName = "dataDownloaded(notification:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DecisionMeter.LoginViewController.dataDownloaded(notification: __ObjC.NSNotification) -&gt; ()"
+                  moduleName = "DecisionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/LoginViewController.swift"
+                  timestampString = "527599188.458539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "6053">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in DecisionMeter.LoginViewController.dataDownloaded(notification: __ObjC.NSNotification) -&gt; ()"
+                  moduleName = "DecisionMeter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/avisheksinha/Documents/Harvard/Production/Fortune70/DecisionMeter/DecisionMeter/Controller/LoginViewController.swift"
+                  timestampString = "527599188.459764"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "277"
+                  endingLineNumber = "277"
+                  offsetFromSymbolStart = "26">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

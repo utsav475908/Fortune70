@@ -97,7 +97,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         let  limitNumber = startString.characters.count
         if limitNumber > 4
         {
-            UIView.animate(withDuration: 1.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.75, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 
                 self.loginButton.alpha = 1.0
             }) { (isCompleted) in
@@ -115,7 +115,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 }
                 return true
             }
-            UIView.animate(withDuration:1 , delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            UIView.animate(withDuration:0.75 , delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 
                 self.loginButton.alpha = 1
             }) { (isCompleted) in
@@ -128,7 +128,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             
         else
         {
-            UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            UIView.animate(withDuration: 0.75, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
                 
                 self.loginButton.alpha = 0
             }) { (isCompleted) in
@@ -218,18 +218,48 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             
             
             
-            defaults.set(arrayElementsGot["questionString"]!, forKey: "quest")
-            defaults.set(arrayElementsGot["questionId"]!, forKey: "questionId")
-            defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
-            defaults.synchronize()
-            //            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
-            //                else { return }
-            if  arrayElementsGot["questionType"] as! String == "SINGLE_OPTION" {
-                defaults.set(arrayElementsGot["options"], forKey: "options")
+//            defaults.set(arrayElementsGot["questionString"]!, forKey: "quest")
+//            defaults.set(arrayElementsGot["questionId"]!, forKey: "questionId")
+//            defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
+//            defaults.synchronize()
+//            //            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
+//            //                else { return }
+//            if  arrayElementsGot["questionType"] as! String == "SINGLE_OPTION" {
+//                defaults.set(arrayElementsGot["options"], forKey: "options")
+//            }
+//
+//            if  arrayElementsGot["questionType"] as! String == "MULTIPLE_CHOICE" {
+//                defaults.set(arrayElementsGot["options"], forKey: "options")
+//            }
+            
+            if let _ = arrayElementsGot["questionString"], (arrayElementsGot["questionId"] != nil), (arrayElementsGot["questionType"] != nil) {
+                defaults.set(arrayElementsGot["questionString"]!, forKey: "quest")
+                defaults.set(arrayElementsGot["questionId"]!, forKey: "questionId")
+                defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
+                defaults.synchronize()
             }
             
-            if  arrayElementsGot["questionType"] as! String == "MULTIPLE_CHOICE" {
-                defaults.set(arrayElementsGot["options"], forKey: "options")
+            //            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
+            //                else { return }
+            
+            if let _ = arrayElementsGot["questionType"] {
+                
+                if  arrayElementsGot["questionType"] as! String == "SINGLE_OPTION" {
+                    defaults.set(arrayElementsGot["options"], forKey: "options")
+                    defaults.synchronize()
+                }
+                
+                if  arrayElementsGot["questionType"] as! String == "MULTIPLE_CHOICE" {
+                    defaults.set(arrayElementsGot["options"], forKey: "options")
+                    defaults.synchronize()
+                }
+            }
+            
+            if var errorCode404  = arrayElementsGot["status"] {
+                errorCode404 = arrayElementsGot["status"]!
+                print(errorCode404 as! Int )
+                print("TOKEN ERROR THROWING! ALERT ALERT ALERT")
+                return 
             }
             
             

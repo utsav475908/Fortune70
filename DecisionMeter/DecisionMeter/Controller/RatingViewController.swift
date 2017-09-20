@@ -24,7 +24,7 @@ class RatingViewController: UIViewController {
     @IBOutlet weak var starRating: HCSStarRatingView!
     
     @IBAction func ratingChanged(_ sender: HCSStarRatingView) {
-        UIView.animate(withDuration: 1.5, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: { 
+        UIView.animate(withDuration: 0.75, delay: 0, options: UIViewAnimationOptions.curveEaseInOut, animations: { 
             self.submitButton.alpha = 1
         }) { (completed) in
             self.submitButton.alpha = 1 

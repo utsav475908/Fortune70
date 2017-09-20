@@ -28,7 +28,7 @@ class RangeViewController: UIViewController {
     @IBOutlet weak var submitButton: CustomButton!
     
     func showSubmitButton() {
-        UIView.animate(withDuration: 2.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+        UIView.animate(withDuration: 0.75, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
             
             self.submitButton.alpha = 1.0
         }) { (isCompleted) in
@@ -46,12 +46,14 @@ class RangeViewController: UIViewController {
         sliderValuePointer.center = CGPoint(x: thumbRect.origin.x + scaleShow.frame.origin.x, y: scaleShow.frame.origin.y - 20)
         
         DispatchQueue.global(qos: .background).async {
-            self.revereSliderValue = Int((floor(sender.maximumValue) + 1) - floor(sender.value))
+            
             
             //print(revereSliderValue)
             print("This is run on the background queue")
-            currentStringValue = String(self.revereSliderValue)
+            
             DispatchQueue.main.async {
+                self.revereSliderValue = Int((floor(sender.maximumValue) + 1) - floor(sender.value))
+                currentStringValue = String(self.revereSliderValue)
                 print("This is run on the main queue, after the previous code in outer block")
                 
                 self.sliderValuePointer.text = currentStringValue

@@ -61,7 +61,7 @@ struct Http{
             guard let data = data else {
                 return
             }
-            Thread.sleep(forTimeInterval: 1)
+            Thread.sleep(forTimeInterval: 0.2)
             DispatchQueue.main.async {
                 MBProgressHUD.hide(for: viewController.view, animated: true)
             }

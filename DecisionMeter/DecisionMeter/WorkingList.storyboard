@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="c063003t.ttf">
+            <string>CorporateS-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Wp5-5D-eKs">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="8jg-KH-OuI" customClass="LoginViewController" customModule="DecisionMeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NHZ-tC-3F6"/>
+                        <viewControllerLayoutGuide type="bottom" id="9b8-Am-7KB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NIH-Cr-Eva">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPI-qh-BoG">
+                                <rect key="frame" x="0.0" y="167" width="375" height="333.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="eLL-jK-4fs">
+                                        <rect key="frame" x="106" y="39" width="163.5" height="118.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykn-IJ-qfX">
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
+                                                <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="eg: 0015" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0N-OZ-ty9">
+                                                <rect key="frame" x="43" y="42.5" width="77.5" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXi-HI-xWC" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                                <rect key="frame" x="43" y="86.5" width="77.5" height="32"/>
+                                                <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="doLoginTask:" destination="8jg-KH-OuI" eventType="touchUpInside" id="JLo-eo-nKL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xXi-HI-xWC" firstAttribute="width" secondItem="I0N-OZ-ty9" secondAttribute="width" id="keS-Zv-oXD"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196788309999998" green="0.90196806190000001" blue="0.90196657179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="eLL-jK-4fs" firstAttribute="top" secondItem="WPI-qh-BoG" secondAttribute="top" constant="39" id="4hA-bV-JUY"/>
+                                    <constraint firstItem="eLL-jK-4fs" firstAttribute="centerX" secondItem="WPI-qh-BoG" secondAttribute="centerX" id="Z5W-zY-EDB"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dZ8-dh-vDC">
+                                <rect key="frame" x="101" y="28" width="173" height="103"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9lV-iT-i8N">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="21"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Iut-ey-I0p">
+                                        <rect key="frame" x="0.0" y="29" width="173" height="74"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dZ8-dh-vDC" secondAttribute="height" multiplier="159:95" id="Eli-GP-dLe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WPI-qh-BoG" firstAttribute="height" secondItem="NIH-Cr-Eva" secondAttribute="height" multiplier="0.5" id="9lN-Q8-q3p"/>
+                            <constraint firstItem="WPI-qh-BoG" firstAttribute="top" secondItem="dZ8-dh-vDC" secondAttribute="bottom" constant="36" id="afk-1k-DcO"/>
+                            <constraint firstItem="dZ8-dh-vDC" firstAttribute="centerX" secondItem="NIH-Cr-Eva" secondAttribute="centerX" id="bKp-BJ-b7G"/>
+                            <constraint firstAttribute="trailing" secondItem="WPI-qh-BoG" secondAttribute="trailing" id="lKx-xg-zju"/>
+                            <constraint firstItem="dZ8-dh-vDC" firstAttribute="top" secondItem="NHZ-tC-3F6" secondAttribute="bottom" constant="8" id="lTK-r6-pO0"/>
+                            <constraint firstItem="WPI-qh-BoG" firstAttribute="leading" secondItem="NIH-Cr-Eva" secondAttribute="leading" id="wgT-AY-QXL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H7x-0E-tCd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fHc-Vn-IeB"/>
+                    <connections>
+                        <outlet property="attendeeLabel" destination="Ykn-IJ-qfX" id="CNc-zb-HJr"/>
+                        <outlet property="loginButton" destination="xXi-HI-xWC" id="8wi-fB-bRo"/>
+                        <outlet property="tokenTextField" destination="I0N-OZ-ty9" id="gak-D7-m8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4uO-WU-GLY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3754" y="-332"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ADM_logo" width="159" height="74"/>
+        <image name="daimler_logo" width="136" height="21"/>
+    </resources>
+</document>

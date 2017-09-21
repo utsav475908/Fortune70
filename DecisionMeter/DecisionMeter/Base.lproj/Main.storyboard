@@ -42,7 +42,7 @@
                                         <rect key="frame" x="106.5" y="39" width="163.5" height="118.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-Nn-cTQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="98" width="146" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                                 <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3586.4000000000001" y="-299.10044977511245"/>
+            <point key="canvasLocation" x="-3754" y="-332"/>
         </scene>
         <!--Single Choice View Controller-->
         <scene sceneID="TmX-q6-t0X">
@@ -636,10 +636,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KW0-lk-o4u">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KW0-lk-o4u">
                                 <rect key="frame" x="0.0" y="151" width="375" height="451"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-ci-7yY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-ci-7yY">
                                         <rect key="frame" x="36" y="75.5" width="325" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="102" id="yV1-KW-Rty"/>
@@ -648,7 +648,7 @@
                                         <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odS-ck-iic" customClass="HCSStarRatingView">
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odS-ck-iic" customClass="HCSStarRatingView">
                                         <rect key="frame" x="67.5" y="203.5" width="240" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -671,7 +671,7 @@
                                             <action selector="ratingChanged:" destination="Cd1-FG-TK8" eventType="valueChanged" id="MFG-lp-6tM"/>
                                         </connections>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-YT-hRV" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-YT-hRV" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
                                         <rect key="frame" x="127.5" y="332.5" width="120" height="32"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -703,33 +703,36 @@
                                     <constraint firstItem="odS-ck-iic" firstAttribute="centerX" secondItem="KW0-lk-o4u" secondAttribute="centerX" id="s2z-f7-QaE"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0oB-yN-sHD">
-                                <rect key="frame" x="108" y="49" width="159" height="74"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="z1B-MY-gkQ">
-                                <rect key="frame" x="108" y="20" width="159" height="21"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="54I-sD-RNW">
+                                <rect key="frame" x="108" y="28" width="159" height="103"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="sx4-sq-HvP">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="21"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bBu-w5-Dik">
+                                        <rect key="frame" x="0.0" y="29" width="159" height="74"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="54I-sD-RNW" secondAttribute="height" multiplier="159:103" id="7N9-ZR-Hm9"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KW0-lk-o4u" secondAttribute="trailing" id="2Bi-kO-kqE"/>
                             <constraint firstAttribute="trailing" secondItem="KW0-lk-o4u" secondAttribute="trailing" id="3AK-8f-bkc"/>
                             <constraint firstItem="OxI-OT-5lF" firstAttribute="top" relation="lessThanOrEqual" secondItem="KW0-lk-o4u" secondAttribute="bottom" priority="750" constant="65" id="3BQ-1k-bgG"/>
-                            <constraint firstItem="KW0-lk-o4u" firstAttribute="top" secondItem="0oB-yN-sHD" secondAttribute="bottom" constant="28" id="8Cc-rw-eAA"/>
-                            <constraint firstItem="z1B-MY-gkQ" firstAttribute="trailing" secondItem="0oB-yN-sHD" secondAttribute="trailing" id="Acv-Eo-iNS"/>
                             <constraint firstItem="KW0-lk-o4u" firstAttribute="leading" secondItem="Mjh-Or-1Oc" secondAttribute="leading" id="EN2-Bt-Ct0"/>
                             <constraint firstItem="KW0-lk-o4u" firstAttribute="leading" secondItem="Mjh-Or-1Oc" secondAttribute="leading" id="Egx-dq-6UZ"/>
                             <constraint firstItem="KW0-lk-o4u" firstAttribute="centerX" secondItem="Mjh-Or-1Oc" secondAttribute="centerX" id="L7T-vw-KdZ"/>
-                            <constraint firstItem="z1B-MY-gkQ" firstAttribute="centerX" secondItem="Mjh-Or-1Oc" secondAttribute="centerX" id="UNo-1h-dPe"/>
+                            <constraint firstItem="54I-sD-RNW" firstAttribute="centerX" secondItem="Mjh-Or-1Oc" secondAttribute="centerX" id="NT6-G4-BgT"/>
+                            <constraint firstItem="54I-sD-RNW" firstAttribute="top" secondItem="1DS-GM-9a6" secondAttribute="bottom" constant="8" id="jEe-7r-zSd"/>
                             <constraint firstItem="OxI-OT-5lF" firstAttribute="top" secondItem="KW0-lk-o4u" secondAttribute="bottom" constant="65" id="lz6-Wf-efW"/>
-                            <constraint firstItem="0oB-yN-sHD" firstAttribute="top" secondItem="z1B-MY-gkQ" secondAttribute="bottom" constant="8" symbolic="YES" id="tAg-px-mQI"/>
-                            <constraint firstItem="z1B-MY-gkQ" firstAttribute="top" secondItem="1DS-GM-9a6" secondAttribute="bottom" id="tqP-RZ-K72"/>
-                            <constraint firstItem="z1B-MY-gkQ" firstAttribute="leading" secondItem="0oB-yN-sHD" secondAttribute="leading" id="vkO-ku-0fF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="2Bi-kO-kqE"/>
-                                <exclude reference="8Cc-rw-eAA"/>
                                 <exclude reference="EN2-Bt-Ct0"/>
                                 <exclude reference="3BQ-1k-bgG"/>
                             </mask>
@@ -737,7 +740,6 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="2Bi-kO-kqE"/>
-                                <include reference="8Cc-rw-eAA"/>
                                 <include reference="EN2-Bt-Ct0"/>
                                 <include reference="3BQ-1k-bgG"/>
                             </mask>
@@ -751,7 +753,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azN-1X-jir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2462" y="-260"/>
+            <point key="canvasLocation" x="-2817" y="-315"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="vYi-wc-yAK">

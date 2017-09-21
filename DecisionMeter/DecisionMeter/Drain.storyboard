@@ -345,16 +345,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9x-i4-YK4">
-                                <rect key="frame" x="0.0" y="151" width="375" height="293"/>
+                                <rect key="frame" x="0.0" y="151" width="375" height="291"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-x0-4SA">
-                                        <rect key="frame" x="36" y="22" width="266" height="37.5"/>
+                                        <rect key="frame" x="36" y="22" width="266" height="36.5"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="16"/>
                                         <color key="textColor" red="0.26676476001739502" green="0.26676484942436218" blue="0.2667643129825592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JHn-8x-Vpq">
-                                        <rect key="frame" x="36" y="72.5" width="295" height="147"/>
+                                        <rect key="frame" x="36" y="71.5" width="295" height="147"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1A-B3-xB6" customClass="ISRadioButton" customModule="DecisionMeter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="33"/>
@@ -460,7 +460,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-Mc-HLD" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="93" y="246.5" width="189" height="38.5"/>
+                                        <rect key="frame" x="93" y="245.5" width="189" height="37.5"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                         <state key="normal" title="Submit">
@@ -1338,21 +1338,21 @@
                                 <rect key="frame" x="0.0" y="167" width="375" height="333.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="5Q9-da-Zy3">
-                                        <rect key="frame" x="97.5" y="39" width="181" height="119"/>
+                                        <rect key="frame" x="106.5" y="39" width="163.5" height="118.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJs-23-qP5">
-                                                <rect key="frame" x="0.0" y="0.0" width="181" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                                 <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="eg: 0015" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-wE-PIW">
-                                                <rect key="frame" x="51.5" y="43" width="77.5" height="22"/>
+                                                <rect key="frame" x="43" y="42.5" width="77.5" height="22"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEG-xZ-CbW" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                                <rect key="frame" x="63" y="87" width="55" height="32"/>
+                                                <rect key="frame" x="57.5" y="86.5" width="49" height="32"/>
                                                 <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                                 <state key="normal" title="Submit">

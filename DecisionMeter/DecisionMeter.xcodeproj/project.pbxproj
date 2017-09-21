@@ -51,6 +51,7 @@
 		54C7E7891F57D31700522FE9 /* RangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7E7881F57D31700522FE9 /* RangeViewController.swift */; };
 		54C7E78B1F57D42500522FE9 /* rating.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C7E78A1F57D42500522FE9 /* rating.png */; };
 		54C7E78D1F57D4B000522FE9 /* RatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7E78C1F57D4B000522FE9 /* RatingViewController.swift */; };
+		54D7D70C1F737BEB00974F37 /* WorkingList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54D7D70B1F737BEA00974F37 /* WorkingList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		54C7E78A1F57D42500522FE9 /* rating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rating.png; sourceTree = "<group>"; };
 		54C7E78C1F57D4B000522FE9 /* RatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RatingViewController.swift; path = Controller/RatingViewController.swift; sourceTree = "<group>"; };
 		54D7D7071F726DBF00974F37 /* Drain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Drain.storyboard; sourceTree = "<group>"; };
+		54D7D70B1F737BEA00974F37 /* WorkingList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WorkingList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				540BDEB51F6AA9DA00456EA0 /* OptionBasedModel.swift */,
 				5401E1371F6FCF0C002BEE8A /* MBProgressHUD.h */,
 				5401E1381F6FCF0C002BEE8A /* MBProgressHUD.m */,
+				54D7D70B1F737BEA00974F37 /* WorkingList.storyboard */,
 			);
 			name = Vendor;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				54C7E7871F57D2A500522FE9 /* checklistImage.png in Resources */,
 				5450633C1F5966FF001E6251 /* Mock.json in Resources */,
 				54572DCB1F57BE380023DBC2 /* Main.storyboard in Resources */,
+				54D7D70C1F737BEB00974F37 /* WorkingList.storyboard in Resources */,
 				54B787BD1F5D23620029ABAD /* Configure.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,24 +30,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WPI-qh-BoG">
-                                <rect key="frame" x="0.0" y="167" width="375" height="333.5"/>
+                                <rect key="frame" x="0.0" y="164" width="375" height="333.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="eLL-jK-4fs">
-                                        <rect key="frame" x="106" y="39" width="163.5" height="118.5"/>
+                                        <rect key="frame" x="97.5" y="39" width="181" height="129"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykn-IJ-qfX">
-                                                <rect key="frame" x="0.0" y="0.0" width="163.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="21"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                                 <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="eg: 0015" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0N-OZ-ty9">
-                                                <rect key="frame" x="43" y="42.5" width="77.5" height="22"/>
+                                                <rect key="frame" x="51.5" y="43" width="77.5" height="32"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXi-HI-xWC" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                                <rect key="frame" x="43" y="86.5" width="77.5" height="32"/>
+                                                <rect key="frame" x="51.5" y="97" width="77.5" height="32"/>
                                                 <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                                 <state key="normal" title="Submit">
@@ -65,6 +65,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="xXi-HI-xWC" firstAttribute="width" secondItem="I0N-OZ-ty9" secondAttribute="width" id="keS-Zv-oXD"/>
+                                            <constraint firstItem="I0N-OZ-ty9" firstAttribute="height" secondItem="xXi-HI-xWC" secondAttribute="height" id="qL5-gA-0hC"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -75,13 +76,13 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dZ8-dh-vDC">
-                                <rect key="frame" x="101" y="28" width="173" height="103"/>
+                                <rect key="frame" x="103.5" y="28" width="168" height="100"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="9lV-iT-i8N">
-                                        <rect key="frame" x="0.0" y="0.0" width="173" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="168" height="18"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Iut-ey-I0p">
-                                        <rect key="frame" x="0.0" y="29" width="173" height="74"/>
+                                        <rect key="frame" x="0.0" y="26" width="168" height="74"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -109,11 +110,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uO-WU-GLY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3754" y="-332"/>
+            <point key="canvasLocation" x="-4756" y="-383"/>
         </scene>
     </scenes>
     <resources>
         <image name="ADM_logo" width="159" height="74"/>
-        <image name="daimler_logo" width="136" height="21"/>
+        <image name="daimler_logo" width="116" height="18"/>
     </resources>
 </document>

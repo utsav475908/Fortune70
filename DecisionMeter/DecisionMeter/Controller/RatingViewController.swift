@@ -14,13 +14,14 @@ class RatingViewController: UIViewController {
         
         super.viewDidLoad()
         let defaults = UserDefaults.standard
-        self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        self.textQuestions.text = defaults.value(forKey: "quest") as? String
       self.submitButton.alpha = 0
         // Do any additional setup after loading the view.
     }
 
-   
-    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var textQuestions: UITextView!
+    
+    //@IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var starRating: HCSStarRatingView!
     
     @IBAction func ratingChanged(_ sender: HCSStarRatingView) {

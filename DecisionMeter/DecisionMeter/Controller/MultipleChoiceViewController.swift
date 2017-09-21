@@ -24,14 +24,16 @@ class MultipleChoiceViewController: UIViewController {
 
     
     var submitCounter : Int = 0
-    @IBOutlet weak var optionLabel: UILabel!
+    //@IBOutlet weak var optionLabel: UILabel!
+    
+    @IBOutlet weak var textViewLabel: UITextView!
     // MARK: VDL
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let defaults = UserDefaults.standard
-        self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        self.textViewLabel.text = defaults.value(forKey: "quest") as? String
         self.submitButton.alpha = 0
         giveTheNameToRespectiveLabels()
         //showSubmitButton()
@@ -53,7 +55,7 @@ class MultipleChoiceViewController: UIViewController {
         choiceD.setTitle(sayTitleLabel["4"], for: .normal)
     }
     
-    @IBOutlet weak var questionLabel: UILabel!
+    //@IBOutlet weak var questionLabel: UILabel!
     
     func showSubmitButton() {
         for case let button as ISRadioButton in self.view.subviews {

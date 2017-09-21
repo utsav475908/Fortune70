@@ -15,14 +15,15 @@ class RangeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let defaults = UserDefaults.standard
-        self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        self.questionTextView.text = defaults.value(forKey: "quest") as? String
         self.submitButton.alpha = 0
               //self.submitButton.alpha = 0
         // Do any additional setup after loading the view.
     }
 
     
-    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var questionTextView: UITextView!
+    //@IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scaleShow: CustomSlider!
     @IBOutlet weak var sliderValuePointer: UILabel!
     @IBOutlet weak var submitButton: CustomButton!

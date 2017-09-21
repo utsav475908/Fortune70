@@ -16,17 +16,18 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
     @IBOutlet weak var choiceC: SSRadioButton!
     @IBOutlet weak var choiceD: SSRadioButton!
    // @IBOutlet weak var choiceD: SSRadioButton!
-
+    @IBOutlet weak var questionTextView: UITextView!
+    
     var radioButtonController:SSRadioButtonsController?
     
-    @IBOutlet weak var postQuestion: UILabel!
+    //@IBOutlet weak var postQuestion: UILabel!
     // the question from the webservice will be coming here
     override func viewDidLoad() {
         
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         
-        self.postQuestion.text = defaults.value(forKey: "quest") as? String
+        self.questionTextView.text = defaults.value(forKey: "quest") as? String
         let questionDictionary = defaults.value(forKey: "options") as! [String:String]
 //        for (key,value) in questionDictionary {
 //            choiceA.titleLabel?.text = value

@@ -5,7 +5,9 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -86,10 +88,10 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GJi-qL-H2W">
-                                <rect key="frame" x="93.5" y="28" width="188" height="110"/>
+                                <rect key="frame" x="108" y="28" width="159" height="110"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="78b-R6-D1E">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="zdt-93-T53">
                                                 <variation key="heightClass=compact-widthClass=compact" constant="16"/>
@@ -97,7 +99,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4t8-lr-DYe">
-                                        <rect key="frame" x="0.0" y="36" width="188" height="74"/>
+                                        <rect key="frame" x="0.0" y="36" width="159" height="74"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="83" id="xGD-hx-sMl"/>
                                         </constraints>
@@ -164,10 +166,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TU1-hO-T9p">
-                                <rect key="frame" x="0.0" y="159" width="375" height="343"/>
+                                <rect key="frame" x="0.0" y="151" width="375" height="351"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jOy-zJ-Y1e">
-                                        <rect key="frame" x="120.5" y="304" width="134" height="32"/>
+                                        <rect key="frame" x="120.5" y="312" width="134" height="32"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0p-Jr-s8T" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="134" height="32"/>
@@ -297,10 +299,10 @@
                                 </variation>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="iBL-99-1Mh">
-                                <rect key="frame" x="95" y="65" width="193" height="74"/>
+                                <rect key="frame" x="95" y="57" width="193" height="74"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="c7F-Hd-3zd">
-                                <rect key="frame" x="91" y="28" width="193" height="29"/>
+                                <rect key="frame" x="91" y="28" width="193" height="21"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -343,7 +345,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9x-i4-YK4">
-                                <rect key="frame" x="0.0" y="159" width="375" height="293"/>
+                                <rect key="frame" x="0.0" y="151" width="375" height="293"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-x0-4SA">
                                         <rect key="frame" x="36" y="22" width="266" height="37.5"/>
@@ -490,13 +492,13 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="2af-Cq-ETM">
-                                <rect key="frame" x="94" y="28" width="188" height="105"/>
+                                <rect key="frame" x="108.5" y="28" width="159" height="97"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="90X-0T-eBp">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="21"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="4Pq-EG-hH7">
-                                        <rect key="frame" x="0.0" y="31" width="188" height="74"/>
+                                        <rect key="frame" x="0.0" y="23" width="159" height="74"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
@@ -672,10 +674,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KW0-lk-o4u">
-                                <rect key="frame" x="0.0" y="159" width="375" height="443"/>
+                                <rect key="frame" x="0.0" y="151" width="375" height="451"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-ci-7yY">
-                                        <rect key="frame" x="36" y="71.5" width="325" height="102"/>
+                                        <rect key="frame" x="36" y="75.5" width="325" height="102"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="102" id="yV1-KW-Rty"/>
                                         </constraints>
@@ -684,7 +686,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odS-ck-iic" customClass="HCSStarRatingView">
-                                        <rect key="frame" x="67.5" y="199.5" width="240" height="44"/>
+                                        <rect key="frame" x="67.5" y="203.5" width="240" height="44"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <userDefinedRuntimeAttributes>
@@ -707,7 +709,7 @@
                                         </connections>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-YT-hRV" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="127.5" y="328.5" width="120" height="32"/>
+                                        <rect key="frame" x="127.5" y="332.5" width="120" height="32"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="120" id="QWf-zu-er4"/>
@@ -739,10 +741,10 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0oB-yN-sHD">
-                                <rect key="frame" x="93.5" y="57" width="188" height="74"/>
+                                <rect key="frame" x="108" y="49" width="159" height="74"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="z1B-MY-gkQ">
-                                <rect key="frame" x="93.5" y="20" width="188" height="29"/>
+                                <rect key="frame" x="108" y="20" width="159" height="21"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -960,10 +962,10 @@
                                 </variation>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="RXi-RB-yfi">
-                                <rect key="frame" x="93.5" y="28" width="188" height="110"/>
+                                <rect key="frame" x="108" y="28" width="159" height="110"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z3D-Xt-hNa">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="29"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="laF-Jr-v0Z">
                                                 <variation key="heightClass=compact-widthClass=compact" constant="16"/>
@@ -971,7 +973,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="5uy-DX-WpH">
-                                        <rect key="frame" x="0.0" y="36" width="188" height="74"/>
+                                        <rect key="frame" x="0.0" y="36" width="159" height="74"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="83" id="4WN-dQ-4xS"/>
                                         </constraints>
@@ -1028,10 +1030,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="pZO-pF-NPw">
-                                <rect key="frame" x="98" y="57" width="188" height="588"/>
+                                <rect key="frame" x="112.5" y="57" width="159" height="588"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="jOA-OP-6OF">
-                                <rect key="frame" x="94" y="20" width="188" height="29"/>
+                                <rect key="frame" x="108.5" y="20" width="159" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="cqA-UY-uMA"/>
                                 </constraints>
@@ -1216,10 +1218,10 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-MR-Gt8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-MR-Gt8">
                                 <rect key="frame" x="95" y="65" width="193" height="74"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vc0-Co-YVl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vc0-Co-YVl">
                                 <rect key="frame" x="91" y="28" width="193" height="29"/>
                             </imageView>
                         </subviews>
@@ -1249,12 +1251,173 @@
             </objects>
             <point key="canvasLocation" x="-3076" y="447"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="JDd-Ar-eXq">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="ToN-Ul-VKl" customClass="LoginViewController" customModule="DecisionMeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="onP-Km-U1j"/>
+                        <viewControllerLayoutGuide type="bottom" id="MPV-QB-WcH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t0U-GC-6TD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaC-L2-Zid">
+                                <rect key="frame" x="0.0" y="159" width="375" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icc-Hn-K97">
+                                        <rect key="frame" x="106" y="39" width="163.5" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
+                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="eg: 0015" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8nw-B8-yOU">
+                                        <rect key="frame" x="149.5" y="106" width="77.5" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0G-IX-HMF" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                        <rect key="frame" x="159" y="170" width="58" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
+                                        <state key="normal" title="Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="doLoginTask:" destination="ToN-Ul-VKl" eventType="touchUpInside" id="ZTa-3l-ncN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196788309999998" green="0.90196806190000001" blue="0.90196657179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="QIU-nz-MlL">
+                                <rect key="frame" x="106" y="28" width="162" height="25"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="lwl-aX-Uzg">
+                                <rect key="frame" x="108" y="53" width="159" height="74"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PfT-A9-2rM"/>
+                    <connections>
+                        <outlet property="attendeeLabel" destination="icc-Hn-K97" id="VuZ-iT-ISx"/>
+                        <outlet property="loginButton" destination="y0G-IX-HMF" id="sAK-qG-xe8"/>
+                        <outlet property="tokenTextField" destination="8nw-B8-yOU" id="HA2-ER-qgq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VOx-ru-Nix" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4522" y="-444"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="PPw-zG-gnD">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="87O-ek-HJy" customClass="LoginViewController" customModule="DecisionMeter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qhJ-gk-fu3"/>
+                        <viewControllerLayoutGuide type="bottom" id="hIs-Xb-fQH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rlE-Qf-W9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edu-5X-yhf">
+                                <rect key="frame" x="0.0" y="167" width="375" height="333.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="5Q9-da-Zy3">
+                                        <rect key="frame" x="97.5" y="39" width="181" height="119"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJs-23-qP5">
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="21"/>
+                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
+                                                <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="eg: 0015" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-wE-PIW">
+                                                <rect key="frame" x="51.5" y="43" width="77.5" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEG-xZ-CbW" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                                <rect key="frame" x="63" y="87" width="55" height="32"/>
+                                                <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="doLoginTask:" destination="87O-ek-HJy" eventType="touchUpInside" id="bnE-4c-67K"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196788309999998" green="0.90196806190000001" blue="0.90196657179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="5Q9-da-Zy3" firstAttribute="top" secondItem="edu-5X-yhf" secondAttribute="top" constant="39" id="tpU-ta-emi"/>
+                                    <constraint firstItem="5Q9-da-Zy3" firstAttribute="centerX" secondItem="edu-5X-yhf" secondAttribute="centerX" id="tq4-rg-oBF"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qD0-XR-a7g">
+                                <rect key="frame" x="101" y="28" width="173" height="103"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="WFD-O8-ot3">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="21"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="KE3-or-Eif">
+                                        <rect key="frame" x="0.0" y="29" width="173" height="74"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qD0-XR-a7g" secondAttribute="height" multiplier="159:95" id="TgA-Bc-KeX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="edu-5X-yhf" secondAttribute="trailing" id="18o-og-s8u"/>
+                            <constraint firstItem="edu-5X-yhf" firstAttribute="top" secondItem="qD0-XR-a7g" secondAttribute="bottom" constant="36" id="Aqo-9x-wZK"/>
+                            <constraint firstItem="edu-5X-yhf" firstAttribute="leading" secondItem="rlE-Qf-W9Z" secondAttribute="leading" id="Rwv-Of-JcL"/>
+                            <constraint firstItem="edu-5X-yhf" firstAttribute="height" secondItem="rlE-Qf-W9Z" secondAttribute="height" multiplier="0.5" id="jqd-su-M6C"/>
+                            <constraint firstItem="qD0-XR-a7g" firstAttribute="centerX" secondItem="rlE-Qf-W9Z" secondAttribute="centerX" id="tDr-5B-Ahw"/>
+                            <constraint firstItem="qD0-XR-a7g" firstAttribute="top" secondItem="qhJ-gk-fu3" secondAttribute="bottom" constant="8" id="z1k-en-7X2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="OH0-kX-tfI"/>
+                    <connections>
+                        <outlet property="attendeeLabel" destination="FJs-23-qP5" id="gay-mU-H0x"/>
+                        <outlet property="loginButton" destination="rEG-xZ-CbW" id="9dN-IY-FYt"/>
+                        <outlet property="tokenTextField" destination="Tku-wE-PIW" id="I8M-HJ-DoH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vY-dh-ggV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3586.4000000000001" y="-299.10044977511245"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ADM_logo" width="159" height="74"/>
         <image name="Tick" width="44" height="44"/>
         <image name="checked" width="33" height="33"/>
-        <image name="daimler_logo" width="188" height="29"/>
+        <image name="daimler_logo" width="136" height="21"/>
         <image name="noquestions" width="100" height="100"/>
         <image name="unchecked" width="33" height="33"/>
     </resources>

@@ -168,14 +168,31 @@ class WaitingViewController: UIViewController {
         //        present(vc!, animated: true, completion: nil);
     }
     
+    func addGestureRecognizerForThis(){
+        
+        DispatchQueue.main.async {
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.navigateToLoginVC(_:)))
+            self.view.addGestureRecognizer(tapGesture)
+            tapGesture.numberOfTapsRequired = 8
+        }
+        
+    }
+    
+    func navigateToLoginVC(_ sender: UITapGestureRecognizer) {
+        // navigate to login vc.
+        let loginVC =   storyboard?.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+        present(loginVC, animated: true, completion: nil)
+    }
+    
     func hasTheQuestionIdChanged(notification:NSNotification) {
-        print(notification.userInfo as? Dictionary<String,AnyObject>!)
+        //print(notification.userInfo as? Dictionary<String,AnyObject>!)
         if let arrayElementsGot = notification.userInfo as? Dictionary<String,AnyObject> {
             //navigateKey = String.getQuestionCategory(passedString: arrayElementsGot[2]).1
             // print(arrayElementsGot)
             //dictsValue["status"]!.int64Value == 404
             if  arrayElementsGot["status"]?.int64Value == 404 {
                 print("Raise error")
+                addGestureRecognizerForThis()
                 /*
                 DispatchQueue.main.async {
                     [weak self] value in

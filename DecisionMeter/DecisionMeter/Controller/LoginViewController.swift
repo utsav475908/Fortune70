@@ -298,6 +298,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         respondToTokenTextField()
         addedListOfNotifications()
         
+        // delete this
+        
+        #if Debug
+            serverEndPointURL = "www.google.com"
+        #elseif Testing
+            serverEndPointURL = "www.youtube.com"
+            
+        #elseif Staging
+            serverEndPointURL = "www.apple.com"
+            
+        #elseif Release
+            serverEndPointURL = "www.gmail.com"
+            
+        #elseif Production
+            serverEndPointURL = "www.yahoo.com"
+            
+        #endif
+        // delete that
+        
         
         //Http.submitAction()
         // Note that SO highlighting makes the new selector syntax (#selector()) look

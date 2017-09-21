@@ -13,8 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    func platform() -> String {
+        var sysinfo = utsname()
+        uname(&sysinfo) // ignore return value
+        return String(bytes: Data(bytes: &sysinfo.machine, count: Int(_SYS_NAMELEN)), encoding: .ascii)!.trimmingCharacters(in: .controlCharacters)
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        print(self.platform())
+        
         self.setDomainEnvironment()
         // Override point for customization after application launch.
         return true
@@ -69,12 +76,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(bundleId)
         //https://www.youtube.com/watch?v=GrI9b9fDcys
     }
-    
-    
-    
-    
-    
-
 
 }
+
+
+
 

@@ -295,6 +295,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         print("loginviewcontroller" + serverEndPointURL)
+        self.tokenTextField.borderStyle = UITextBorderStyle.roundedRect 
         respondToTokenTextField()
         addedListOfNotifications()
         

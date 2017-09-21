@@ -42,7 +42,7 @@
                                         <rect key="frame" x="78" y="84" width="220" height="145.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-Nn-cTQ">
-                                                <rect key="frame" x="28.5" y="0.0" width="163.5" height="13.5"/>
+                                                <rect key="frame" x="19.5" y="0.0" width="181" height="13.5"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                                 <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3754" y="-332"/>
+            <point key="canvasLocation" x="-3970" y="-364"/>
         </scene>
         <!--Single Choice View Controller-->
         <scene sceneID="TmX-q6-t0X">
@@ -317,16 +317,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9x-i4-YK4">
-                                <rect key="frame" x="0.0" y="148" width="375" height="291"/>
+                                <rect key="frame" x="0.0" y="148" width="375" height="293"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUH-x0-4SA">
-                                        <rect key="frame" x="36" y="22" width="266" height="36.5"/>
+                                        <rect key="frame" x="36" y="22" width="266" height="37.5"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="16"/>
                                         <color key="textColor" red="0.26676476001739502" green="0.26676484942436218" blue="0.2667643129825592" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JHn-8x-Vpq">
-                                        <rect key="frame" x="36" y="71.5" width="295" height="147"/>
+                                        <rect key="frame" x="36" y="72.5" width="295" height="147"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1A-B3-xB6" customClass="ISRadioButton" customModule="DecisionMeter" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="33"/>
@@ -432,7 +432,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rti-Mc-HLD" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="93" y="245.5" width="189" height="37.5"/>
+                                        <rect key="frame" x="93" y="246.5" width="189" height="38.5"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                         <state key="normal" title="Submit">
@@ -645,20 +645,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KW0-lk-o4u">
-                                <rect key="frame" x="0.0" y="151" width="375" height="451"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KW0-lk-o4u">
+                                <rect key="frame" x="0.0" y="160" width="375" height="333.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-ci-7yY">
-                                        <rect key="frame" x="36" y="8" width="312" height="170"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="102" id="yV1-KW-Rty"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odS-ck-iic" customClass="HCSStarRatingView">
-                                        <rect key="frame" x="67.5" y="203.5" width="240" height="44"/>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="odS-ck-iic" customClass="HCSStarRatingView">
+                                        <rect key="frame" x="50" y="138" width="240" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="tintColor" red="0.17075036466121674" green="0.40263006091117859" blue="0.49813476204872131" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <userDefinedRuntimeAttributes>
@@ -680,12 +672,17 @@
                                             <action selector="ratingChanged:" destination="Cd1-FG-TK8" eventType="valueChanged" id="MFG-lp-6tM"/>
                                         </connections>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-YT-hRV" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="127.5" y="332.5" width="120" height="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How often you want to vote on your cell phone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrC-ci-7yY">
+                                        <rect key="frame" x="31" y="44" width="312" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
+                                        <color key="textColor" red="0.2744935751" green="0.26666489240000002" blue="0.27460768819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-YT-hRV" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                        <rect key="frame" x="110" y="215" width="120" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="QWf-zu-er4"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -701,58 +698,33 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196788311004639" green="0.90196806192398071" blue="0.90196657180786133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="JrC-ci-7yY" firstAttribute="leading" secondItem="KW0-lk-o4u" secondAttribute="leading" constant="36" id="26S-SL-DbP"/>
-                                    <constraint firstItem="JrC-ci-7yY" firstAttribute="centerX" secondItem="Pt8-YT-hRV" secondAttribute="centerX" constant="11" id="Coz-3t-FLY"/>
-                                    <constraint firstItem="odS-ck-iic" firstAttribute="centerY" secondItem="KW0-lk-o4u" secondAttribute="centerY" id="Dwr-Qg-s9c"/>
-                                    <constraint firstItem="Pt8-YT-hRV" firstAttribute="top" secondItem="odS-ck-iic" secondAttribute="bottom" constant="85" id="J2u-2I-CbS"/>
-                                    <constraint firstItem="Pt8-YT-hRV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="odS-ck-iic" secondAttribute="bottom" constant="10" id="ME3-gu-arC"/>
-                                    <constraint firstAttribute="trailing" secondItem="JrC-ci-7yY" secondAttribute="trailing" constant="14" id="fij-6c-tEV"/>
-                                    <constraint firstItem="odS-ck-iic" firstAttribute="top" secondItem="JrC-ci-7yY" secondAttribute="bottom" constant="26" id="oA4-dm-BoN"/>
-                                    <constraint firstItem="odS-ck-iic" firstAttribute="centerX" secondItem="KW0-lk-o4u" secondAttribute="centerX" id="s2z-f7-QaE"/>
-                                </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="54I-sD-RNW">
-                                <rect key="frame" x="108" y="28" width="159" height="103"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="54I-sD-RNW">
+                                <rect key="frame" x="108" y="28" width="159" height="94"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="sx4-sq-HvP">
-                                        <rect key="frame" x="0.0" y="0.0" width="159" height="21"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="sx4-sq-HvP">
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="18"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bBu-w5-Dik">
-                                        <rect key="frame" x="0.0" y="29" width="159" height="74"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bBu-w5-Dik">
+                                        <rect key="frame" x="0.0" y="20" width="159" height="74"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="54I-sD-RNW" secondAttribute="height" multiplier="159:103" id="7N9-ZR-Hm9"/>
+                                    <constraint firstAttribute="width" secondItem="bBu-w5-Dik" secondAttribute="height" multiplier="159:74" id="c5b-tU-190"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="KW0-lk-o4u" secondAttribute="trailing" id="2Bi-kO-kqE"/>
-                            <constraint firstAttribute="trailing" secondItem="KW0-lk-o4u" secondAttribute="trailing" id="3AK-8f-bkc"/>
-                            <constraint firstItem="OxI-OT-5lF" firstAttribute="top" relation="lessThanOrEqual" secondItem="KW0-lk-o4u" secondAttribute="bottom" priority="750" constant="65" id="3BQ-1k-bgG"/>
-                            <constraint firstItem="KW0-lk-o4u" firstAttribute="leading" secondItem="Mjh-Or-1Oc" secondAttribute="leading" id="EN2-Bt-Ct0"/>
-                            <constraint firstItem="KW0-lk-o4u" firstAttribute="leading" secondItem="Mjh-Or-1Oc" secondAttribute="leading" id="Egx-dq-6UZ"/>
-                            <constraint firstItem="KW0-lk-o4u" firstAttribute="centerX" secondItem="Mjh-Or-1Oc" secondAttribute="centerX" id="L7T-vw-KdZ"/>
-                            <constraint firstItem="54I-sD-RNW" firstAttribute="centerX" secondItem="Mjh-Or-1Oc" secondAttribute="centerX" id="NT6-G4-BgT"/>
-                            <constraint firstItem="54I-sD-RNW" firstAttribute="top" secondItem="1DS-GM-9a6" secondAttribute="bottom" constant="8" id="jEe-7r-zSd"/>
-                            <constraint firstItem="OxI-OT-5lF" firstAttribute="top" secondItem="KW0-lk-o4u" secondAttribute="bottom" constant="65" id="lz6-Wf-efW"/>
+                            <constraint firstItem="KW0-lk-o4u" firstAttribute="top" relation="greaterThanOrEqual" secondItem="54I-sD-RNW" secondAttribute="bottom" constant="12" id="49E-0e-VKD"/>
+                            <constraint firstItem="KW0-lk-o4u" firstAttribute="height" secondItem="Mjh-Or-1Oc" secondAttribute="height" multiplier="0.5" id="9Mj-aS-c9Q"/>
+                            <constraint firstItem="KW0-lk-o4u" firstAttribute="centerX" secondItem="54I-sD-RNW" secondAttribute="centerX" id="CPX-yO-0TV"/>
+                            <constraint firstItem="54I-sD-RNW" firstAttribute="centerX" secondItem="Mjh-Or-1Oc" secondAttribute="centerX" id="KJs-bZ-CXj"/>
+                            <constraint firstItem="KW0-lk-o4u" firstAttribute="top" secondItem="54I-sD-RNW" secondAttribute="bottom" constant="38" id="TaW-bP-eSr"/>
+                            <constraint firstItem="KW0-lk-o4u" firstAttribute="leading" secondItem="Mjh-Or-1Oc" secondAttribute="leading" id="Wam-O8-gJr"/>
+                            <constraint firstItem="54I-sD-RNW" firstAttribute="top" secondItem="1DS-GM-9a6" secondAttribute="bottom" constant="8" id="evq-vN-4rw"/>
+                            <constraint firstItem="KW0-lk-o4u" firstAttribute="top" relation="lessThanOrEqual" secondItem="54I-sD-RNW" secondAttribute="bottom" priority="750" constant="23" id="icj-Uz-ohV"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="2Bi-kO-kqE"/>
-                                <exclude reference="EN2-Bt-Ct0"/>
-                                <exclude reference="3BQ-1k-bgG"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="2Bi-kO-kqE"/>
-                                <include reference="EN2-Bt-Ct0"/>
-                                <include reference="3BQ-1k-bgG"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="JrC-ci-7yY" id="Yyi-KS-uWv"/>
@@ -762,7 +734,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="azN-1X-jir" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2818.4000000000001" y="-315.29235382308849"/>
+            <point key="canvasLocation" x="-3362.4000000000001" y="-365.66716641679164"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="vYi-wc-yAK">

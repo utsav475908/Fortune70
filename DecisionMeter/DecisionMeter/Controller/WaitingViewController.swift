@@ -23,9 +23,9 @@ class WaitingViewController: UIViewController {
         static let kTimerConstant:Int = 10
     }
     
-    @IBOutlet weak var startButton: CustomButton!
-    @IBOutlet weak var pauseButton:CustomButton!
-    @IBOutlet weak var timerLabel:UILabel!
+//    @IBOutlet weak var startButton: CustomButton!
+//    @IBOutlet weak var pauseButton:CustomButton!
+//    @IBOutlet weak var timerLabel:UILabel!
     
     @IBOutlet weak var resetButton: CustomButton!
     var seconds = TimerConstants.kTimerConstant
@@ -38,12 +38,12 @@ class WaitingViewController: UIViewController {
     @IBOutlet weak var submitButton: CustomButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        pauseButton.isEnabled = false
-        startButton.alpha = 0.0
-        pauseButton.alpha = 0.0
-        timerLabel.alpha = 0.0
-        resetButton.alpha = 0.0
-        submitButton.alpha = 0.0
+//        pauseButton.isEnabled = false
+//        startButton.alpha = 0.0
+//        pauseButton.alpha = 0.0
+        //timerLabel.alpha = 0.0
+//        resetButton.alpha = 0.0
+        submitButton.alpha = 1.0
         runTimer()
         addNotificationForDownloadDataFromInternet()
         // Do any additional setup after loading the view.
@@ -60,71 +60,71 @@ class WaitingViewController: UIViewController {
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         isTimerRunning = true
-        pauseButton.isEnabled = true
+        //pauseButton.isEnabled = true
     }
     
-    @IBAction func pauseButtonTapped(_ sender:UIButton){
-        if self.resumeTapped == false {
-            timer.invalidate()
-            isTimerRunning = false;
-            self.resumeTapped = true;
-            self.pauseButton.setTitle("Resume", for: .normal)
-            
-        } else {
-            runTimer()
-            self.resumeTapped = false
-            isTimerRunning = true
-            self.pauseButton.setTitle("Pause", for: .normal)
-        }
-    }
+//    @IBAction func pauseButtonTapped(_ sender:UIButton){
+//        if self.resumeTapped == false {
+//            timer.invalidate()
+//            isTimerRunning = false;
+//            self.resumeTapped = true;
+//            self.pauseButton.setTitle("Resume", for: .normal)
+//
+//        } else {
+//            runTimer()
+//            self.resumeTapped = false
+//            isTimerRunning = true
+//            self.pauseButton.setTitle("Pause", for: .normal)
+//        }
+//    }
+//
+    
+//    @IBAction func onStartButtonPressed(_ sender: CustomButton) {
+//        if isTimerRunning == false {
+//            runTimer()
+//            self.startButton.isEnabled = false
+//        }
+//
+//    }
+//
+//    @IBAction func onPauseButtonPressed(_ sender: CustomButton) {
+//        if self.resumeTapped == false {
+//            timer.invalidate()
+//            isTimerRunning = false
+//            self.resumeTapped = true
+//            self.pauseButton.setTitle("Resume", for: .normal)
+//        } else {
+//            runTimer()
+//            self.resumeTapped = false
+//            isTimerRunning = true
+//            self.pauseButton.setTitle("Pause", for: .normal)
+//        }
+//
+//    }
+//
     
     
-    @IBAction func onStartButtonPressed(_ sender: CustomButton) {
-        if isTimerRunning == false {
-            runTimer()
-            self.startButton.isEnabled = false
-        }
-        
-    }
-    
-    @IBAction func onPauseButtonPressed(_ sender: CustomButton) {
-        if self.resumeTapped == false {
-            timer.invalidate()
-            isTimerRunning = false
-            self.resumeTapped = true
-            self.pauseButton.setTitle("Resume", for: .normal)
-        } else {
-            runTimer()
-            self.resumeTapped = false
-            isTimerRunning = true
-            self.pauseButton.setTitle("Pause", for: .normal)
-        }
-        
-    }
-    
-    
-    
-    @IBAction func onResetButtonPressed(_ sender: CustomButton) {
-        timer.invalidate()
-        seconds = TimerConstants.kTimerConstant
-        timerLabel.text = timeString(time: TimeInterval(seconds))
-        isTimerRunning = false
-        pauseButton.isEnabled = false
-        startButton.isEnabled = true 
-        
-        
-    }
-    
-    
-    @IBAction func resetButtonTapped(_ sender:UIButton){
-        timer.invalidate()
-        seconds = TimerConstants.kTimerConstant
-        timerLabel.text = timeString(time:TimeInterval(seconds))
-        isTimerRunning = false
-        pauseButton.isEnabled = false
-        startButton.isEnabled = true 
-    }
-    
+//    @IBAction func onResetButtonPressed(_ sender: CustomButton) {
+//        timer.invalidate()
+//        seconds = TimerConstants.kTimerConstant
+//        timerLabel.text = timeString(time: TimeInterval(seconds))
+//        isTimerRunning = false
+//        pauseButton.isEnabled = false
+//        startButton.isEnabled = true
+//
+//
+//    }
+//
+//
+//    @IBAction func resetButtonTapped(_ sender:UIButton){
+//        timer.invalidate()
+//        seconds = TimerConstants.kTimerConstant
+//        timerLabel.text = timeString(time:TimeInterval(seconds))
+//        isTimerRunning = false
+//        pauseButton.isEnabled = false
+//        startButton.isEnabled = true
+//    }
+//
     
     func updateTimer() {
 //        if seconds < 1 {

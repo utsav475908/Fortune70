@@ -12,9 +12,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="CourierNew.ttf">
-            <string>CourierNewPSMT</string>
-        </array>
         <array key="HelveticaNeue.ttc">
             <string>HelveticaNeue</string>
         </array>
@@ -42,7 +39,7 @@
                                         <rect key="frame" x="78" y="84" width="220" height="145.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-Nn-cTQ">
-                                                <rect key="frame" x="28.5" y="0.0" width="163.5" height="23.5"/>
+                                                <rect key="frame" x="19.5" y="0.0" width="181" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                                 <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -966,98 +963,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-QZ-dR4">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qDW-QZ-dR4">
                                 <rect key="frame" x="0.0" y="160" width="375" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mv4-Yh-2bV">
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mv4-Yh-2bV">
                                         <rect key="frame" x="121" y="304" width="134" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <variation key="widthClass=compact" axis="vertical"/>
                                     </stackView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="noquestions" translatesAutoresizingMaskIntoConstraints="NO" id="nIw-J8-b1j">
-                                        <rect key="frame" x="142" y="45" width="109" height="128"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="noquestions" translatesAutoresizingMaskIntoConstraints="NO" id="nIw-J8-b1j">
+                                        <rect key="frame" x="132.5" y="45" width="109" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You have no questions to answer , just Enjoy" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofc-eF-n9r">
-                                        <rect key="frame" x="18" y="185" width="341" height="50"/>
-                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                        <color key="textColor" red="0.26676475999999999" green="0.2667648494" blue="0.26676431299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbR-Po-MH6">
-                                        <rect key="frame" x="53" y="8" width="254.5" height="60.5"/>
-                                        <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="53"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" spacing="-34" translatesAutoresizingMaskIntoConstraints="NO" id="1aY-MT-gwv">
-                                        <rect key="frame" x="18" y="203" width="334" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9K-DP-qcO" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="134" height="32"/>
-                                                <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="134" id="Psl-LM-Hln"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                                <state key="normal" title="Start">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onStartButtonPressed:" destination="9N9-Ko-xEx" eventType="touchUpInside" id="EIq-38-gvj"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="we7-qU-dCb" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                                <rect key="frame" x="100" y="0.0" width="134" height="32"/>
-                                                <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="134" id="CXR-Bj-YUD"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                                <state key="normal" title="Pause">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onPauseButtonPressed:" destination="9N9-Ko-xEx" eventType="touchUpInside" id="MTQ-ft-GaC"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgM-Ru-oio" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                                <rect key="frame" x="200" y="0.0" width="134" height="32"/>
-                                                <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="134" id="Erj-aD-qeQ"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
-                                                <state key="normal" title="Reset">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusValue">
-                                                        <real key="value" value="3"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="onResetButtonPressed:" destination="9N9-Ko-xEx" eventType="touchUpInside" id="eiT-yB-5UR"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Wy-9Hf" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
-                                        <rect key="frame" x="113" y="270" width="134" height="32"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Wy-9Hf" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
+                                        <rect key="frame" x="103.5" y="270" width="134" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="134" id="A8k-u1-gCg"/>
-                                            <constraint firstAttribute="height" constant="32" id="zlE-8x-gAO"/>
-                                        </constraints>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1071,43 +993,33 @@
                                             <action selector="onSubmitButtonPressed:" destination="9N9-Ko-xEx" eventType="touchUpInside" id="o55-74-isv"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have no questions to answer , just Enjoy" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofc-eF-n9r">
+                                        <rect key="frame" x="31.5" y="188" width="310" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
+                                        <color key="textColor" red="0.26676475999999999" green="0.2667648494" blue="0.26676431299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196788309999998" green="0.90196806190000001" blue="0.90196657179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="JbR-Po-MH6" firstAttribute="centerX" secondItem="AGz-Wy-9Hf" secondAttribute="centerX" id="1kG-or-0OP"/>
-                                    <constraint firstItem="mv4-Yh-2bV" firstAttribute="top" secondItem="AGz-Wy-9Hf" secondAttribute="bottom" constant="2" id="7Z8-Zc-IRF"/>
-                                    <constraint firstItem="mv4-Yh-2bV" firstAttribute="centerX" secondItem="Ofc-eF-n9r" secondAttribute="centerX" id="GGY-yD-LhT"/>
-                                    <constraint firstItem="we7-qU-dCb" firstAttribute="top" secondItem="nIw-J8-b1j" secondAttribute="bottom" constant="30" id="ZbT-KI-3lh"/>
-                                    <constraint firstAttribute="width" secondItem="qDW-QZ-dR4" secondAttribute="height" multiplier="375:334" id="od4-dJ-eaH"/>
-                                    <constraint firstItem="AGz-Wy-9Hf" firstAttribute="top" secondItem="Ofc-eF-n9r" secondAttribute="bottom" constant="35" id="wUF-jd-fG6"/>
-                                </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfi-ON-Aoe">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfi-ON-Aoe">
                                 <rect key="frame" x="108" y="33" width="159" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vc0-Co-YVl">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="daimler_logo" translatesAutoresizingMaskIntoConstraints="NO" id="vc0-Co-YVl">
                                         <rect key="frame" x="21.5" y="0.0" width="116" height="18"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-MR-Gt8">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="ADM_logo" translatesAutoresizingMaskIntoConstraints="NO" id="z3c-MR-Gt8">
                                         <rect key="frame" x="0.0" y="35" width="159" height="74"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="qDW-QZ-dR4" firstAttribute="leading" secondItem="PAo-yw-kA8" secondAttribute="leading" id="Bdr-A6-xN6"/>
-                            <constraint firstItem="mfi-ON-Aoe" firstAttribute="leading" secondItem="PAo-yw-kA8" secondAttribute="leading" constant="108" id="GS8-Y2-dua"/>
-                            <constraint firstAttribute="trailing" secondItem="qDW-QZ-dR4" secondAttribute="trailing" id="SmK-DD-rqY"/>
-                            <constraint firstItem="mfi-ON-Aoe" firstAttribute="top" secondItem="WpA-EV-mwE" secondAttribute="bottom" constant="13" id="es4-gh-zDk"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="pauseButton" destination="we7-qU-dCb" id="lim-9p-4yi"/>
-                        <outlet property="resetButton" destination="hgM-Ru-oio" id="3k5-te-wEF"/>
-                        <outlet property="startButton" destination="p9K-DP-qcO" id="Oe7-yd-fCH"/>
                         <outlet property="submitButton" destination="AGz-Wy-9Hf" id="r3A-VB-LOs"/>
-                        <outlet property="timerLabel" destination="JbR-Po-MH6" id="hwP-jo-92U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BfA-cM-cg0" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -40,6 +40,19 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
         choiceC.setTitle(questionDictionary["3"], for: .normal)
         choiceD.setTitle(questionDictionary["4"], for: .normal)
         
+    
+        let spaceA = "    " + (choiceA.titleLabel?.text!)!
+        let spaceB = "    " + (choiceB.titleLabel?.text!)!
+        let spaceC = "    " + (choiceC.titleLabel?.text!)!
+        let spaceD = "    " + (choiceD.titleLabel?.text!)!
+        
+        choiceA.titleLabel?.text = spaceA
+        choiceB.titleLabel?.text = spaceB
+        choiceC.titleLabel?.text = spaceC
+        choiceD.titleLabel?.text = spaceD 
+        
+        
+        
         
         
         self.submitButtonPressd.alpha = 0

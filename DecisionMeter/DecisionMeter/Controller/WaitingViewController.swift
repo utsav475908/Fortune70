@@ -283,28 +283,7 @@ class WaitingViewController: UIViewController {
         }
     }
     
-    
-    //        func instantiateTheViewController(withIdentifier identifier:String,toNavigate navigationKey:String) -> UIViewController {
-    //            //Decide.single
-    //            // identifiers are like single multiple go with Decisionconstants.
-    //            let returnVC : UIViewController
-    //
-    //            switch navigationKey {
-    //            case "MULTIPLE_CHOICE":
-    //              returnVC =  storyboard?.instantiateViewController(withIdentifier: DecisionConstants.multiple)
-    //            case "SINGLE_OPTION":
-    //              returnVC =   storyboard?.instantiateViewController(withIdentifier: DecisionConstants.single)
-    //            case "RATING":
-    //              returnVC =   storyboard?.instantiateViewController(withIdentifier: DecisionConstants.slider)
-    //            case "RANGE":
-    //               returnVC = storyboard?.instantiateViewController(withIdentifier: DecisionConstants.range)
-    //
-    //            default:
-    //              returnVC =  storyboard?.instantiateViewController(withIdentifier: DecisionConstants.range)
-    //            }
-    //            return returnVC
-    //
-    //        }
+
     
     
     

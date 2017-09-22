@@ -14,6 +14,8 @@ class RangeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // according to the requirements I am setting this sliderValuePointer to alpha value 0 Kumar Utsav
+        sliderValuePointer.alpha = 0
         let defaults = UserDefaults.standard
         self.questionTextView.text = defaults.value(forKey: "quest") as? String
         self.submitButton.alpha = 0

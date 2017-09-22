@@ -39,7 +39,7 @@
                                         <rect key="frame" x="78" y="84" width="220" height="145.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-Nn-cTQ">
-                                                <rect key="frame" x="28.5" y="0.0" width="163.5" height="23.5"/>
+                                                <rect key="frame" x="19.5" y="0.0" width="181" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                                 <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>

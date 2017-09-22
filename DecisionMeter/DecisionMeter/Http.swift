@@ -112,6 +112,7 @@ struct Http{
         do {
             
             request.httpBody = try JSONSerialization.data(withJSONObject:passtheJSONDictionary(), options: .prettyPrinted)
+            request.setValue("#c$m#876ty12itu3428$z$", forHTTPHeaderField: "x-adm-client")
             //request.httpBody =
             // pass dictionary to nsdata object and set it as request body
             

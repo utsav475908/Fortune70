@@ -9,12 +9,16 @@
 import UIKit
 
 class RatingViewController: UIViewController {
-
+@IBOutlet weak var ratingQuestionViewHeightConstraint: NSLayoutConstraint!
     override func viewDidLoad() {
         
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        
+        let height = heightForView(text: self.questionLabel.text!, width: self.questionLabel.frame.size.width)
+        print(height)
+        ratingQuestionViewHeightConstraint.constant = height + 220
       self.submitButton.alpha = 0
         // Do any additional setup after loading the view.
     }
@@ -32,6 +36,17 @@ class RatingViewController: UIViewController {
         }
     }
     @IBOutlet weak var submitButton: CustomButton!
+    //MARK:HEIGHT FOR THE VIEW
+    func heightForView(text:String, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = UIFont(name: "CorporateS-Regular", size: 18.0)
+        label.text = text
+        label.sizeToFit()
+        
+        return label.frame.height
+    }
     
     @IBAction func onSubmitButtonPressed(_ sender: UIButton) {
         saveTheRatingsValue()

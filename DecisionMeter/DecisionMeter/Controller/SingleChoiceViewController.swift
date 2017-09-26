@@ -19,13 +19,29 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
     @IBOutlet weak var questionLabel: UILabel!
     
     var radioButtonController:SSRadioButtonsController?
+    @IBOutlet weak var singleQuestionViewHeightConstraint: NSLayoutConstraint!
 
+    
+    //MARK:HEIGHT FOR THE VIEW
+    func heightForView(text:String, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = UIFont(name: "CorporateS-Regular", size: 18.0)
+        label.text = text
+        label.sizeToFit()
+        
+        return label.frame.height
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         
         self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        let heightofLabel = heightForView(text: self.questionLabel.text!, width: self.questionLabel.frame.width)
+        singleQuestionViewHeightConstraint.constant = heightofLabel + 250
         let questionDictionary = defaults.value(forKey: "options") as! [String:String]
 
         choiceA.setTitle(questionDictionary["1"], for: .normal)

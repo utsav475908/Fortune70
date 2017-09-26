@@ -1,14 +1,14 @@
-//
-//  WaitingViewController.swift
-//  DecisionMeter
-//
-//  Created by Avishek Sinha on 19/09/17.
-//  Copyright © 2017 Avishek Sinha. All rights reserved.
-//
-
-import UIKit
-
-struct Decide {
+ //
+ //  WaitingViewController.swift
+ //  DecisionMeter
+ //
+ //  Created by Avishek Sinha on 19/09/17.
+ //  Copyright © 2017 Avishek Sinha. All rights reserved.
+ //
+ 
+ import UIKit
+ 
+ struct Decide {
     static let single:String = "Single"
     static let multiple:String = "Multiple"
     static let slider:String = "Slider"
@@ -16,17 +16,14 @@ struct Decide {
     static let baseURL:String = "http://localhost:8891"
     //static let baseURL:String = "http://sgscaiu0610.inedc.corpintra.net:8891"
     static let appURL:String = "/decision-meter/sessions/"
-}
-
-class WaitingViewController: UIViewController {
+ }
+ 
+ class WaitingViewController: UIViewController {
     struct TimerConstants {
         static let kTimerConstant:Int = 10
     }
     
-//    @IBOutlet weak var startButton: CustomButton!
-//    @IBOutlet weak var pauseButton:CustomButton!
-//    @IBOutlet weak var timerLabel:UILabel!
-    
+
     @IBOutlet weak var resetButton: CustomButton!
     var seconds = TimerConstants.kTimerConstant
     var timer = Timer()
@@ -38,15 +35,11 @@ class WaitingViewController: UIViewController {
     @IBOutlet weak var submitButton: CustomButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        pauseButton.isEnabled = false
-//        startButton.alpha = 0.0
-//        pauseButton.alpha = 0.0
-        //timerLabel.alpha = 0.0
-//        resetButton.alpha = 0.0
-        submitButton.alpha = 1.0
+
+        //submitButton.alpha = 1.0
         runTimer()
         addNotificationForDownloadDataFromInternet()
-        // Do any additional setup after loading the view.
+     
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -60,83 +53,11 @@ class WaitingViewController: UIViewController {
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         isTimerRunning = true
-        //pauseButton.isEnabled = true
+       
     }
-    
-//    @IBAction func pauseButtonTapped(_ sender:UIButton){
-//        if self.resumeTapped == false {
-//            timer.invalidate()
-//            isTimerRunning = false;
-//            self.resumeTapped = true;
-//            self.pauseButton.setTitle("Resume", for: .normal)
-//
-//        } else {
-//            runTimer()
-//            self.resumeTapped = false
-//            isTimerRunning = true
-//            self.pauseButton.setTitle("Pause", for: .normal)
-//        }
-//    }
-//
-    
-//    @IBAction func onStartButtonPressed(_ sender: CustomButton) {
-//        if isTimerRunning == false {
-//            runTimer()
-//            self.startButton.isEnabled = false
-//        }
-//
-//    }
-//
-//    @IBAction func onPauseButtonPressed(_ sender: CustomButton) {
-//        if self.resumeTapped == false {
-//            timer.invalidate()
-//            isTimerRunning = false
-//            self.resumeTapped = true
-//            self.pauseButton.setTitle("Resume", for: .normal)
-//        } else {
-//            runTimer()
-//            self.resumeTapped = false
-//            isTimerRunning = true
-//            self.pauseButton.setTitle("Pause", for: .normal)
-//        }
-//
-//    }
-//
-    
-    
-//    @IBAction func onResetButtonPressed(_ sender: CustomButton) {
-//        timer.invalidate()
-//        seconds = TimerConstants.kTimerConstant
-//        timerLabel.text = timeString(time: TimeInterval(seconds))
-//        isTimerRunning = false
-//        pauseButton.isEnabled = false
-//        startButton.isEnabled = true
-//
-//
-//    }
-//
-//
-//    @IBAction func resetButtonTapped(_ sender:UIButton){
-//        timer.invalidate()
-//        seconds = TimerConstants.kTimerConstant
-//        timerLabel.text = timeString(time:TimeInterval(seconds))
-//        isTimerRunning = false
-//        pauseButton.isEnabled = false
-//        startButton.isEnabled = true
-//    }
-//
-    
+
     func updateTimer() {
-//        if seconds < 1 {
-//            timer.invalidate()
-//            // send alert to indicate time up
-//        }else {
-//            seconds -= 1
-//            timerLabel.text = timeString(time: TimeInterval(seconds))
-//            timerLabel.text = String(seconds)
-//            doThePolling()
-//            // write the code
-//        }
+
         doThePolling()
     }
     
@@ -147,21 +68,29 @@ class WaitingViewController: UIViewController {
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
+    func questionIdIncrement() {
+        let defauts = UserDefaults.standard
+        let questionNumber = defauts.value(forKey: "questionId") as! String
+        let questionId = Int(questionNumber)! + 1
+        let stringQuestionId = String(questionId)
+        defauts.set(stringQuestionId, forKey: "questionId")
+        defauts.synchronize()
+    }
+    
     func doThePolling () {
         let defaults = UserDefaults.standard
         let token = defaults.value(forKey: "session") as? String
         print(token!)
         let theQuestionId = defaults.value(forKey: "questionId")!
         print(theQuestionId)
-        //this questionId is the deciding factor
-        
-        //Http.httpRequest(session: token, viewController: self)
+        questionIdIncrement() // lets increment the question. 
         Http.httpRequest(session: token!, viewController: self, searchNext: true)
     }
     
     
     
     @IBAction func onSubmitButtonPressed(_ sender: CustomButton) {
+        questionIdIncrement()
         doThePolling()
         
         
@@ -187,23 +116,24 @@ class WaitingViewController: UIViewController {
     func hasTheQuestionIdChanged(notification:NSNotification) {
         //print(notification.userInfo as? Dictionary<String,AnyObject>!)
         if let arrayElementsGot = notification.userInfo as? Dictionary<String,AnyObject> {
-            //navigateKey = String.getQuestionCategory(passedString: arrayElementsGot[2]).1
-            // print(arrayElementsGot)
-            //dictsValue["status"]!.int64Value == 404
+
             if  arrayElementsGot["status"]?.int64Value == 404 {
                 print("Raise error")
                 addGestureRecognizerForThis()
                 /*
-                DispatchQueue.main.async {
-                    [weak self] value in
-                    let ac =  UIAlertController.alertWithTitle(title: "NO Question", message: "NO Question", buttonTitle: "NO Question")
-                    //                    self?.tokenTextField.text = ""
-                    // the question has not changed , so stay upon this page or throw error.
-                    self?.present(ac, animated: true, completion: nil)
-                    
-                }
-                  */
+                 DispatchQueue.main.async {
+                 [weak self] value in
+                 let ac =  UIAlertController.alertWithTitle(title: "NO Question", message: "NO Question", buttonTitle: "NO Question")
+                 //                    self?.tokenTextField.text = ""
+                 // the question has not changed , so stay upon this page or throw error.
+                 self?.present(ac, animated: true, completion: nil)
+                 
+                 }
+                 */
             }
+            // you have got the success
+//            if  arrayElementsGot["status"]?.int64Value == 404 {
+//            questionIdIncrement()
             
             let defaults = UserDefaults.standard
             // MULTIPLE_CHOICE
@@ -219,9 +149,7 @@ class WaitingViewController: UIViewController {
                 defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
                 defaults.synchronize()
             }
-            
-            //            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
-            //                else { return }
+
             
             if let _ = arrayElementsGot["questionType"] {
                 
@@ -259,15 +187,9 @@ class WaitingViewController: UIViewController {
                 // Please handle this case kumar utsav
                 // ToDo: //
             }
-            
-            
-            //
-            //        print(" i am the JURY")
-            //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            //        let vc = storyboard.instantiateViewController(withIdentifier: "Single") as? SingleChoiceViewController
+
             DispatchQueue.main.async {
-                // memory management kumar utsav vvimportant
-                //self.present(vc!, animated: true, completion: nil);
+
                 self.presentTheViewController(viewController: returnVC)
             }
             
@@ -279,11 +201,11 @@ class WaitingViewController: UIViewController {
         if viewController is WaitingViewController {
             // do nothing
         }else {
-        self.present(viewController, animated: true, completion: nil);
+            self.present(viewController, animated: true, completion: nil);
         }
     }
     
-
+    
     
     
     
@@ -295,14 +217,6 @@ class WaitingViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: dataGotNotificationName, object: nil)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+
     
-}
+ }

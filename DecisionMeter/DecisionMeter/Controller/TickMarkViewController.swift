@@ -9,7 +9,9 @@
 import UIKit
 
 class TickMarkViewController: UIViewController {
-    @IBOutlet weak var field:UITextField!
+    //@IBOutlet weak var field:UITextField!
+    
+    var timer:Timer = Timer()
     
     func addNotificationForDownloadDataFromInternet() {
         NotificationCenter.default.addObserver(self, selector: #selector(dataDownloaded), name: dataGotNotificationName, object: nil)
@@ -30,36 +32,42 @@ class TickMarkViewController: UIViewController {
         removeNotificationForDownloadDataFromInternet() 
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        timer.invalidate()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        runTimer()
         addNotificationForDownloadDataFromInternet()
    let defaults = UserDefaults.standard
     let token = defaults.value(forKey: "session") as? String
         print(token!)
         // Do any additional setup after loading the view.
-        if field.text != "200" {
-        Http.httpRequest(session: token!, viewController: self)
-        } 
+//        if field.text != "200" {
+//        Http.httpRequest(session: token!, viewController: self)
+//        } 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func runTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        //isTimerRunning = true
+        
     }
     
+    func updateTimer() {
+        
+        loginButtonPressed(UIButton())
+    }
+    
+    
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        Http.submitAction()
-        self.navigationController?.popToRootViewController(animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let waitingVC =   storyboard.instantiateViewController(withIdentifier: "Waiting") as! WaitingViewController
+        present(waitingVC, animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

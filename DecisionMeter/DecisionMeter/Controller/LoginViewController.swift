@@ -1,4 +1,4 @@
-//
+
 //  ViewController.swift
 //  DecisionMeter
 //
@@ -48,7 +48,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     @IBAction func doLoginTask(_ sender: CustomButton) {
         let defaults = UserDefaults.standard
+        
         defaults.set(self.tokenTextField.text, forKey: "session")
+        
         defaults.synchronize()
         //Http.httpRequest(session: self.tokenTextField.text!)
         Http.httpRequest(session: self.tokenTextField.text!, viewController: self)
@@ -57,19 +59,48 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
     func invokeTheSegueAfterTheWebService (navigationKey:String) {
-        controllers =   createAnArrayOfVC()
-        print(controllers)
+       // controllers =   createAnArrayOfVC()
+       // print(controllers)
         
+//        switch navigationKey {
+//
+//        case "MULTIPLE_CHOICE": present(controllers[0], animated: true, completion: nil)
+//        case "SINGLE_OPTION": present(controllers[1], animated: true, completion: nil)
+//        case "RATING": present(controllers[2], animated: true, completion: nil)
+//        case "RANGE": present(controllers[3], animated: true, completion: nil)
+//        default: present(controllers[3], animated: true, completion: nil)
+//        }
+        
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let returnVC : UIViewController
         switch navigationKey {
             
-        case "MULTIPLE_CHOICE": present(controllers[0], animated: true, completion: nil)
-        case "SINGLE_OPTION": present(controllers[1], animated: true, completion: nil)
-        case "RATING": present(controllers[2], animated: true, completion: nil)
-        case "RANGE": present(controllers[3], animated: true, completion: nil)
-        default: present(controllers[3], animated: true, completion: nil)
+        case "MULTIPLE_CHOICE":
+            returnVC =  storyboard.instantiateViewController(withIdentifier: DecisionConstants.multiple) as! MultipleChoiceViewController
+            
+        case "SINGLE_OPTION":
+            returnVC =   storyboard.instantiateViewController(withIdentifier: DecisionConstants.single) as! SingleChoiceViewController
+        case "RATING":
+            returnVC =   storyboard.instantiateViewController(withIdentifier: DecisionConstants.range) as! RatingViewController
+        case "RANGE":
+            returnVC = storyboard.instantiateViewController(withIdentifier: DecisionConstants.slider) as! RangeViewController
+            
+        default:
+            returnVC =  storyboard.instantiateViewController(withIdentifier: DecisionConstants.waiting) as! WaitingViewController
+            // Please handle this case kumar utsav
+            // ToDo: //
+        }
+        
+        DispatchQueue.main.async {
+            
+            self.present(returnVC, animated: true, completion: nil)
+            
         }
         
     }
+        
+    
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         //self.loginButton.alpha = 1
@@ -194,13 +225,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         NotificationCenter.default.removeObserver(self, name: dataGotNotificationName, object: nil)
     }
     // MARK: data downloaded callback 
+    func questionIdIncrement() {
+        let defauts = UserDefaults.standard
+        let questionNumber = defauts.value(forKey: "questionId") as! String
+        let questionId = Int(questionNumber)! + 1
+        let stringQuestionId = String(questionId)
+        defauts.set(stringQuestionId, forKey: "questionId")
+        defauts.synchronize()
+    }
     
     func dataDownloaded(notification:NSNotification) {
+        let kQuestion = "QUESTION_ALREADY_ANSWERED"
         if let arrayElementsGot = notification.userInfo as? Dictionary<String,AnyObject> {
-            //navigateKey = String.getQuestionCategory(passedString: arrayElementsGot[2]).1
-            // print(arrayElementsGot)
-            //dictsValue["status"]!.int64Value == 404
+      
+            
             if  arrayElementsGot["status"]?.int64Value == 404 {
+               if  arrayElementsGot["message"] as! String  == kQuestion {
+                questionIdIncrement()
+                //let defaults = UserDefaults.standard
+                let session = tokenTextField.text!
+                //let session = defaults.value(forKey: "session") as! String
+                print("critical")
+                Http.httpRequest(session: session, viewController:self , searchNext: true)
+                return 
+                }
                 print("Raise error")
                 DispatchQueue.main.async {
                     [weak self] value in
@@ -216,21 +264,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             let defaults = UserDefaults.standard
             // MULTIPLE_CHOICE
             
-            
-            
-//            defaults.set(arrayElementsGot["questionString"]!, forKey: "quest")
-//            defaults.set(arrayElementsGot["questionId"]!, forKey: "questionId")
-//            defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
-//            defaults.synchronize()
-//            //            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
-//            //                else { return }
-//            if  arrayElementsGot["questionType"] as! String == "SINGLE_OPTION" {
-//                defaults.set(arrayElementsGot["options"], forKey: "options")
-//            }
-//
-//            if  arrayElementsGot["questionType"] as! String == "MULTIPLE_CHOICE" {
-//                defaults.set(arrayElementsGot["options"], forKey: "options")
-//            }
+
             
             if let _ = arrayElementsGot["questionString"], (arrayElementsGot["questionId"] != nil), (arrayElementsGot["questionType"] != nil) {
                 defaults.set(arrayElementsGot["questionString"]!, forKey: "quest")
@@ -238,9 +272,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 defaults.set(arrayElementsGot["questionType"], forKey: "questionType")
                 defaults.synchronize()
             }
-            
-            //            guard arrayElementsGot["questionType"] as! String != "SINGLE_OPTION", arrayElementsGot["questionType"] as! String != "MULTIPLE_CHOICE"
-            //                else { return }
+      
             
             if let _ = arrayElementsGot["questionType"] {
                 
@@ -268,10 +300,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             
             defaults.synchronize()
             
-            //            KeyStore.saveTheQuestion(withValue: arrayElementsGot["questionString"]! as! String, withKey: "question")
-            //            // options
-            //            //
-            //            KeyStore.saveTheOptions(optionsDictionary: arrayElementsGot	["options"]! as! [String : String], withKey: "option")
+
             
             DispatchQueue.main.async {
                 [weak self] value in
@@ -316,31 +345,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             serverEndPointURL = "www.yahoo.com"
             
         #endif
-        // delete that
-        
-        
-        //Http.submitAction()
-        // Note that SO highlighting makes the new selector syntax (#selector()) look
-        // like a comment but it isn't one
-        
-        // this will mock data.
-        
-        //       let sampleMockDictionary:NSDictionary? = dataParserFromFile(fileName: "Mock") as? NSDictionary
-        //        print(sampleMockDictionary ?? [:])
-        //        navigateKey  = sampleMockDictionary!.value(forKey: "questionType")! as! String
-        //         print(sampleMockDictionary!.value(forKey: "questionType")!)
-        
-        
+
+  
     }
     
     func createAnArrayOfVC() ->[UIViewController] {
         let myVC = UIStoryboard(name: "Main", bundle: nil)
-        let vc0:UIViewController =  myVC.instantiateViewController(withIdentifier: DecisionConstants.multiple)
+        let vc0:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.multiple)
         let vc1:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.single)
         let vc2:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.range)
         let vc3:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.slider)
         
-        var multipleVC = [vc0,vc1,vc2,vc3]
+        let multipleVC = [vc0,vc1,vc2,vc3]
         print(multipleVC)
         return multipleVC;
     }

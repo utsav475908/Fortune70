@@ -14,45 +14,58 @@ let dataGotNotificationName = Notification.Name("DataReceived")
 struct Http{
     // Get Method
     
+    //    let UUID = UIDevice.current.identifierForVendor!.uuidString
+    
+    static func questionIdReset() {
+        let defaults = UserDefaults.standard
+        defaults.set("1", forKey: "questionId")
+        defaults.synchronize()
+    }
+    
     static func switchTheURL(withSession sessionString:String, searchNext:Bool = false) -> URL {
         let urlHolder:URL
         if searchNext {
-            let defauts = UserDefaults.standard
-            let questionNumber = defauts.value(forKey: "questionId") as! String
-            let questionId = Int(questionNumber)! + 1
-           urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/questions/\(questionId)")!
+            let defaults = UserDefaults.standard
+            let questionNumber:Int   = Int(defaults.value(forKey: "questionId")! as! String)!
+            let questionId = String(questionNumber)
+            defaults.set(String(describing: questionNumber), forKey: "questionId")
+            defaults.synchronize()
+            
+            urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/questions/\(questionId)")!
         }else {
-        urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/current-question")!
+            //urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/current-question")!
+            questionIdReset()
+            let defaults = UserDefaults.standard
+            let questionID = String(describing: defaults.value(forKey: "questionId")!)
+            urlHolder = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionString)/questions/\(questionID)")!
+            
         }
         print("url formatted is \(urlHolder) " )
         return urlHolder
     }
-
+    
     
     static func httpRequest(session:String, viewController:UIViewController, searchNext next:Bool = false)  {
-        //var questions:String = String()
-        //var questionList:[String] = [String]()
-        var dicList:Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
-        //let urlTest = URL(string: DecisionConstants.baseURL + "/decision-meter/sessions/\(session)/current-question")!
         
-//        let url = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(session)/current-question")!
+        var dicList:Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
+        
         
         let url = switchTheURL(withSession: session,searchNext: next)
+        print(url)
         
-        //let url = URL(string: "http://sgscaiu0610.inedc.corpintra.net:8891/decision-meter/sessions/\(session)/current-question")!
-
-
         let session = URLSession.shared
+        var  request = URLRequest(url: url)
+        request.addValue(UIDevice.current.identifierForVendor!.uuidString, forHTTPHeaderField: "x-request-id")
+        DispatchQueue.main.async {
+            MBProgressHUD.showAdded(to: viewController.view, animated: true)
+        }
         
-        //now create the URLRequest object using the url object
-        let request = URLRequest(url: url)
-        MBProgressHUD.showAdded(to: viewController.view, animated: true)
         //create dataTask using the session object to send data to the server
         let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
             
             guard error == nil else {
-               print("HI I AM THE ERROR " + error!.localizedDescription)
-              let vc = UIAlertController.alertWithTitle(title: "ERROR", message: "ERROR", buttonTitle: "ERROR")
+                print("HI I AM THE ERROR " + error!.localizedDescription)
+                let vc = UIAlertController.alertWithTitle(title: "ERROR", message: "ERROR", buttonTitle: "ERROR")
                 viewController.present(vc, animated: true, completion: nil)
                 return
                 
@@ -68,31 +81,31 @@ struct Http{
             //print("dictionary list got == \(data)")
             dicList =  dataParserFromUrl(givenData: data) as! Dictionary<String,AnyObject>
             print("dictionary list got == \(dicList)")
-//            NotificationCenter.default.post(name: dataGotNotificationName, object: nil, userInfo: dicList)
+            //            NotificationCenter.default.post(name: dataGotNotificationName, object: nil, userInfo: dicList)
             postTheNotification(givenDictionary: dicList)
             //print(String.convertToDictionary(text: questions)!)
         })
         task.resume()
     }
     
-      static func postTheNotification(givenDictionary dictionaryList : Dictionary<String, AnyObject>){
+    static func postTheNotification(givenDictionary dictionaryList : Dictionary<String, AnyObject>){
         NotificationCenter.default.post(name: dataGotNotificationName, object: nil, userInfo: dictionaryList)
     }
     
     
     
     // Post Method 
-     static func submitAction() {
+    static func submitAction() {
         
         //declare parameter as a dictionary which contains string as key and value combination. considering inputs are valid
         
-      //   let parameters = ["type": "OptionBasedAnswer", "questionId": "1", "userId" : "1"] as Dictionary<String, String>
+        //   let parameters = ["type": "OptionBasedAnswer", "questionId": "1", "userId" : "1"] as Dictionary<String, String>
         
         //let parameters = OptionBasedModel()
         
         //create the url with URL
         let defauts = UserDefaults.standard
-         let questionNumber = defauts.value(forKey: "questionId") as! String
+        let questionNumber = defauts.value(forKey: "questionId") as! String
         let sessionId = defauts.value(forKey: "session") as! String
         // appURL = decision-meter/sessions   and baseURL = localhost://8891
         let url = URL(string: DecisionConstants.baseURL + DecisionConstants.appURL + "\(sessionId)/questions/\(questionNumber)/answer")!
@@ -104,7 +117,7 @@ struct Http{
         //now create the URLRequest object using the url object
         var request = URLRequest(url: url)
         request.httpMethod = "POST" //set http method as POST
-         
+        
         
         //let postDict  = passtheJSONDictionary()
         
@@ -113,6 +126,7 @@ struct Http{
             
             request.httpBody = try JSONSerialization.data(withJSONObject:passtheJSONDictionary(), options: .prettyPrinted)
             request.setValue("#c$m#876ty12itu3428$z$", forHTTPHeaderField: "x-adm-client")
+            request.addValue(UIDevice.current.identifierForVendor!.uuidString, forHTTPHeaderField: "x-request-id")
             //request.httpBody =
             // pass dictionary to nsdata object and set it as request body
             
@@ -148,25 +162,6 @@ struct Http{
         task.resume()
     }
     
-//   static func convertDictionaryToJsonObject(dictionary : [String : Any]) -> Any?{
-//        
-//        do {
-//            let jsonData = try JSONSerialization.data(withJSONObject: dictionary, options: .prettyPrinted)
-//            // here "jsonData" is the dictionary encoded in JSON data
-//            
-//            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
-//            // here "decoded" is of type `Any`, decoded from JSON data
-//            
-//            // you can now cast it with the right type
-//            if let dictFromJSON = decoded as? [String:Any] {
-//                // use dictFromJSON
-//                return dictFromJSON
-//            }
-//        } catch {
-//            print(error.localizedDescription)
-//        }
-//        return nil
-//    }
     
     
     
@@ -174,53 +169,39 @@ struct Http{
         let defaults = UserDefaults.standard
         
         if defaults.value(forKey: "questionType") as! String == QuestionTypeConstants.SINGLE_OPTION{
-        let doThisForSingleChoice:[String:Any] = [
-            "type": "OptionBasedAnswer" ,
-            "questionId": defaults.value(forKey: "questionId") as! String,
-            "chossedOptions":SaveManager.sharedInstance().getChoiceForSingleChoice()
-            
-            
-        ]
+            let doThisForSingleChoice:[String:Any] = ["requesterId": UIDevice.current.identifierForVendor!.uuidString,
+                                                      "type": "OptionBasedAnswer" ,
+                                                      "questionId": defaults.value(forKey: "questionId") as! String,
+                                                      "chossedOptions":SaveManager.sharedInstance().getChoiceForSingleChoice()
+                
+                
+            ]
             print(SaveManager.sharedInstance().getChoiceForSingleChoice())
             print(["1":SaveManager.sharedInstance().getChoiceForSingleChoice()])
             print(doThisForSingleChoice)
-//            let doThisForSingleChoice:[String:Any] = [
-//                "type": "OptionBasedAnswer" ,
-//                "questionId": defaults.value(forKey: "questionId") as! String,
-//                "chossedOptions":["1":"Daily"]
-//                
-//                
-//            ]
+            
             return doThisForSingleChoice
         }
         if defaults.value(forKey: "questionType") as! String == QuestionTypeConstants.MULTIPLE_CHOICE{
-
             
-        let doThisForMultipleChoice:[String:Any] = [
-            "type": "OptionBasedAnswer" ,
-            "questionId": defaults.value(forKey: "questionId") as! String,
-            "chossedOptions":SaveManager.sharedInstance().getChoiceForMultipleChoice()
-        ]
+            
+            let doThisForMultipleChoice:[String:Any] = ["requesterId": UIDevice.current.identifierForVendor!.uuidString,
+                                                        "type": "OptionBasedAnswer" ,
+                                                        "questionId": defaults.value(forKey: "questionId") as! String,
+                                                        "chossedOptions":SaveManager.sharedInstance().getChoiceForMultipleChoice()
+            ]
             print(doThisForMultipleChoice)
             return doThisForMultipleChoice
         }
         
-//            let doThisForMultipleChoice:[String:Any] = [
-//                "type": "OptionBasedAnswer" ,
-//                "questionId": defaults.value(forKey: "questionId") as! String,
-//                "chossedOptions":["1":"One", "2":"Two"]
-//            ]
-//            print(doThisForMultipleChoice)
-//            return doThisForMultipleChoice
- //        }
         
         if defaults.value(forKey: "questionType") as! String == QuestionTypeConstants.RATING{
-        
-            let doThisForSlider:[String:Any] = [
-                "type": "ScaleBasedAnswer" ,
-                "questionId": defaults.value(forKey: "questionId") as! String,
-                
-                "scale": SaveManager.sharedInstance().getRatings()
+            
+            let doThisForSlider:[String:Any] = ["requesterId": UIDevice.current.identifierForVendor!.uuidString,
+                                                "type": "ScaleBasedAnswer" ,
+                                                "questionId": defaults.value(forKey: "questionId") as! String,
+                                                
+                                                "scale": SaveManager.sharedInstance().getRatings()
                 
             ]
             print(doThisForSlider)
@@ -229,14 +210,14 @@ struct Http{
         
         if defaults.value(forKey: "questionType") as! String == QuestionTypeConstants.SLIDER{
             
-        
-        let doThisForRange:[String:Any] = [
-            "type": "ScaleBasedAnswer" ,
-            "questionId": defaults.value(forKey: "questionId") as! String,
             
-                "scale": SaveManager.sharedInstance().getSlider()
-            
-        ]
+            let doThisForRange:[String:Any] = ["requesterId": UIDevice.current.identifierForVendor!.uuidString,
+                                               "type": "ScaleBasedAnswer" ,
+                                               "questionId": defaults.value(forKey: "questionId") as! String,
+                                               
+                                               "scale": SaveManager.sharedInstance().getSlider()
+                
+            ]
             print(doThisForRange)
             return doThisForRange
         }

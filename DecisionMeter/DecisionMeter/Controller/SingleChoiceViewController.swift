@@ -15,26 +15,19 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
     @IBOutlet weak var choiceB: SSRadioButton!
     @IBOutlet weak var choiceC: SSRadioButton!
     @IBOutlet weak var choiceD: SSRadioButton!
-   // @IBOutlet weak var choiceD: SSRadioButton!
-    @IBOutlet weak var questionTextView: UITextView!
+ 
+    @IBOutlet weak var questionLabel: UILabel!
     
     var radioButtonController:SSRadioButtonsController?
-    
-    //@IBOutlet weak var postQuestion: UILabel!
-    // the question from the webservice will be coming here
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         
-        self.questionTextView.text = defaults.value(forKey: "quest") as? String
+        self.questionLabel.text = defaults.value(forKey: "quest") as? String
         let questionDictionary = defaults.value(forKey: "options") as! [String:String]
-//        for (key,value) in questionDictionary {
-//            choiceA.titleLabel?.text = value
-//            choiceB.titleLabel?.text = value
-//            choiceC.titleLabel?.text = value
-//            //choiceD.titleLabel?.text = value
-//        }
+
         choiceA.setTitle(questionDictionary["1"], for: .normal)
         choiceB.setTitle(questionDictionary["2"], for: .normal)
         choiceC.setTitle(questionDictionary["3"], for: .normal)
@@ -61,11 +54,11 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
         radioButtonController!.delegate = self;
         radioButtonController!.shouldLetDeSelect = true
 
-        // Do any additional setup after loading the view.
+      
     }
     
     func didSelectButton(selectedButton: UIButton?) {
-        //print(selectedButton)
+       
         let selectedButton = radioButtonController?.selectedButton()
         if (selectedButton != nil) {
             
@@ -113,14 +106,5 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
     }
     
 
-        /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

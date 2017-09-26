@@ -11,24 +11,43 @@ import UIKit
 class RangeViewController: UIViewController {
     var revereSliderValue:Int = 1
     
+    @IBOutlet weak var rangeQuestionViewHeightConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // according to the requirements I am setting this sliderValuePointer to alpha value 0 Kumar Utsav
         sliderValuePointer.alpha = 0
         let defaults = UserDefaults.standard
-        self.questionTextView.text = defaults.value(forKey: "quest") as? String
+        self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        // debugging
+        //self.questionLabel.text = "lore ipsuem loe lore lore ipsuem loe lore lore ipsuem loe lore lore ipsuem loe lore  "
+        // debugging
+        let height = heightForView(text: self.questionLabel.text!, width: self.questionLabel.frame.size.width)
+        print(height)
+        
+        rangeQuestionViewHeightConstraint.constant = height + 250
         self.submitButton.alpha = 0
               //self.submitButton.alpha = 0
         // Do any additional setup after loading the view.
     }
 
     
-    @IBOutlet weak var questionTextView: UITextView!
+    @IBOutlet weak var questionLabel: UILabel!
     //@IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scaleShow: CustomSlider!
     @IBOutlet weak var sliderValuePointer: UILabel!
     @IBOutlet weak var submitButton: CustomButton!
+    
+    func heightForView(text:String, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = UIFont(name: "CorporateS-Regular", size: 18.0)
+        label.text = text
+        label.sizeToFit()
+        
+        return label.frame.height
+    }
     
     func showSubmitButton() {
         UIView.animate(withDuration: 0.75, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {

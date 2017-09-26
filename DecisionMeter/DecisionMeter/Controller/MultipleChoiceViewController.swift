@@ -26,14 +26,14 @@ class MultipleChoiceViewController: UIViewController {
     var submitCounter : Int = 0
     //@IBOutlet weak var optionLabel: UILabel!
     
-    @IBOutlet weak var textViewLabel: UITextView!
+    @IBOutlet weak var questionLabel: UILabel!
     // MARK: VDL
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let defaults = UserDefaults.standard
-        self.textViewLabel.text = defaults.value(forKey: "quest") as? String
+        self.questionLabel.text = defaults.value(forKey: "quest") as? String
         self.submitButton.alpha = 0
         giveTheNameToRespectiveLabels()
         //showSubmitButton()

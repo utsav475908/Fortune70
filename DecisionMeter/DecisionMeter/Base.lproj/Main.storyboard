@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IyS-Sb-XQz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TC3-mv-Ue4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -35,7 +35,7 @@
                                         <rect key="frame" x="78" y="84" width="220" height="145.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your attendee ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-Nn-cTQ">
-                                                <rect key="frame" x="28.5" y="0.0" width="163.5" height="23.5"/>
+                                                <rect key="frame" x="19.5" y="0.0" width="181" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                                 <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -134,7 +134,7 @@
                                 <rect key="frame" x="0.0" y="160" width="375" height="401"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdm-Lr-kLL">
-                                        <rect key="frame" x="0.0" y="106" width="375" height="270"/>
+                                        <rect key="frame" x="0.0" y="108" width="375" height="270"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkl-QS-UtP">
                                                 <rect key="frame" x="50" y="5" width="310" height="210"/>
@@ -258,7 +258,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no questions to answer , just Enjoy You have no questions to answer , just Enjoy   joy " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B1-fQ-3w5">
-                                        <rect key="frame" x="25" y="40" width="325" height="61"/>
+                                        <rect key="frame" x="25" y="40" width="325" height="63"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                         <color key="textColor" red="0.26676475999999999" green="0.2667648494" blue="0.26676431299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -345,7 +345,7 @@
                                 <rect key="frame" x="0.0" y="160" width="375" height="389"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tph-Wg-e9D">
-                                        <rect key="frame" x="0.0" y="121" width="375" height="270"/>
+                                        <rect key="frame" x="0.0" y="123" width="375" height="270"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoN-0s-Li3">
                                                 <rect key="frame" x="50" y="5" width="310" height="228"/>
@@ -369,7 +369,6 @@
                                                             <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="checked"/>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="icon" value="unchecked"/>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="setIconSelected" value="checked"/>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
                                                             <userDefinedRuntimeAttribute type="image" keyPath="setIcon" value="unchecked"/>
                                                         </userDefinedRuntimeAttributes>
@@ -483,7 +482,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.50528133190000002" green="0.83413014409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="xoN-0s-Li3" firstAttribute="leading" secondItem="tph-Wg-e9D" secondAttribute="leading" constant="50" id="06p-Rj-Rgf"/>
                                             <constraint firstItem="NAJ-c7-JRW" firstAttribute="centerX" secondItem="tph-Wg-e9D" secondAttribute="centerX" id="AQq-LZ-sCM"/>
@@ -494,7 +493,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no questions to answer , just Enjoy You have no questions to answer , just Enjoy   joy " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qls-d4-XcU">
-                                        <rect key="frame" x="25" y="40" width="325" height="61"/>
+                                        <rect key="frame" x="25" y="40" width="325" height="63"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                         <color key="textColor" red="0.26676475999999999" green="0.2667648494" blue="0.26676431299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -583,19 +582,19 @@
                                 <rect key="frame" x="0.0" y="159" width="375" height="300"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="You have no questions to answer , just Enjoy You have no questions to answer , just Enjoy   joy " lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxV-wh-w5l">
-                                        <rect key="frame" x="26" y="40" width="325" height="61"/>
+                                        <rect key="frame" x="26" y="40" width="325" height="63"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                         <color key="textColor" red="0.26676475999999999" green="0.2667648494" blue="0.26676431299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="7f3-NK-pnW">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="168"/>
+                                        <rect key="frame" x="0.0" y="118" width="375" height="168"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5D-vX-rcE" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
                                                 <rect key="frame" x="123" y="100" width="128" height="38"/>
                                                 <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="128" id="iW1-vG-KNV"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="iW1-vG-KNV"/>
                                                     <constraint firstAttribute="height" constant="38" id="oI9-dg-Z8O"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
@@ -625,7 +624,7 @@
                                                         <rect key="frame" x="0.0" y="32" width="10" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="HGB-dD-o5v"/>
-                                                            <constraint firstAttribute="width" constant="10" id="XGb-0B-JtY"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="XGb-0B-JtY"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                                         <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -634,7 +633,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qN-rN-HLf">
                                                         <rect key="frame" x="45" y="32" width="10" height="20"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="Qnq-I3-OKm"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="Qnq-I3-OKm"/>
                                                             <constraint firstAttribute="height" constant="20" id="g4I-mJ-aDc"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
@@ -644,7 +643,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGn-8U-bAi">
                                                         <rect key="frame" x="90" y="32" width="10" height="20"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="AtC-kJ-3mK"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="AtC-kJ-3mK"/>
                                                             <constraint firstAttribute="height" constant="20" id="Uz0-38-2HW"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
@@ -654,7 +653,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR4-Ap-gMp">
                                                         <rect key="frame" x="135" y="32" width="10" height="20"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="10" id="Pui-be-ehB"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="Pui-be-ehB"/>
                                                             <constraint firstAttribute="height" constant="20" id="U8O-az-MpE"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
@@ -665,7 +664,7 @@
                                                         <rect key="frame" x="180" y="31" width="10" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="EdN-vt-fQ7"/>
-                                                            <constraint firstAttribute="width" constant="10" id="N5f-4s-NdM"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="N5f-4s-NdM"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                                         <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -675,7 +674,7 @@
                                                         <rect key="frame" x="225" y="32" width="10" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="in9-Q6-DX1"/>
-                                                            <constraint firstAttribute="width" constant="10" id="ulW-Bx-9M3"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="10" id="ulW-Bx-9M3"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
                                                         <color key="textColor" red="0.27449357509613037" green="0.26666489243507385" blue="0.27460768818855286" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -704,6 +703,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="dR4-Ap-gMp" secondAttribute="bottom" constant="3" id="1A3-Zx-PGi"/>
                                                     <constraint firstItem="uTu-4w-ATg" firstAttribute="leading" secondItem="dR4-Ap-gMp" secondAttribute="trailing" constant="35" id="5UU-8g-SxD"/>
+                                                    <constraint firstItem="yGK-W1-OZK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="BFd-XK-27G" secondAttribute="leading" id="HQI-TG-id6"/>
                                                     <constraint firstItem="4qN-rN-HLf" firstAttribute="leading" secondItem="yGK-W1-OZK" secondAttribute="trailing" constant="35" id="LX2-ZR-1TY"/>
                                                     <constraint firstAttribute="bottom" secondItem="d9b-t3-O7L" secondAttribute="bottom" constant="3" id="PEr-4i-tLl"/>
                                                     <constraint firstAttribute="width" constant="235" id="SzD-ln-Fi2"/>
@@ -809,13 +809,13 @@
                                 <rect key="frame" x="0.0" y="160" width="375" height="300"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SBn-TD-06o">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="168"/>
+                                        <rect key="frame" x="0.0" y="118" width="375" height="168"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt8-YT-hRV" customClass="CustomButton" customModule="DecisionMeter" customModuleProvider="target">
                                                 <rect key="frame" x="123.5" y="100" width="128" height="32"/>
                                                 <color key="backgroundColor" red="0.027435610070000001" green="0.39864102010000002" blue="0.49813732500000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="128" id="10n-k6-MjN"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="10n-k6-MjN"/>
                                                     <constraint firstAttribute="height" constant="32" id="Ihn-Zl-RLk"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="17"/>
@@ -869,7 +869,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no questions to answer , just Enjoy You have no questions to answer , just Enjoy   joy " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Baa-0g-Vqq">
-                                        <rect key="frame" x="25" y="40" width="325" height="61"/>
+                                        <rect key="frame" x="25" y="40" width="325" height="63"/>
                                         <fontDescription key="fontDescription" name="CorporateS-Regular" family="CorpoS" pointSize="18"/>
                                         <color key="textColor" red="0.26676475999999999" green="0.2667648494" blue="0.26676431299999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>

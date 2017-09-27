@@ -18,8 +18,8 @@ class RangeViewController: UIViewController {
         // according to the requirements I am setting this sliderValuePointer to alpha value 0 Kumar Utsav
         sliderValuePointer.alpha = 0
         let defaults = UserDefaults.standard
-        //self.questionLabel.text = defaults.value(forKey: "quest") as? String
-        self.questionLabel.text = "woeioeeor sldf sdf sdf sfd s slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl "
+        self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        //self.questionLabel.text = "woeioeeor sldf sdf sdf sfd s slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl "
         // debugging
         //self.questionLabel.text = "lore ipsuem loe lore lore ipsuem loe lore lore ipsuem loe lore lore ipsuem loe lore  "
         // debugging

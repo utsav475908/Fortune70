@@ -29,7 +29,6 @@
 		545063401F59783E001E6251 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5450633F1F59783E001E6251 /* Constants.swift */; };
 		54572DC61F57BE380023DBC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DC51F57BE380023DBC2 /* AppDelegate.swift */; };
 		54572DCB1F57BE380023DBC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54572DC91F57BE380023DBC2 /* Main.storyboard */; };
-		54572DCD1F57BE380023DBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54572DCC1F57BE380023DBC2 /* Assets.xcassets */; };
 		54572DD01F57BE380023DBC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54572DCE1F57BE380023DBC2 /* LaunchScreen.storyboard */; };
 		54572DDB1F57BE380023DBC2 /* DecisionMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DDA1F57BE380023DBC2 /* DecisionMeterTests.swift */; };
 		54572DE61F57BE380023DBC2 /* DecisionMeterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54572DE51F57BE380023DBC2 /* DecisionMeterUITests.swift */; };
@@ -41,6 +40,7 @@
 		54654A761F6BA55C00199E82 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54654A751F6BA55C00199E82 /* Questions.swift */; };
 		54654A781F6BA6A800199E82 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54654A771F6BA6A800199E82 /* ViewRouter.swift */; };
 		54654A7A1F6BBEBC00199E82 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54654A791F6BBEBC00199E82 /* SaveManager.swift */; };
+		54700F291F7B9A71004E7A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54700F281F7B984E004E7A5C /* Assets.xcassets */; };
 		54B787BD1F5D23620029ABAD /* Configure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54B787BC1F5D23620029ABAD /* Configure.plist */; };
 		54C7E7711F57CE3400522FE9 /* radioButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 54C7E7701F57CE3400522FE9 /* radioButton.png */; };
 		54C7E77B1F57D08100522FE9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C7E77A1F57D08100522FE9 /* LoginViewController.swift */; };
@@ -93,12 +93,10 @@
 		5450633B1F5966FF001E6251 /* Mock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Mock.json; sourceTree = "<group>"; };
 		5450633D1F5968B1001E6251 /* iDataParserUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = iDataParserUtils.swift; path = Utils/iDataParserUtils.swift; sourceTree = "<group>"; };
 		5450633F1F59783E001E6251 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		545063411F597F5D001E6251 /* MERCEDES.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MERCEDES.playground; sourceTree = "<group>"; };
 		545063461F59992B001E6251 /* DecisionMeter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DecisionMeter-Bridging-Header.h"; sourceTree = "<group>"; };
 		54572DC21F57BE380023DBC2 /* DecisionMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DecisionMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54572DC51F57BE380023DBC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54572DCA1F57BE380023DBC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		54572DCC1F57BE380023DBC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54572DCF1F57BE380023DBC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54572DD11F57BE380023DBC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54572DD61F57BE380023DBC2 /* DecisionMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DecisionMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +113,7 @@
 		54654A751F6BA55C00199E82 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Questions.swift; path = Models/Questions.swift; sourceTree = "<group>"; };
 		54654A771F6BA6A800199E82 /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		54654A791F6BBEBC00199E82 /* SaveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
+		54700F281F7B984E004E7A5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../DecisionMeter 2/DecisionMeter/Assets.xcassets"; sourceTree = "<group>"; };
 		54B787BC1F5D23620029ABAD /* Configure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configure.plist; sourceTree = "<group>"; };
 		54C7E7701F57CE3400522FE9 /* radioButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radioButton.png; sourceTree = "<group>"; };
 		54C7E77A1F57D08100522FE9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
@@ -202,7 +201,7 @@
 				545063351F593CE0001E6251 /* c063003t.ttf */,
 				545063371F593F38001E6251 /* Pictorial Signature.ttf */,
 				54572DC91F57BE380023DBC2 /* Main.storyboard */,
-				54572DCC1F57BE380023DBC2 /* Assets.xcassets */,
+				54700F281F7B984E004E7A5C /* Assets.xcassets */,
 				54572DCE1F57BE380023DBC2 /* LaunchScreen.storyboard */,
 				54572DD11F57BE380023DBC2 /* Info.plist */,
 				54C7E7811F57D10700522FE9 /* BusinessLogic */,
@@ -256,7 +255,6 @@
 				545063301F5938E5001E6251 /* UIFont+Extension.swift */,
 				5450633D1F5968B1001E6251 /* iDataParserUtils.swift */,
 				5450633F1F59783E001E6251 /* Constants.swift */,
-				545063411F597F5D001E6251 /* MERCEDES.playground */,
 				54B787BC1F5D23620029ABAD /* Configure.plist */,
 				545CF3C31F5D9A080039CC93 /* CustomSlider.swift */,
 				543022251F5FF1E100DC2754 /* MultipleChoiceModel.swift */,
@@ -388,7 +386,7 @@
 				54572DD01F57BE380023DBC2 /* LaunchScreen.storyboard in Resources */,
 				545063381F593F38001E6251 /* Pictorial Signature.ttf in Resources */,
 				545063361F593CE0001E6251 /* c063003t.ttf in Resources */,
-				54572DCD1F57BE380023DBC2 /* Assets.xcassets in Resources */,
+				54700F291F7B9A71004E7A5C /* Assets.xcassets in Resources */,
 				54C7E7711F57CE3400522FE9 /* radioButton.png in Resources */,
 				54C7E7871F57D2A500522FE9 /* checklistImage.png in Resources */,
 				5450633C1F5966FF001E6251 /* Mock.json in Resources */,
@@ -567,6 +565,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z556SWSEC6;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = DecisionMeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -671,6 +670,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z556SWSEC6;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = DecisionMeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -775,6 +775,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z556SWSEC6;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = DecisionMeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -928,6 +929,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z556SWSEC6;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = DecisionMeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -949,6 +951,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z556SWSEC6;
+				IBSC_WARNINGS = YES;
 				INFOPLIST_FILE = DecisionMeter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

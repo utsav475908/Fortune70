@@ -15,8 +15,8 @@ struct DecisionConstants {
     static let slider:String = "Slider"
     static let waiting:String = "Waiting"
     static let range:String = "Rating"
-    //static let baseURL:String = "http://localhost:8891"
-    static let baseURL:String = "http://sgscaiu0610.inedc.corpintra.net:8891"
+    static let baseURL:String = "http://localhost:8891"
+    //static let baseURL:String = "http://sgscaiu0610.inedc.corpintra.net:8891"
     static let appURL:String = "/decision-meter/sessions/"
 }
 

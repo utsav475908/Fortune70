@@ -235,12 +235,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     }
     
     func dataDownloaded(notification:NSNotification) {
-        let kQuestion = "QUESTION_ALREADY_ANSWERED"
+        let kQuestionUnAvailable = "QUESTION_UNAVAILABLE"
+        let kQuestionAnswered = "QUESTION_ALREADY_ANSWERED"
         if let arrayElementsGot = notification.userInfo as? Dictionary<String,AnyObject> {
       
             
             if  arrayElementsGot["status"]?.int64Value == 404 {
-               if  arrayElementsGot["message"] as! String  == kQuestion {
+                if arrayElementsGot["message"] as! String  == kQuestionUnAvailable{
+                    print("question is unavailable")
+                    return
+                }
+               if  arrayElementsGot["message"] as! String  == kQuestionAnswered {
                 questionIdIncrement()
                 //let defaults = UserDefaults.standard
                 let session = tokenTextField.text!
@@ -252,9 +257,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
                 print("Raise error")
                 DispatchQueue.main.async {
                     [weak self] value in
-                    let ac =  UIAlertController.alertWithTitle(title: "TOKEN", message: "TOKEN", buttonTitle: "TOKEN")
-                    self?.tokenTextField.text = ""
-                    self?.present(ac, animated: true, completion: nil)
+//                    let ac =  UIAlertController.alertWithTitle(title: "TOKEN", message: "TOKEN", buttonTitle: "TOKEN")
+//                    self?.tokenTextField.text = ""
+//                    self?.present(ac, animated: true, completion: nil)
+                    
+//                    UIView.animate(withDuration: 0.75, animations: {
+//                        self?.attendeeLabel.textColor = UIColor.red
+//                        self?.attendeeLabel.text = "Enter correct token"
+//                    }, completion: { (complete) in
+//                        self?.attendeeLabel.text = "Enter correct token"
+//                    })
+                    
+                    UIView.animate(withDuration: 0.75, delay: 0, options: .curveEaseIn, animations: {
+                        self?.attendeeLabel.textColor = UIColor.red
+                        self?.attendeeLabel.text = "Enter correct token"
+                    }, completion: { (complete) in
+                        self?.attendeeLabel.text = "Enter correct token"
+                    })
+        
                     
                 }
             }
@@ -349,34 +369,34 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
   
     }
     
-    func createAnArrayOfVC() ->[UIViewController] {
-        let myVC = UIStoryboard(name: "Main", bundle: nil)
-        let vc0:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.multiple)
-        let vc1:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.single)
-        let vc2:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.range)
-        let vc3:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.slider)
-        
-        let multipleVC = [vc0,vc1,vc2,vc3]
-        print(multipleVC)
-        return multipleVC;
-    }
+//    func createAnArrayOfVC() ->[UIViewController] {
+//        let myVC = UIStoryboard(name: "Main", bundle: nil)
+//        let vc0:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.multiple)
+//        let vc1:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.single)
+//        let vc2:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.range)
+//        let vc3:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.slider)
+//        
+//        let multipleVC = [vc0,vc1,vc2,vc3]
+//        print(multipleVC)
+//        return multipleVC;
+//    }
     
     
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print(navigateKey)
-        
-        let myVC = UIStoryboard(name: "Main", bundle: nil)
-        let vc0:UIViewController =  myVC.instantiateViewController(withIdentifier: DecisionConstants.multiple)
-        let vc1:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.single)
-        let vc2:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.range)
-        let vc3:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.slider)
-        
-        var multipleVC = [vc0,vc1,vc2,vc3]
-        print(multipleVC)
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        print(navigateKey)
+//
+//        let myVC = UIStoryboard(name: "Main", bundle: nil)
+//        let vc0:UIViewController =  myVC.instantiateViewController(withIdentifier: DecisionConstants.multiple)
+//        let vc1:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.single)
+//        let vc2:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.range)
+//        let vc3:UIViewController = myVC.instantiateViewController(withIdentifier: DecisionConstants.slider)
+//
+//        var multipleVC = [vc0,vc1,vc2,vc3]
+//        print(multipleVC)
+//
+//    }
     
     
     

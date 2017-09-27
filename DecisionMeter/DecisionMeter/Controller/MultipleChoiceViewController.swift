@@ -25,7 +25,7 @@ class MultipleChoiceViewController: UIViewController {
     
     var submitCounter : Int = 0
     //@IBOutlet weak var optionLabel: UILabel!
-    
+    @IBOutlet weak var multipleQuestionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var questionLabel: UILabel!
     // MARK: VDL
     
@@ -45,7 +45,11 @@ class MultipleChoiceViewController: UIViewController {
         super.viewDidLoad()
 
         let defaults = UserDefaults.standard
-        self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        self.questionLabel.text = "questiona are ae lsdjfsjlkfjl kjlfsdlfj lsjflsj questiona are ae lsdjfsjlkfjl kjlfsdlfj lsjflsj questiona are ae lsdjfsjlkfjl kjlfsdlfj lsjflsj questiona are  "
+       // self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        let heightofLabel = heightForView(text: self.questionLabel.text!, width: self.questionLabel.frame.width)
+        multipleQuestionViewHeightConstraint.constant = heightofLabel + 280
+        
         self.submitButton.alpha = 0
         giveTheNameToRespectiveLabels()
         //showSubmitButton()
@@ -53,8 +57,8 @@ class MultipleChoiceViewController: UIViewController {
     
     func giveTheNameToRespectiveLabels() {
         let defaults = UserDefaults.standard
-        
-        let sayTitleLabel = defaults.value(forKey: "options") as! Dictionary<String,String>
+        let sayTitleLabel = ["1":"something", "2": "sone" , "3": "sometihf" , "4":"sfsfsff"]
+       // let sayTitleLabel = defaults.value(forKey: "options") as! Dictionary<String,String>
         for (key, value) in sayTitleLabel.enumerated(){
             print("Item \(key): \(value)")
         }

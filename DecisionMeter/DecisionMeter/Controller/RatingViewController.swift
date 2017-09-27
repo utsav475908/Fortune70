@@ -14,8 +14,8 @@ class RatingViewController: UIViewController {
         
         super.viewDidLoad()
         let defaults = UserDefaults.standard
-        self.questionLabel.text = defaults.value(forKey: "quest") as? String
-        
+        //self.questionLabel.text = defaults.value(forKey: "quest") as? String
+        self.questionLabel.text = "seomthisdfjsfsjfljsklfsfjslkflksjf fjslfjld sfldklj d klsdk sdlj  ldsklj sdfsdf sdfs dfdssf sdfdsfsd sdfs dfs sdf sdf sdfs df ds slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl"
         let height = heightForView(text: self.questionLabel.text!, width: self.questionLabel.frame.size.width)
         print(height)
         ratingQuestionViewHeightConstraint.constant = height + 220

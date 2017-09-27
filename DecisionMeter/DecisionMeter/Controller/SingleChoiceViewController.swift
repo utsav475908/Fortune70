@@ -39,15 +39,15 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         
-        self.questionLabel.text = defaults.value(forKey: "quest") as? String
-//         self.questionLabel.text = "astsd sdf sf sdf sd sdfsdfs sdfs dfsdf sdfsdfs sdfsdfsdf dsfdfsdf dsfsdfsf sfdsfdf df dfd df dfd  dssd sd sds dsd s sdfsdfsf  sdf sfd s dsfsdf sf sds sfs sfs fsf sfsf sf sf sfsd sfdslfkjslfkjsljljlk sf sf lkjslkdfj slf  sf sfd "
+        //self.questionLabel.text = defaults.value(forKey: "quest") as? String
+         self.questionLabel.text = "astsd sdf sf sdf slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl slkflksjf fjslfjld sfldklj d klsdk sdlj  ldskl "
         
         let heightofLabel = heightForView(text: self.questionLabel.text!, width: self.questionLabel.frame.width)
-        singleQuestionViewHeightConstraint.constant = heightofLabel + 250
+        singleQuestionViewHeightConstraint.constant = heightofLabel + 290
         
         
-        let questionDictionary = defaults.value(forKey: "options") as! [String:String]
-        //let questionDictionary = ["1":"something", "2": "sone" , "3": "sometihf" , "4":"sfsfsff"]
+        //let questionDictionary = defaults.value(forKey: "options") as! [String:String]
+        let questionDictionary = ["1":"something", "2": "sone" , "3": "sometihf" , "4":"sfsfsff"]
 
         choiceA.setTitle(questionDictionary["1"], for: .normal)
         choiceB.setTitle(questionDictionary["2"], for: .normal)
@@ -116,9 +116,9 @@ class SingleChoiceViewController: UIViewController, SSRadioButtonControllerDeleg
    
     
 
-    @IBOutlet weak var submitButtonPressd: UIButton!
+    @IBOutlet weak var submitButtonPressd: CustomButton!
     
-    @IBAction func onSubmitButtonPressed(_ sender: UIButton) {
+    @IBAction func onSubmitButtonPressed(_ sender: CustomButton) {
         saveitToSaveManager()
         Http.submitAction()
         let thisStoryboard =     UIStoryboard(name: "Main", bundle: nil)
